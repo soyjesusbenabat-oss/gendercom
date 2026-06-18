@@ -41,6 +41,44 @@
   bindAccordion('.line-trigger', '.line-item');
   bindAccordion('.faq-trigger', '.faq-item');
 
+  /* ---------- Enfoque: acordeón horizontal ---------- */
+  const hacc = document.getElementById('enfoqueHacc');
+  if (hacc) {
+    const panels = Array.from(hacc.querySelectorAll('.ha-panel'));
+    hacc.querySelectorAll('.ha-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        const panel = tab.closest('.ha-panel');
+        if (panel.classList.contains('is-open')) return;
+        panels.forEach(p => p.classList.remove('is-open'));
+        panel.classList.add('is-open');
+      });
+    });
+  }
+
+  /* ---------- Sede: carrusel ---------- */
+  const car = document.getElementById('sedeCarousel');
+  if (car) {
+    const track = car.querySelector('.sede-track');
+    const slides = Array.from(track.children);
+    const dots = Array.from(car.querySelectorAll('.sede-dot'));
+    let idx = 0, timer = null;
+    const go = (n) => {
+      idx = (n + slides.length) % slides.length;
+      track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+      dots.forEach((d, i) => d.classList.toggle('is-active', i === idx));
+    };
+    const start = () => { stop(); timer = setInterval(() => go(idx + 1), 5500); };
+    const stop = () => { if (timer) clearInterval(timer); timer = null; };
+    const prev = car.querySelector('.sede-prev');
+    const next = car.querySelector('.sede-next');
+    if (prev) prev.addEventListener('click', () => { go(idx - 1); start(); });
+    if (next) next.addEventListener('click', () => { go(idx + 1); start(); });
+    dots.forEach((d, i) => d.addEventListener('click', () => { go(i); start(); }));
+    car.addEventListener('mouseenter', stop);
+    car.addEventListener('mouseleave', start);
+    start();
+  }
+
   /* ---------- Scroll reveal + contadores (basado en scroll, robusto) ---------- */
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const reveals = Array.from(document.querySelectorAll('.reveal'));
@@ -91,40 +129,6 @@
     window.addEventListener('load', checkReveals);
     // Red de seguridad: nunca dejar contenido oculto de forma permanente
     setTimeout(() => reveals.forEach(el => el.classList.add('in')), 3000);
-  }
-
-  /* ---------- Enfoque: arrastrar para desplazar ---------- */
-  const eScroll = document.getElementById('enfoqueScroll');
-  if (eScroll) {
-    let down = false, startX = 0, startScroll = 0, moved = 0;
-    eScroll.addEventListener('pointerdown', (e) => {
-      down = true; moved = 0;
-      startX = e.clientX; startScroll = eScroll.scrollLeft;
-      eScroll.classList.add('dragging');
-      eScroll.setPointerCapture(e.pointerId);
-    });
-    eScroll.addEventListener('pointermove', (e) => {
-      if (!down) return;
-      const dx = e.clientX - startX;
-      moved = Math.max(moved, Math.abs(dx));
-      eScroll.scrollLeft = startScroll - dx;
-    });
-    const end = (e) => {
-      if (!down) return;
-      down = false;
-      eScroll.classList.remove('dragging');
-      try { eScroll.releasePointerCapture(e.pointerId); } catch (_) {}
-    };
-    eScroll.addEventListener('pointerup', end);
-    eScroll.addEventListener('pointercancel', end);
-    eScroll.addEventListener('pointerleave', end);
-    // Rueda vertical → desplazamiento horizontal
-    eScroll.addEventListener('wheel', (e) => {
-      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-        eScroll.scrollLeft += e.deltaY;
-        e.preventDefault();
-      }
-    }, { passive: false });
   }
 
   /* ---------- Ponentes: acordeón (expandir al pulsar) ---------- */
