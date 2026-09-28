@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GENDERCOM 2026 — XII Congreso Internacional de Comunicación y Género</title>
+<meta name="description" content="XII Congreso Internacional de Comunicación y Género. Comunicación sostenible y liderazgo con mirada de género. Granada, 7–9 octubre 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+.bp-bar{position:sticky;top:0;z-index:60;background:rgba(20,15,26,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-dark)}
+.bp-bar-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}
+.bp-bar img{height:52px;width:auto}
+.bp-back{display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:600;color:var(--text-ondark-soft);transition:color .25s}
+.bp-back:hover{color:var(--pink)}
+.bp-back svg{width:17px;height:17px}
+.bp-hero{background:var(--ink);color:var(--text-ondark);padding:clamp(56px,8vw,104px) 0 clamp(48px,6vw,80px)}
+.bp-kicker{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--pink);border:1px solid var(--line-dark);border-radius:100px;padding:8px 18px}
+.bp-hero h1{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,5.4vw,4.2rem);line-height:1.02;letter-spacing:-.03em;margin-top:26px;max-width:20ch;text-wrap:balance}
+.bp-hero-meta{margin-top:clamp(36px,4vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1px;background:var(--line-dark);border:1px solid var(--line-dark);border-radius:var(--radius-sm);overflow:hidden}
+.bp-meta-cell{background:var(--ink);padding:22px 24px}
+.bp-meta-cell span{display:block;font-size:12px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--text-ondark-soft)}
+.bp-meta-cell strong{display:block;font-family:var(--display);font-weight:700;font-size:1.15rem;margin-top:9px;line-height:1.2}
+.bp-layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:clamp(36px,5vw,80px);padding:clamp(56px,7vw,96px) 0 clamp(72px,9vw,120px)}
+.bp-index{position:sticky;top:100px;align-self:start}
+.bp-index-label{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-soft);padding-bottom:14px;border-bottom:1px solid var(--line)}
+.bp-index ol{list-style:none;counter-reset:bpi;display:flex;flex-direction:column;margin-top:14px}
+.bp-index a{display:flex;gap:11px;padding:9px 0;font-size:14.5px;line-height:1.35;color:var(--text-soft);transition:color .25s}
+.bp-index a::before{counter-increment:bpi;content:counter(bpi);font-family:var(--display);font-weight:700;font-size:12px;color:var(--magenta);opacity:.6;padding-top:3px}
+.bp-index a:hover{color:var(--magenta)}
+.bp-art{max-width:74ch}
+.bp-lead{font-family:var(--display);font-weight:600;font-size:clamp(1.15rem,2vw,1.5rem);line-height:1.4;letter-spacing:-.01em;color:var(--text);padding-bottom:clamp(32px,4vw,48px);border-bottom:1px solid var(--line)}
+.bp-sec{padding-top:clamp(40px,5vw,64px);scroll-margin-top:110px}
+.bp-sec-num{font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--magenta)}
+.bp-sec h2{font-family:var(--display);font-weight:800;font-size:clamp(1.55rem,3vw,2.3rem);line-height:1.08;letter-spacing:-.02em;margin-top:12px;text-wrap:balance}
+.bp-sec h3{font-family:var(--display);font-weight:700;font-size:1.12rem;line-height:1.25;margin-top:30px}
+.bp-sec p{margin-top:16px;color:var(--text-soft);line-height:1.68}
+.bp-sec>p:first-of-type{margin-top:20px}
+.bp-list{list-style:none;margin-top:18px;display:flex;flex-direction:column;gap:10px}
+.bp-list li{position:relative;padding-left:22px;color:var(--text-soft);line-height:1.6}
+.bp-list li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:2px;background:var(--magenta)}
+.bp-mods{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:26px}
+.bp-mod{border:1px solid var(--line);border-radius:var(--radius-sm);padding:24px;background:var(--paper)}
+.bp-mod-letter{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--magenta)}
+.bp-mod h3{margin-top:10px;font-size:1.05rem}
+.bp-mod p{font-size:14.5px;margin-top:12px}
+.bp-mod-prizes{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:8px}
+.bp-mod-prizes div{display:flex;justify-content:space-between;align-items:baseline;font-size:14px;color:var(--text-soft)}
+.bp-mod-prizes strong{font-family:var(--display);font-weight:700;color:var(--text)}
+.bp-mod-prizes .bp-tot{padding-top:8px;border-top:1px dashed var(--line);color:var(--magenta)}
+.bp-mod-prizes .bp-tot strong{color:var(--magenta)}
+.bp-total{margin-top:28px;background:var(--mist);border-radius:var(--radius-sm);padding:26px 28px}
+.bp-total-fig{font-family:var(--display);font-weight:800;font-size:clamp(2rem,4vw,2.8rem);letter-spacing:-.03em;color:var(--magenta)}
+.bp-total-fig span{font-size:.45em;font-weight:600;color:var(--text-soft);letter-spacing:0;margin-left:10px}
+.bp-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.bp-chip{font-size:13.5px;font-weight:600;color:var(--purple-deep);background:rgba(110,43,142,.08);border:1px solid rgba(110,43,142,.18);border-radius:100px;padding:8px 16px}
+.bp-table{width:100%;border-collapse:collapse;margin-top:24px;font-size:15px}
+.bp-table th{text-align:left;font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--text-soft);padding:0 0 12px;border-bottom:1px solid var(--line)}
+.bp-table th:last-child,.bp-table td:last-child{text-align:right;white-space:nowrap}
+.bp-table td{padding:15px 0;border-bottom:1px solid var(--line);color:var(--text-soft);line-height:1.5}
+.bp-table td:last-child{font-family:var(--display);font-weight:700;color:var(--magenta)}
+.bp-dates{display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;margin-top:24px}
+.bp-date{background:var(--paper);padding:18px 22px;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px}
+.bp-date strong{font-family:var(--display);font-weight:700;font-size:1rem;color:var(--magenta);min-width:130px}
+.bp-date span{color:var(--text-soft);font-size:15px;line-height:1.5}
+.bp-cta{margin-top:clamp(48px,6vw,72px);border-top:1px solid var(--line);padding-top:clamp(32px,4vw,48px);display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.bp-foot{background:var(--ink);color:var(--text-ondark-soft);padding:44px 0;font-size:14px}
+.bp-foot-inner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}
+.bp-foot a{color:var(--text-ondark-soft)}
+.bp-foot a:hover{color:var(--pink)}
+@media (max-width:960px){.bp-layout{grid-template-columns:1fr;padding-top:44px}.bp-index{position:static;order:-1;border:1px solid var(--line);border-radius:var(--radius-sm);padding:20px}.bp-index-label{border-bottom:none;padding-bottom:8px}}
+a{color:var(--magenta)}
+a:hover{color:var(--magenta-deep)}
+
+/* Bases premios (overlay :target) */
+.bases-overlay{display:none;position:fixed;inset:0;z-index:200;background:var(--paper);overflow-y:auto;-webkit-overflow-scrolling:touch}
+.bases-overlay:target{display:block}
+.bases-close{position:sticky;top:0;z-index:10;background:rgba(20,15,26,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-dark)}
+.bases-close-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}
+.bases-close-inner img{height:52px;width:auto}
+.bases-close a{display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:600;color:var(--text-ondark-soft);transition:color .25s}
+.bases-close a:hover{color:var(--pink)}
+.bases-close svg{width:17px;height:17px}
+.bases-overlay .bp-hero{padding-top:clamp(40px,6vw,72px)}
+
+/* Pop-up prórroga de propuestas */
+.pp-pop{position:fixed;inset:0;z-index:300;display:none;align-items:center;justify-content:center;padding:24px}
+.pp-pop.is-open{display:flex}
+.pp-backdrop{position:absolute;inset:0;background:rgba(20,15,26,.72);backdrop-filter:blur(6px)}
+.pp-card{position:relative;width:100%;max-width:560px;background:var(--ink);color:var(--text-ondark);border:1px solid var(--line-dark);border-radius:var(--radius);overflow:hidden;box-shadow:0 60px 120px -50px rgba(0,0,0,.8);animation:ppIn .45s var(--ease) both}
+@keyframes ppIn{from{opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:none}}
+.pp-card::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(120% 90% at 108% -8%,rgba(198,0,126,.5) 0%,rgba(110,43,142,.24) 38%,transparent 68%)}
+.pp-card::after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:linear-gradient(90deg,var(--magenta),var(--pink) 55%,var(--purple))}
+.pp-body{position:relative;padding:clamp(28px,4vw,40px)}
+.pp-close{position:absolute;top:14px;right:16px;z-index:2;width:38px;height:38px;border:1px solid var(--line-dark);border-radius:50%;background:rgba(20,15,26,.6);color:var(--text-ondark-soft);font-size:22px;line-height:1;cursor:pointer;transition:color .25s,border-color .25s}
+.pp-close:hover{color:var(--pink);border-color:var(--pink)}
+.pp-logo{height:52px;width:auto;display:block;margin-bottom:22px}
+.pp-kicker{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#fff;background:var(--magenta);border-radius:100px;padding:9px 18px}
+.pp-kicker .dot{width:8px;height:8px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px rgba(255,255,255,.28)}
+.pp-card h3{font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,3.4vw,2rem);line-height:1.04;letter-spacing:-.025em;margin-top:18px;text-wrap:balance}
+.pp-card h3 em{font-style:normal;color:var(--pink)}
+.pp-datelabel{font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--pink);margin-top:26px}
+.pp-date{display:flex;align-items:baseline;gap:.3em;font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,7vw,3.6rem);line-height:.9;letter-spacing:-.04em;margin-top:6px}
+.pp-date span{font-size:.42em;color:var(--pink);letter-spacing:-.01em}
+.pp-note{margin-top:18px;color:var(--text-ondark-soft);font-size:15px;line-height:1.6;max-width:44ch}
+.pp-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.pp-actions .btn{font-size:14.5px}
+@media (max-width:520px){.pp-logo{height:42px}.pp-body{padding:26px 22px 30px}}
+.agenda-body p.agenda-note{margin-top:8px;font-size:13px;line-height:1.5;color:var(--magenta);font-weight:600}
+
+.agenda-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.agenda-news{font-size:13px;font-weight:700;color:var(--magenta);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px}
+.agenda-news:hover{color:var(--magenta-deep)}
+.agenda-cta{display:inline-flex;align-items:center;font-size:13px;font-weight:700;color:#fff;background:var(--magenta);border-radius:100px;padding:8px 16px;text-decoration:none;transition:background .25s}
+.agenda-cta:hover{background:var(--magenta-deep);color:#fff}
+
+.tally-pop{position:fixed;inset:0;z-index:400;display:none;align-items:center;justify-content:center;padding:20px}
+.tally-pop.is-open{display:flex}
+.tally-backdrop{position:absolute;inset:0;background:rgba(20,15,26,.72);backdrop-filter:blur(6px)}
+.tally-card{position:relative;width:100%;max-width:620px;max-height:calc(100vh - 40px);display:flex;flex-direction:column;background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 60px 120px -50px rgba(0,0,0,.8)}
+.tally-head{background:var(--ink);color:#fff;padding:22px 64px 20px 26px;position:relative}
+.tally-head::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:linear-gradient(90deg,var(--magenta),var(--pink) 55%,var(--purple))}
+.tally-head span{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--pink)}
+.tally-head h3{font-family:var(--display);font-weight:800;font-size:1.3rem;line-height:1.15;letter-spacing:-.02em;margin-top:6px}
+.tally-close{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;font-size:22px;line-height:1;cursor:pointer}
+.tally-close:hover{border-color:var(--pink);color:var(--pink)}
+.tally-card iframe{flex:1;width:100%;min-height:480px;border:0;display:block}
+
+/* Alojamiento */
+.alo{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;margin-top:clamp(28px,3.5vw,40px)}
+.alo-row{background:var(--paper);padding:20px 22px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 16px;align-items:start}
+.alo-row h3{font-family:var(--display);font-weight:700;font-size:1rem;line-height:1.25;letter-spacing:-.01em;grid-column:1}
+.alo-row .alo-deal{grid-column:1;color:var(--text-soft);font-size:13.8px;line-height:1.5}
+.alo-row .alo-deal b{color:var(--magenta);font-weight:700}
+.alo-side{grid-column:2;grid-row:1/span 2;display:flex;flex-direction:column;align-items:flex-end;gap:8px;text-align:right}
+.alo-code{font-family:var(--display);font-weight:700;font-size:11.5px;letter-spacing:.06em;color:var(--purple-deep);background:rgba(110,43,142,.08);border:1px solid rgba(110,43,142,.18);border-radius:100px;padding:6px 12px;white-space:nowrap}
+.alo-link{font-size:12.5px;font-weight:700;letter-spacing:.02em;color:var(--magenta);white-space:nowrap}
+.alo-link:hover{color:var(--magenta-deep)}
+.alo-note{margin-top:20px;font-size:13.5px;line-height:1.6;color:var(--text-soft);max-width:80ch}
+@media (max-width:480px){.alo-row{grid-template-columns:minmax(0,1fr)}.alo-side{grid-column:1;grid-row:auto;align-items:flex-start;text-align:left;flex-direction:row;flex-wrap:wrap;margin-top:4px}}
+</style>
+</head>
+<body>
+
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="bgthumb" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#C6007E"/>
+        <stop offset="1" stop-color="#4A1C66"/>
+      </linearGradient>
+    </defs>
+    <rect width="100" height="100" rx="18" fill="url(#bgthumb)"/>
+    <text x="50" y="52" font-family="'Sora',sans-serif" font-size="30" font-weight="800" fill="#fff" text-anchor="middle">GC</text>
+    <text x="50" y="72" font-family="'Sora',sans-serif" font-size="13" font-weight="700" fill="#ED5BA0" text-anchor="middle">2026</text>
+  </svg>
+</template>
+
+<!-- ============ TOPBAR — AVANCE DE PROGRAMA ============ -->
+<div class="topbar" id="topbar">
+  <a href="#agenda">
+    <span class="tb-badge">Programa</span>
+    <span>Ya disponible el avance de programa de GENDERCOM 2026 · 7–9 de octubre</span>
+    <svg class="tb-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#hero" class="nav-logo" aria-label="GENDERCOM 2026 inicio">
+      <img class="logo-neg" src="assets/logo-neg.png" alt="XII Congreso Internacional de Comunicación y Género">
+      <img class="logo-color" src="assets/logo-color.png" alt="XII Congreso Internacional de Comunicación y Género">
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#presentacion">Presentación</a></li>
+        <li><a href="#lineas">Líneas </a></li>
+        <li><a href="#inscripciones">Participación</a></li>
+        <li><a href="#agenda">Agenda</a></li>
+        <li><a href="#alojamiento">Alojamiento</a></li>
+        <li><a href="#publicaciones">Publicaciones</a></li>
+        <li><a href="#premios">Premios</a></li>
+        <li><a href="#noticias">Noticias</a></li>
+        <li><a href="#organizacion">Organización</a></li>
+        <li><a href="#sede">Sede</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a href="https://areaprivada.portalintracom.com/inscripcion-previa-gendercom26" target="_blank" rel="noopener" class="btn btn-ghost on-dark">Área Privada</a>
+      <a href="https://areaprivada.portalintracom.com/inscripcion-previa-gendercom26" target="_blank" rel="noopener" class="btn btn-primary">Quiero Participar
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="nav-backdrop" id="navBackdrop"></div>
+<nav class="nav-mobile" id="navMobile">
+  <a href="#presentacion">Presentación</a>
+  <a href="#lineas">Líneas Temáticas</a>
+  <a href="#inscripciones">Participación</a>
+  <a href="#agenda">Agenda</a>
+  <a href="#publicaciones">Publicaciones</a>
+  <a href="#premios">Premios</a>
+  <a href="#noticias">Noticias</a>
+  <a href="#organizacion">Organización</a>
+  <a href="#sede">Sede</a>
+  <a href="https://areaprivada.portalintracom.com/inscripcion-previa-gendercom26" target="_blank" rel="noopener" class="btn btn-primary">Quiero Participar</a>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero" data-screen-label="Hero">
+  <div class="hero-bg" aria-hidden="true">
+    <img class="hero-photo" src="assets/img/hero-alhambra.jpg" alt="">
+    <div class="hero-veil"></div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal"><span class="dot"></span> 7–9 Octubre 2026 · Online 6 Oct · Granada</div>
+      <h1 class="hero-title">
+        <span class="word reveal" data-d="1">GENDERCOM</span>
+        <span class="word reveal" data-d="2"><span class="year">2026</span></span>
+      </h1>
+      <p class="hero-lede reveal" data-d="3">Comunicación <span class="hl">sostenible</span> y liderazgo con mirada de <span class="hl">género</span></p>
+      <p class="hero-venue reveal" data-d="3">Facultad de Comunicación y Documentación de la Universidad de Granada · Colegio Máximo de Cartuja</p>
+      <div class="hero-actions reveal" data-d="4">
+        <a href="https://areaprivada.portalintracom.com/inscripcion-previa-gendercom26" target="_blank" rel="noopener" class="btn btn-primary">Quiero Participar
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#lineas" class="btn btn-ghost on-dark">Ver líneas temáticas</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">Scroll</div>
+</section>
+
+<!-- ============ ENFOQUE ============ -->
+<section class="section" id="presentacion" data-screen-label="Presentación">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-index="01">Enfoque</span>
+      <h2>Comunicación, género y sostenibilidad</h2>
+    </div>
+  </div>
+  <div class="container enfoque-hacc-wrap">
+    <div class="enfoque-intro reveal">
+      <span class="enfoque-intro-tag">Enfoque 2026</span>
+      <p class="panel-lead">Repensar la comunicación como herramienta de transformación social, con perspectiva de género, multidisciplinar y multicultural.</p>
+    </div>
+    <div class="enfoque-hacc reveal" id="enfoqueHacc">
+      <div class="ha-panel is-open">
+        <button class="ha-tab" type="button"><span class="ha-num">01</span><span class="ha-vtitle">Diálogo crítico</span></button>
+        <div class="ha-content"><span class="ha-num-lg">01</span><h3>Un diálogo crítico entre comunicación, género y sostenibilidad</h3><p>La edición de 2026 de GENDERCOM propone un espacio de reflexión y diálogo crítico en torno a las intersecciones entre comunicación, género y sostenibilidad, con una doble perspectiva académica y profesional. Se hace imprescindible repensar el papel de la comunicación como herramienta de transformación social y hacerlo además con una perspectiva de género, multidisciplinar y multicultural conectada con el emprendimiento y la transferencia, con la obligada conexión de la investigación con el tejido empresarial y su impacto en la ciudadanía.</p></div>
+      </div>
+      <div class="ha-panel">
+        <button class="ha-tab" type="button"><span class="ha-num">02</span><span class="ha-vtitle">Sostenibilidad integral</span></button>
+        <div class="ha-content"><span class="ha-num-lg">02</span><h3>La sostenibilidad como un concepto integral</h3><p>El congreso parte de la convicción de que la sostenibilidad no es únicamente una cuestión medioambiental, sino que implica también dimensiones sociales, culturales y de gobernanza. En este sentido, abordamos la sostenibilidad como un concepto integral que incluye la justicia de género, la equidad en el acceso a la información, la representación diversa en los medios y la construcción de liderazgos inclusivos en todos los ámbitos de la comunicación.</p></div>
+      </div>
+      <div class="ha-panel">
+        <button class="ha-tab" type="button"><span class="ha-num">03</span><span class="ha-vtitle">Sur global y «glocal»</span></button>
+        <div class="ha-content"><span class="ha-num-lg">03</span><h3>Miradas críticas desde el sur global y lo «glocal»</h3><p>Desde esta perspectiva, queremos dar protagonismo a miradas críticas y propositivas que emergen desde el sur global y los márgenes. Con un enfoque constructivo y también de conexión con lo más próximo, lo «glocal», en un momento de crisis también del propio sistema mediático y de avance de los llamados «desiertos informativos».</p></div>
+      </div>
+      <div class="ha-panel">
+        <button class="ha-tab" type="button"><span class="ha-num">04</span><span class="ha-vtitle">Granada, frontera</span></button>
+        <div class="ha-content"><span class="ha-num-lg">04</span><h3>Granada, ciudad de frontera y mestizaje</h3><p>Granada, ciudad de frontera y con un legado histórico de convivencia y mestizaje, se convierte en un enclave ideal para abrir este diálogo interdisciplinar que ponga en el centro las voces femeninas, las narrativas de resistencia y los modelos de liderazgo comprometidos con la convulsa y desafiante sociedad en que nos encontramos. Tanto por su posición de puerta a Europa desde el continente africano como por su posición de referencia para América Latina. Y ello en un contexto especialmente incierto y complejo donde las democracias occidentales se enfrentan al auge del populismo, la polarización, la desinformación y los discursos del odio.</p></div>
+      </div>
+      <div class="ha-panel">
+        <button class="ha-tab" type="button"><span class="ha-num">05</span><span class="ha-vtitle">Igualdad</span></button>
+        <div class="ha-content"><span class="ha-num-lg">05</span><h3>La comunicación como herramienta de igualdad</h3><p>El objetivo principal es promover una reflexión crítica sobre cómo la comunicación puede convertirse en una herramienta clave para fomentar la igualdad de género y la integración multicultural desde un enfoque sostenible, constructivo y de liderazgo femenino, al tiempo que se abordan los retos tecnológicos y éticos emergentes.</p></div>
+      </div>
+      <div class="ha-panel">
+        <button class="ha-tab" type="button"><span class="ha-num">06</span><span class="ha-vtitle">Encuentro</span></button>
+        <div class="ha-content"><span class="ha-num-lg">06</span><h3>Un encuentro multidisciplinar de referencia</h3><p>Como en anteriores ediciones, GENDERCOM26 pretende seguir siendo un lugar de encuentro multidisciplinar que propicie la difusión de conocimientos y el intercambio de perspectivas y que promueva la reflexión crítica y la transferencia de conocimientos en el ámbito de los estudios de género.</p></div>
+      </div>
+      <div class="ha-panel">
+        <button class="ha-tab" type="button"><span class="ha-num">07</span><span class="ha-vtitle">INTRACOM</span></button>
+        <div class="ha-content"><span class="ha-num-lg">07</span><h3>GENDERCOM, congreso de la red INTRACOM</h3><p>GENDERCOM es un congreso sectorial de la Red de Investigación y Transferencia en Comunicación y Ciencias Sociales (INTRACOM), por lo que comparte el objetivo de aunar la reflexión crítica de la academia con propuestas de transferencia del conocimiento en los estudios de género, desde una mirada interdisciplinar y colaborativa. Es una iniciativa de la Universidad de Sevilla, la Universidad La Sapienza de Roma y la Universidad Autónoma de Barcelona. En esta edición se suma a su organización la Universidad de Granada, como anfitriona.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LÍNEAS TEMÁTICAS ============ -->
+<section class="section" id="lineas" data-screen-label="Líneas Temáticas">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-index="02">Mesas de trabajo</span>
+      <h2>Líneas temáticas para comunicaciones</h2>
+      <p>El programa se estructura en seis mesas que integran perspectivas académicas y profesionales, con formatos tradicionales y audiovisuales/innovadores. Despliega cada mesa para ver su descripción y subtemas.</p>
+    </div>
+    <div class="mesa-stack">
+      <article class="mesa-card" style="--i:0">
+        <div class="mesa-card-inner">
+          <div class="mesa-text">
+            <span class="mesa-num">01</span>
+            <h3>Nuevos medios y nuevas narrativas en la comunicación sostenible</h3>
+            <p>Transformaciones del ecosistema mediático ante los retos de la sostenibilidad y la igualdad: periodismo constructivo, lenguaje inclusivo, representaciones diversas y formatos audiovisuales o digitales innovadores.</p>
+            <div class="line-tags"><span class="line-tag">Periodismo de soluciones</span><span class="line-tag">Desiertos informativos</span><span class="line-tag">Cambio climático</span><span class="line-tag">Lenguaje inclusivo</span><span class="line-tag">Ciberfeminismo</span></div>
+          </div>
+          <div class="mesa-img"><img src="assets/img/tiro-medio-mujer-que-trabaja-en-la-computadora-portatil_resultado.webp" alt="" loading="lazy"></div>
+        </div>
+      </article>
+      <article class="mesa-card" style="--i:1">
+        <div class="mesa-card-inner">
+          <div class="mesa-text">
+            <span class="mesa-num">02</span>
+            <h3>Comunicación corporativa, liderazgo y sostenibilidad institucional</h3>
+            <p>Comunicación de organizaciones públicas, privadas y del tercer sector con foco en liderazgo inclusivo, gestión del cambio, equidad institucional y responsabilidad social.</p>
+            <div class="line-tags"><span class="line-tag">Liderazgos femeninos</span><span class="line-tag">Gestión del cambio</span><span class="line-tag">Gestión de crisis</span><span class="line-tag">Estrategias ESG</span><span class="line-tag">Comunicación política</span></div>
+          </div>
+          <div class="mesa-img"><img src="assets/img/shutterstock_2480862361_resultado.webp" alt="" loading="lazy"></div>
+        </div>
+      </article>
+      <article class="mesa-card" style="--i:2">
+        <div class="mesa-card-inner">
+          <div class="mesa-text">
+            <span class="mesa-num">03</span>
+            <h3>Desinformación, discursos de odio y populismo digital</h3>
+            <p>Análisis crítico de la manipulación informativa, la polarización ideológica y la violencia simbólica en entornos digitales, desde una mirada feminista e interseccional.</p>
+            <div class="line-tags"><span class="line-tag">Manipulación mediática</span><span class="line-tag">Violencia digital</span><span class="line-tag">Ciberacoso y doxing</span><span class="line-tag">Narrativas populistas</span><span class="line-tag">Alfabetización mediática</span></div>
+          </div>
+          <div class="mesa-img"><img src="assets/img/jon-tyson-IYtVtgXw72M-unsplash.jpg" alt="" loading="lazy"></div>
+        </div>
+      </article>
+      <article class="mesa-card" style="--i:3">
+        <div class="mesa-card-inner">
+          <div class="mesa-text">
+            <span class="mesa-num">04</span>
+            <h3>Tecnologías emergentes, inteligencia artificial y ética feminista</h3>
+            <p>Impacto social, epistémico y profesional de las tecnologías digitales —en particular la IA— desde una perspectiva de género: sesgos, gobernanza algorítmica y justicia epistémica.</p>
+            <div class="line-tags"><span class="line-tag">Sesgos de género y raza</span><span class="line-tag">Ética del diseño</span><span class="line-tag">Gobernanza algorítmica</span><span class="line-tag">Derechos digitales</span><span class="line-tag">Inclusión y diversidad</span></div>
+          </div>
+          <div class="mesa-img"><img src="assets/img/shutterstock_1787334818_resultado.webp" alt="" loading="lazy"></div>
+        </div>
+      </article>
+      <article class="mesa-card" style="--i:4">
+        <div class="mesa-card-inner">
+          <div class="mesa-text">
+            <span class="mesa-num">05</span>
+            <h3>Cuerpo, territorio y migraciones</h3>
+            <p>Comunicación intercultural, narrativas de migración, representación de mujeres migrantes y mediación cultural desde perspectivas de género y sostenibilidad territorial.</p>
+            <div class="line-tags"><span class="line-tag">Multiculturalidad</span><span class="line-tag">Narrativas migratorias</span><span class="line-tag">Mujeres migrantes</span><span class="line-tag">Transcreación</span><span class="line-tag">Mediación cultural</span></div>
+          </div>
+          <div class="mesa-img"><img src="assets/img/closeup-of-diverse-people-joining-their-hands_resultado.webp" alt="" loading="lazy"></div>
+        </div>
+      </article>
+      <article class="mesa-card" style="--i:5">
+        <div class="mesa-card-inner">
+          <div class="mesa-text">
+            <span class="mesa-num">06</span>
+            <h3>Miscelánea</h3>
+            <p>Espacio para investigaciones y aportaciones profesionales que no encajan estrictamente en las mesas anteriores, pero que abordan la comunicación, la igualdad y la sostenibilidad desde nuevos marcos teóricos, metodológicos o de praxis.</p>
+            <div class="line-tags"><span class="line-tag">Nuevos enfoques de género</span><span class="line-tag">Propuestas interdisciplinares</span><span class="line-tag">Identidades e igualdad</span><span class="line-tag">Innovación metodológica</span></div>
+          </div>
+          <div class="mesa-img"><img src="assets/img/rear-view-of-group-of-diverse-woman-friends-walking-together_resultado.webp" alt="" loading="lazy"></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FECHAS CLAVE ============ -->
+<section class="section dark" aria-label="Fechas clave">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow on-dark" data-index="03">Calendario</span>
+      <h2>Fechas clave</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal"><div class="tl-dot"></div><div class="tl-date">13 sep 2026</div><div class="tl-label">Límite de recepción de propuestas</div></div>
+      <div class="tl-item reveal" data-d="1"><div class="tl-dot"></div><div class="tl-date">15 sep 2026</div><div class="tl-label">Límite de inscripción al congreso</div></div>
+      <div class="tl-item reveal" data-d="2"><div class="tl-dot"></div><div class="tl-date">25 sep 2026</div><div class="tl-label">Envío de programas provisionales</div></div>
+      <div class="tl-item reveal" data-d="3"><div class="tl-dot"></div><div class="tl-date">30 sep 2026</div><div class="tl-label">Texto completo · candidaturas a los Premios GenderCom</div></div>
+      <div class="tl-item reveal" data-d="4"><div class="tl-dot"></div><div class="tl-date">1 oct 2026</div><div class="tl-label">Publicación de programas definitivos</div></div>
+      <div class="tl-item is-final reveal" data-d="5"><div class="tl-dot"></div><div class="tl-date">30 oct 2026</div><div class="tl-label">Texto completo · participación general</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PONENTES ============ -->
+<section class="section" id="ponentes" aria-label="Ponentes destacados" data-screen-label="Ponentes">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-index="04">Voces del congreso</span>
+      <h2>Destacados por días</h2>
+      <p>Investigadoras, investigadores y profesionales de referencia que protagonizarán GENDERCOM 2026, jornada a jornada.</p>
+    </div>
+    <div class="sp-tabs reveal" role="tablist">
+      <button class="sp-tab active" data-spday="s1" type="button">Miércoles · 7 oct</button>
+      <button class="sp-tab" data-spday="s2" type="button">Jueves · 8 oct</button>
+      <button class="sp-tab" data-spday="s3" type="button">Viernes · 9 oct</button>
+    </div>
+    <div class="speakers-day active" data-spday="s1"><div class="speakers-accordion">
+      <button class="speaker active" type="button">
+        <img class="photo" src="assets/img/RSalaverria19-scaled.jpg" alt="Ramón Salaverría" loading="lazy">
+        <span class="speaker-vlabel">Ramón Salaverría</span>
+        <div class="speaker-info"><h4>Ramón Salaverría</h4><span>Catedrático de Periodismo · Universidad de Navarra</span></div>
+      </button>
+      <button class="speaker" type="button">
+        <img class="photo" src="assets/mesas/ximena-villagran.png" alt="Ximena Villagrán" loading="lazy" style="object-position:50% 20%">
+        <span class="speaker-vlabel">Ximena Villagrán</span>
+        <div class="speaker-info"><h4>Ximena Villagrán</h4><span>Directora de Operaciones · Maldita.es</span></div>
+      </button>
+      <button class="speaker" type="button">
+        <img class="photo" src="assets/mesas/marilin-gonzalo.jpg" alt="Marilín Gonzalo" loading="lazy" style="object-position:50% 30%">
+        <span class="speaker-vlabel">Marilín Gonzalo</span>
+        <div class="speaker-info"><h4>Marilín Gonzalo</h4><span>Periodista especializada en medios digitales · Newstral</span></div>
+      </button>
+      <button class="speaker" type="button">
+        <img class="photo" src="assets/mesas/simon-pena.jpg" alt="Simón Peña" loading="lazy" style="object-position:34% 42%">
+        <span class="speaker-vlabel">Simón Peña</span>
+        <div class="speaker-info"><h4>Simón Peña</h4><span>Profesor de Periodismo · UPV/EHU</span></div>
+      </button>
+      <button class="speaker" type="button">
+        <img class="photo" src="assets/mesas/marian-del-moral.webp" alt="Marian del Moral" loading="lazy" style="object-position:50% 22%">
+        <span class="speaker-vlabel">Marian del Moral</span>
+        <div class="speaker-info"><h4>Marian del Moral</h4><span>Directora de FilmingLAB · Universidad de Granada</span></div>
+      </button>
+      <button class="speaker" type="button">
+        <img class="photo" src="assets/mesas/asia-jarzyna.jpg" alt="Asia Jarzyna" loading="lazy" style="object-position:50% 30%">
+        <span class="speaker-vlabel">Asia Jarzyna</span>
+        <div class="speaker-info"><h4>Asia Jarzyna</h4><span>Ecomanager y coordinadora de producción audiovisual</span></div>
+      </button>
+      <button class="speaker" type="button">
+        <img class="photo" src="assets/mesas/ines-nofuentes.jpg" alt="Inés Nofuentes" loading="lazy" style="object-position:50% 26%">
+        <span class="speaker-vlabel">Inés Nofuentes</span>
+        <div class="speaker-info"><h4>Inés Nofuentes</h4><span>Productora creativa · Fundadora de Cinenido</span></div>
+      </button>
+      <button class="speaker" type="button">
+        <img class="photo" src="assets/mesas/ainhoa-gutierrez.jpg" alt="Ainhoa Gutiérrez" loading="lazy" style="object-position:50% 30%">
+        <span class="speaker-vlabel">Ainhoa Gutiérrez</span>
+        <div class="speaker-info"><h4>Ainhoa Gutiérrez</h4><span>Cineasta e investigadora</span></div>
+      </button>
+    </div></div>
+    <div class="speakers-day" data-spday="s2"><div class="speakers-accordion">
+      <button class="speaker active" type="button">
+        <img class="photo" src="assets/mesas/luis-collado-2.jpg" alt="Luis Collado" loading="lazy" style="object-position:50% 16%">
+        <span class="speaker-vlabel">Luis Collado</span>
+        <div class="speaker-info"><h4>Luis Collado</h4><span>Senior Manager News · Google España</span></div>
+      </button>
+      <button class="speaker" type="button">
+        <img class="photo" src="assets/img/montserrat-zamorano.jpg" alt="Montserrat Zamorano" loading="lazy">
+        <span class="speaker-vlabel">Montserrat Zamorano</span>
+        <div class="speaker-info"><h4>Montserrat Zamorano</h4><span>Catedrática de Ingeniería Ambiental · Universidad de Granada</span></div>
+      </button>
+      <button class="speaker" type="button">
+        <img class="photo" src="assets/mesas/nieves-rey.png" alt="Nieves Rey" loading="lazy" style="object-position:45% 20%">
+        <span class="speaker-vlabel">Nieves Rey</span>
+        <div class="speaker-info"><h4>Nieves Rey</h4><span>Directora general de Dircom</span></div>
+      </button>
+      <button class="speaker" type="button">
+        <img class="photo" src="assets/mesas/santiago-alfonso-web.jpg" alt="Santiago Alfonso" loading="lazy" style="object-position:55% 22%">
+        <span class="speaker-vlabel">Santiago Alfonso</span>
+        <div class="speaker-info"><h4>Santiago Alfonso</h4><span>Presidente de Dircom Andalucía · Grupo Cosentino</span></div>
+      </button>
+    </div></div>
+    <div class="speakers-day" data-spday="s3"><div class="speakers-accordion">
+      <button class="speaker active" type="button">
+        <img class="photo" src="assets/img/images-1.jpg" alt="Manuel Sicilia" loading="lazy">
+        <span class="speaker-vlabel">Manuel Sicilia</span>
+        <div class="speaker-info"><h4>Manuel Sicilia</h4><span>Director y productor de cine · Rokyn Animation</span></div>
+      </button>
+      <button class="speaker" type="button">
+        <img class="photo" src="assets/mesas/paola-panarese.jpg" alt="Paola Panarese" loading="lazy" style="object-position:50% 12%">
+        <span class="speaker-vlabel">Paola Panarese</span>
+        <div class="speaker-info"><h4>Paola Panarese</h4><span>Catedrática de Sociología · Universidad Sapienza de Roma</span></div>
+      </button>
+      <button class="speaker" type="button">
+        <img class="photo" src="assets/img/Diseno-sin-titulo-10_resultado.webp" alt="Zoraida Callejas" loading="lazy">
+        <span class="speaker-vlabel">Zoraida Callejas</span>
+        <div class="speaker-info"><h4>Zoraida Callejas</h4><span>Catedrática de Ing. Informática · Universidad de Granada</span></div>
+      </button>
+    </div></div>
+  </div>
+</section>
+
+<!-- ============ MESAS CON NOMBRE PROPIO ============ -->
+<section class="section mist" id="mesas" aria-label="Mesas destacadas" data-screen-label="Mesas destacadas">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-index="05">Encuentros profesionales</span>
+      <h2>Mesas con nombre propio</h2>
+      <p>Tres encuentros que reúnen a creadoras, directoras de medios y reporteras. Pulsa cualquiera para ver a todas las participantes y sus trayectorias.</p>
+    </div>
+    <div class="mesas-featured">
+      <article class="mesa-card is-wide reveal" data-mesa="cineastas" role="button" tabindex="0" aria-haspopup="dialog">
+        <img class="mesa-card-banner" src="assets/img/cineastas-banner.png" alt="Cineastas. Habitar el mundo para crear — GenderCom &amp; FilmingLAB" loading="lazy">
+        <div class="mesa-card-body">
+          <span class="mesa-card-time">Miércoles 7 oct · 18:30–19:30 · GenderCom &amp; FilmingLAB</span>
+          <h3>Cineastas. Habitar el mundo para crear</h3>
+          <p>¿Puede el cine cuidar? Cuatro profesionales del audiovisual conversan sobre creación, ecofeminismo y producción no extractiva.</p>
+          <div class="mesa-faces"></div>
+          <span class="mesa-card-link">Ver participantes y bios →</span>
+        </div>
+      </article>
+      <article class="mesa-card reveal" data-mesa="directoras" role="button" tabindex="0" aria-haspopup="dialog">
+        <div class="mesa-card-body">
+          <span class="mesa-card-time">Jueves 8 oct · 13:00–14:00</span>
+          <h3>Donde se decide la agenda. Mujeres al frente de los medios</h3>
+          <p>Directoras y responsables de IDEAL, Granada Hoy, RTVA y TG7 sobre liderazgo, criterios editoriales y transformación digital.</p>
+          <div class="mesa-faces"></div>
+          <span class="mesa-card-link">Ver participantes y bios →</span>
+        </div>
+      </article>
+      <article class="mesa-card reveal" data-mesa="reporteras" role="button" tabindex="0" aria-haspopup="dialog">
+        <div class="mesa-card-body">
+          <span class="mesa-card-time">Jueves 8 oct · 18:30–19:30</span>
+          <h3>Contar desde el terreno. Liderazgo femenino en el periodismo televisivo</h3>
+          <p>Cinco reporteras de TVE, Mediaset, Atresmedia y Canal Sur sobre el directo, la presión y los nuevos perfiles del reporterismo.</p>
+          <div class="mesa-faces"></div>
+          <span class="mesa-card-link">Ver participantes y bios →</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AGENDA PROVISIONAL ============ -->
+<section class="section mist" id="agenda" data-screen-label="Agenda">
+  <div class="container">
+    <div class="agenda-head">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-index="06">Avance de programa</span>
+        <h2>Agenda provisional</h2>
+        <p>Programa provisional del 7 al 9 de octubre de 2026. Se anunciarán nuevas incorporaciones y actividades en las próximas semanas.</p>
+      </div>
+
+      <div class="agenda-tabs reveal" role="tablist">
+        <button class="agenda-tab active" data-day="d1" type="button">Miércoles · 7 oct</button>
+        <button class="agenda-tab" data-day="d2" type="button">Jueves · 8 oct</button>
+        <button class="agenda-tab" data-day="d3" type="button">Viernes · 9 oct</button>
+      </div>
+    </div>
+
+    <!-- Día 1 -->
+    <div class="agenda-day active" data-day="d1">
+      <div class="agenda-row reveal"><span class="agenda-time">09:00</span><div class="agenda-body"><h4>Recepción de participantes e inscripciones</h4><p>Entrega de acreditaciones y documentación del congreso.</p></div></div>
+      <div class="agenda-row reveal"><span class="agenda-time">09:30</span><div class="agenda-body"><span class="agenda-tag">Apertura institucional</span><h4>Apertura institucional</h4><p>El rector de la Universidad de Granada, Pedro Mercado, presidirá el acto inaugural junto a las instituciones organizadoras y colaboradoras.</p></div></div>
+      <div class="agenda-row reveal"><span class="agenda-time">10:00–10:50</span><div class="agenda-body"><span class="agenda-tag">Ponencia inaugural</span><h4>Ramón Salaverría — Cómo opera la desinformación identitaria en Europa</h4><p>Catedrático de Periodismo (Universidad de Navarra) y coordinador de IBERIFIER, referente internacional en periodismo digital y desinformación.</p></div></div>
+      <div class="agenda-row reveal"><span class="agenda-time">11:00–12:00</span><div class="agenda-body"><span class="agenda-tag">Mesa de debate</span><h4>Desinformación con sesgo de género: verificación, IA y discursos de odio</h4><p>Marilín Gonzalo (Newtral) y Ximena Villagrán (Maldita.es). Modera: Zoraida Callejas (Cátedra RTVE-UGR).</p><div class="agenda-links"><a class="agenda-news" href="#noticias" data-news="news-desinfo">Leer la noticia →</a></div></div></div>
+      <div class="agenda-row reveal agenda-break"><span class="agenda-time">12:00–12:30</span><div class="agenda-body"><h4>☕ Coffee break</h4></div></div>
+      <div class="agenda-row reveal agenda-click" role="button" tabindex="0"><span class="agenda-time">12:30–13:20</span><div class="agenda-body"><span class="agenda-tag">Encuentros GenderCom</span><h4>Simón Peña — Los retos de las mujeres científicas en el ecosistema mediático digital</h4><p>Profesor de Periodismo (UPV/EHU) y coordinador de la Red de Excelencia CIBERCOM. Presenta: Lola Olvera (UGR).</p><span class="agenda-more">Ver perfil y bio →</span><div class="mesa-detail" hidden data-time="12:30–13:20 · Encuentros GenderCom"><p class="mesa-lead">Cómo se representa —y cómo se invisibiliza— a las mujeres científicas en los ecosistemas informativos digitales: quién habla de ciencia, quién aparece como fuente experta y qué papel juegan las plataformas en la construcción de esa autoridad.</p><div class="mesa-people"><div class="mesa-group-label">Interviene</div><div class="mesa-person"><span class="mesa-photo"><img src="assets/mesas/simon-pena.jpg" alt="Simón Peña-Fernández" style="object-position:34% 42%"></span><div class="mesa-person-body"><h4>Simón Peña-Fernández</h4><span class="mesa-role">Profesor de Periodismo · UPV/EHU</span><p>Simón Peña-Fernández es Profesor del Departamento de Periodismo de la Universidad del País Vasco (UPV/EHU). Su principal línea de investigación se centra en el estudio de las transformaciones de los ecosistemas informativos digitales.</p><p>En este ámbito, ha publicado diversos estudios sobre el impacto del género en la comunicación de la ciencia.</p></div></div><div class="mesa-group-label">Presenta</div><div class="mesa-person"><span class="mesa-photo"><img src="assets/mesas/lola-olvera.jpg" alt="Lola Olvera" style="object-position:50% 30%"></span><div class="mesa-person-body"><h4>Lola Olvera</h4><span class="mesa-role">Catedrática de Información y Comunicación · Universidad de Granada</span><p>Catedrática del Departamento de Información y Comunicación, desarrolla su labor académica en la Facultad de Comunicación y Documentación y en la Facultad de Traducción e Interpretación de la Universidad de Granada. Es investigadora principal del proyecto TRAMASS, financiado por la Agencia Estatal de Investigación.</p><p>Su trayectoria investigadora se ha centrado en el acceso a la información y en el papel de las tecnologías y la mediación lingüística y cultural para superar las barreras que lo dificultan, desde la recuperación de información y la comunicación multilingüe hasta la traducción, la localización, la transcreación y la comunicación pública de la ciencia en entornos digitales.</p><p>Actualmente, su investigación se sitúa en la intersección entre comunicación intercultural, género y tecnologías emergentes, con especial atención a las comunidades migrantes. Estudia la transcreación y la mediación cultural como herramientas de inclusión y equidad en el acceso a la información sanitaria, y analiza los sesgos de género y etnia que la inteligencia artificial generativa puede reproducir en la representación de las migraciones y en la adaptación de contenidos a contextos lingüística y culturalmente diversos.</p></div></div></div></div></div></div>
+      <div class="agenda-row reveal agenda-click" role="button" tabindex="0"><span class="agenda-time">13:30–14:20</span><div class="agenda-body"><span class="agenda-tag">Lab GenderCom · MediaLab UGR</span><h4>Liderazgos en red: cocreando el Manifiesto Feminista</h4><p>Espacio de inteligencia colectiva impulsado por Medialab UGR. Coordina: Sandra Haro Márquez.</p><p class="agenda-note">20 plazas · requiere inscripción previa.</p><div class="agenda-links"><a class="agenda-cta" href="https://tally.so/r/Zj0YVA" target="_blank" rel="noopener" data-tally="Zj0YVA">Inscribirse →</a><a class="agenda-news" href="#noticias" data-news="news-manifiesto">Leer la noticia →</a></div><span class="agenda-more">Ver detalle y coordinación →</span><div class="mesa-detail" hidden data-time="13:30–14:20 · Lab GenderCom · Liderazgo participativo"><p class="mesa-lead">Un espacio de inteligencia colectiva impulsado por Medialab UGR para rediseñar la forma en que ejercemos y entendemos el liderazgo. A través de una metodología participativa, se trabajará en cuatro mesas temáticas para mapear problemáticas, retos y soluciones en cuatro dimensiones clave: el liderazgo público, el privado, el ciudadano y el propio. En solo 50 minutos, las ideas y voces de las participantes se convertirán en la materia prima del primer Manifiesto de Liderazgo Feminista Transmedia.</p><div class="mesa-people"><div class="mesa-group-label">Coordina</div><div class="mesa-person"><span class="mesa-photo"><img src="assets/mesas/sandra-haro.jpg" alt="Sandra Haro Márquez" style="object-position:50% 18%"></span><div class="mesa-person-body"><h4>Sandra Haro Márquez</h4><span class="mesa-role">Coordinadora de Medialab UGR</span><p>Politóloga y coordinadora del laboratorio de innovación de la Universidad de Granada (Medialab UGR). Su trayectoria se enmarca en el ámbito de los proyectos de innovación social, la participación ciudadana y la gobernanza pública.</p><p>Es formadora en el programa «Educación para la Igualdad» del Instituto de las Mujeres y divulgadora en Radiolab UGR.</p></div></div></div></div></div></div>
+      <div class="agenda-row reveal agenda-break"><span class="agenda-time">14:30–16:00</span><div class="agenda-body"><h4>Almuerzo</h4></div></div>
+      <div class="agenda-row reveal"><span class="agenda-time">16:00–18:00</span><div class="agenda-body"><span class="agenda-tag">Comunicaciones</span><h4>Presentación de comunicaciones (sesiones paralelas)</h4></div></div>
+      <div class="agenda-row reveal agenda-break"><span class="agenda-time">18:00–18:30</span><div class="agenda-body"><h4>☕ Coffee break</h4></div></div>
+      <div class="agenda-row reveal agenda-click" role="button" tabindex="0" data-mesa-id="cineastas"><span class="agenda-time">18:30–19:30</span><div class="agenda-body"><span class="agenda-tag">GenderCom &amp; FilmingLAB</span><h4>Cineastas. Habitar el mundo para crear</h4><p>Asia Jarzyna, Inés Nofuentes y Ainhoa Gutiérrez conversan sobre cine, ecofeminismo y cuidados. Modera: Marian del Moral (FilmingLAB).</p><span class="agenda-more">Ver participantes y bios →</span><div class="mesa-detail" hidden data-time="18:30–19:30 · GenderCom &amp; FilmingLAB"><img class="mesa-banner" src="assets/img/cineastas-banner.png" alt="Cineastas. Habitar el mundo para crear"><p class="mesa-lead">¿Puede el cine cuidar? ¿Es posible filmar y producir desde el cuidado en un mundo en crisis? Cuatro profesionales del audiovisual exploran otras maneras de entender la creación y la producción cinematográfica, poniendo el foco en los vínculos que el cine establece con los cuerpos, los territorios y el mundo no humano. Desde una perspectiva ecofeminista, la conversación aborda cómo trabajar desde modelos no extractivos: cómo se organizan los equipos, qué relación se establece con las personas filmadas, qué impacto generan las producciones y qué imaginarios proyectan las narrativas.</p><div class="mesa-people"><div class="mesa-group-label">Participan</div><div class="mesa-person"><span class="mesa-photo"><img src="assets/mesas/asia-jarzyna.jpg" alt="Asia Jarzyna" style="object-position:50% 30%"></span><div class="mesa-person-body"><h4>Asia Jarzyna</h4><span class="mesa-role">Ecomanager y coordinadora de producción</span><p>Ecomanager, creadora del programa de gestión audiovisual Willco y coordinadora de producción con veinte años de experiencia en producciones internacionales, independientes y de estudio.</p><p>Ha trabajado con cineastas como Francis Ford Coppola, Miloš Forman, Paul Greengrass, Ridley Scott, Icíar Bollaín o Álex de la Iglesia. Actualmente centra su actividad en la digitalización de los procesos de producción y en modelos sostenibles que reduzcan el impacto ambiental de la industria audiovisual.</p></div></div><div class="mesa-person"><span class="mesa-photo"><img src="assets/mesas/ines-nofuentes.jpg" alt="Inés Nofuentes" style="object-position:50% 26%"></span><div class="mesa-person-body"><h4>Inés Nofuentes</h4><span class="mesa-role">Productora creativa · Fundadora de Cinenido</span><p>Productora creativa especializada en ficción y fundadora y directora de Cinenido, una residencia de escritura de guion creada para acompañar los procesos creativos en un entorno cuidado y conciliador.</p><p>Su trabajo comprende la concepción, el diseño y la supervisión integral de los proyectos, desde su línea artística hasta la financiación. Ha producido largometrajes seleccionados y premiados en festivales como la Berlinale, San Sebastián, DOK Leipzig, Hot Docs y Camerimage.</p></div></div><div class="mesa-person"><span class="mesa-photo"><img src="assets/mesas/ainhoa-gutierrez.jpg" alt="Ainhoa Gutiérrez" style="object-position:50% 30%"></span><div class="mesa-person-body"><h4>Ainhoa Gutiérrez</h4><span class="mesa-role">Cineasta e investigadora</span><p>Cineasta e investigadora, graduada en Bellas Artes por la Universidad del País Vasco y máster en Cine Documental por la Universidad del Cine de Buenos Aires. Su obra explora las relaciones entre el arte contemporáneo, el territorio rural y el mundo no humano.</p><p>Actualmente realiza una investigación doctoral en antropología visual sobre las centrales hidroeléctricas del Valle de Urumea y desarrolla, junto a Olatz González Abrisketa, su primer largometraje.</p></div></div><div class="mesa-group-label">Modera</div><div class="mesa-person"><span class="mesa-photo"><img src="assets/mesas/marian-del-moral.webp" alt="Marian del Moral" style="object-position:50% 22%"></span><div class="mesa-person-body"><h4>Marian del Moral</h4><span class="mesa-role">Directora de FilmingLAB · Universidad de Granada</span><p>Profesora e investigadora posdoctoral del Departamento de Antropología Social y miembro del Instituto Universitario de Investigación de Estudios de las Mujeres y de Género de la Universidad de Granada.</p><p>Especializada en cine y medios audiovisuales, desarrolla su investigación desde perspectivas de género, feministas y decoloniales. Desde 2021 dirige FilmingLAB, un laboratorio concebido para favorecer el intercambio entre cineastas, personal investigador y ciudadanía.</p></div></div></div></div></div></div>
+      <div class="agenda-row reveal"><span class="agenda-time">20:30</span><div class="agenda-body"><span class="agenda-tag">Experiencias GenderCom</span><h4>Noches de vino, cine… y otras miradas — Palacio de Santa Paula</h4><p>Una cata de cine en la que película, vino y gastronomía se maridan en una misma experiencia. Una noche para disfrutar del cine desde otras miradas y descubrir cómo construye sus personajes, sus relaciones y los roles de mujeres y hombres en pantalla. Dirigen Manuel Sicilia y David Rodríguez.</p><p class="agenda-note">Plazas limitadas · requiere inscripción independiente.</p><div class="agenda-links"><a class="agenda-news" href="#noticias" data-news="news-cine">Leer la noticia →</a><a class="agenda-cta" href="https://sales.premiumguest.com/1540experiencesclub/es/1540experiencesclub/noches-de-vino-cine-y-otras-miradas/" target="_blank" rel="noopener">Inscribirse →</a></div></div></div>
+    </div>
+
+    <!-- Día 2 -->
+    <div class="agenda-day" data-day="d2">
+      <div class="agenda-row reveal agenda-click" role="button" tabindex="0"><span class="agenda-time">09:00–09:45</span><div class="agenda-body"><span class="agenda-tag">Encuentros GenderCom</span><h4>Luis Collado — El futuro del periodismo: innovación, IA y sostenibilidad</h4><p>Senior Manager News en Google España. La visión de Google sobre los retos del ecosistema informativo y cómo la innovación puede construir un periodismo más sostenible y resiliente. Presenta: Javier F. Barrera (1001 Medios).</p><div class="agenda-links"><a class="agenda-news" href="#noticias" data-news="news-google">Leer la noticia →</a></div><span class="agenda-more">Ver perfil y bio →</span><div class="mesa-detail" hidden data-time="09:00–09:45 · Encuentros GenderCom"><p class="mesa-lead">La visión de Google sobre los retos del ecosistema informativo: cómo trabajar con editores para desarrollar su presencia digital, generar nuevos modelos de negocio y adaptarse a tecnologías como la inteligencia artificial sin renunciar a la sostenibilidad del periodismo.</p><div class="mesa-people"><div class="mesa-group-label">Interviene</div><div class="mesa-person"><span class="mesa-photo"><img src="assets/mesas/luis-collado-2.jpg" alt="Luis Collado" style="object-position:50% 16%"></span><div class="mesa-person-body"><h4>Luis Collado</h4><span class="mesa-role">Senior Manager News · Google España</span><p>Licenciado en Ciencias Económicas y Empresariales por la Universidad Autónoma de Madrid y máster en Marketing, es Senior Manager News dentro de Google España.</p><p>Cuenta con más de 10 años de experiencia en el sector financiero y la consultoría de marketing, y más de 20 desempeñando diversos trabajos en la industria editorial. En Pearson fue director general de División y posteriormente director de Promoción y Marketing en McGraw-Hill España, antes de incorporarse a Google.</p><p>Su trabajo desde Google se centra en la colaboración con editores de prensa, revistas u otras fuentes de información, tanto tradicionales como nativos digitales, para ayudarles a encontrar soluciones al desarrollo de su presencia en internet y su acercamiento a las audiencias potenciales, generar nuevos modelos de negocio y adaptarse a nuevas tecnologías como la IA.</p></div></div><div class="mesa-group-label">Presenta</div><div class="mesa-person"><span class="mesa-photo"><img src="assets/mesas/javier-barrera.jpg" alt="Javier F. Barrera" style="object-position:45% 30%"></span><div class="mesa-person-body"><h4>Javier F. Barrera</h4><span class="mesa-role">Fundador de 1001 Medios · Periodista de IDEAL</span><p>Javier F. Barrera es periodista en el diario IDEAL de Vocento con 38 años de experiencia. Es profesor del Máster en Nuevos Medios Interactivos y Periodismo Multimedia de la UGR y director del Festival de Periodismo de Granada. Tiene diez premios de Periodismo.</p></div></div></div></div></div></div>
+      <div class="agenda-row reveal"><span class="agenda-time">09:45–10:30</span><div class="agenda-body"><span class="agenda-tag">Encuentros GenderCom</span><h4>Montserrat Zamorano — Liderar la sostenibilidad: mujeres que transforman el territorio</h4><p>Catedrática de Ingeniería Ambiental (UGR), primera mujer en dirigir una Escuela de Caminos en España y Medalla de Andalucía al Mérito Medioambiental.</p></div></div>
+      <div class="agenda-row reveal agenda-click" role="button" tabindex="0"><span class="agenda-time">10:30–11:30</span><div class="agenda-body"><span class="agenda-tag">Liderazgo corporativo</span><h4>Liderar desde la comunicación: reputación, propósito y transformación</h4><p>Nieves Rey, directora general de Dircom España, y Santiago Alfonso, presidente de Dircom Andalucía y vicepresidente de Relaciones Institucionales y Reputación Corporativa de Grupo Cosentino. Presenta y modera: Paco Torres (Ayuntamiento de Granada).</p><div class="agenda-links"><a class="agenda-news" href="#noticias" data-news="news-dircom">Leer la noticia →</a></div><span class="agenda-more">Ver participantes y bios →</span><div class="mesa-detail" hidden data-time="10:30–11:30 · Mesa de comunicación corporativa"><p class="mesa-lead">Un encuentro con la dirección de Dircom en España y Andalucía sobre el papel de la comunicación en la alta dirección: cómo se construye reputación, cómo se gestiona una crisis y de qué modo el propósito y la sostenibilidad han pasado a ocupar el centro de la estrategia corporativa.</p><div class="mesa-people"><div class="mesa-group-label">Participan</div><div class="mesa-person"><span class="mesa-photo"><img src="assets/mesas/nieves-rey.png" alt="Nieves Rey Hernández" style="object-position:45% 20%"></span><div class="mesa-person-body"><h4>Nieves Rey Hernández</h4><span class="mesa-role">Directora general de Dircom</span><p>Cuenta con más de 25 años de experiencia en comunicación corporativa, marketing, reputación y sostenibilidad. Durante más de dos décadas desarrolló su trayectoria en Ecoembes, donde fue directora de Comunicación y Marketing y lideró estrategias de marca, comunicación externa e interna, gestión de crisis, medición de la reputación y equipos de más de 20 profesionales. Anteriormente trabajó en Burson Marsteller, gestionando grandes cuentas y campañas integradas de comunicación.</p><p>Es licenciada en Ciencias de la Información, Publicidad y Relaciones Públicas y máster en Comunicación Corporativa y Publicitaria por la Universidad Complutense de Madrid, y cuenta con formación ejecutiva en negocio digital y alta dirección. Su trayectoria ha sido reconocida, entre otros, con el Premio Ondas 2024 y el Premio Especial Dircom Ramón del Corral 2025.</p></div></div><div class="mesa-person"><span class="mesa-photo"><img src="assets/mesas/santiago-alfonso-web.jpg" alt="Santiago Alfonso Rodríguez" style="object-position:55% 22%"></span><div class="mesa-person-body"><h4>Santiago Alfonso Rodríguez</h4><span class="mesa-role">Presidente de Dircom Andalucía · Grupo Cosentino</span><p>Vicepresidente de Relaciones Institucionales y Reputación Corporativa en Grupo Cosentino. Durante sus más de 36 años de pertenencia a este grupo empresarial almeriense ha tenido responsabilidad en el área de comercio exterior, marketing y comunicación corporativa, siempre en nivel directivo.</p><p>Creó y presidió el Club de Marketing de Almería, formando parte de la Federación Andaluza de Marketing. En 2019 recibió el Premio Nacional de Marketing al mejor director o profesional otorgado por la Asociación Nacional de Marketing.</p><p>Ha sido vocal de Dircom Andalucía durante varios años y desde marzo de 2026 es presidente de Dircom Andalucía.</p></div></div></div></div></div></div>
+      <div class="agenda-row reveal agenda-break"><span class="agenda-time">11:30–12:00</span><div class="agenda-body"><h4>☕ Coffee break</h4></div></div>
+      <div class="agenda-row reveal"><span class="agenda-time">12:00–13:00</span><div class="agenda-body"><span class="agenda-tag">Mesa de debate</span><h4>Universidades que transforman</h4><p>Responsables de las Unidades de Igualdad de las universidades andaluzas: políticas institucionales, prevención de las violencias machistas y perspectiva de género en docencia e investigación. (Programa en actualización)</p></div></div>
+      <div class="agenda-row reveal agenda-click" role="button" tabindex="0" data-mesa-id="directoras"><span class="agenda-time">13:00–14:00</span><div class="agenda-body"><span class="agenda-tag">Mesa de debate</span><h4>Donde se decide la agenda. Mujeres al frente de los medios</h4><p>Lola Quero (Granada Hoy), María Victoria Cobo (IDEAL), Carmen María González (RTVA Granada) y Raquel Romero (TG7). Modera: Aránzazu Román San Miguel (Universidad de Sevilla).</p><span class="agenda-more">Ver participantes y bios →</span><div class="mesa-detail" hidden data-time="13:00–14:00 · Liderazgo informativo y editorial"><p class="mesa-lead">Cuatro directoras y responsables de los principales medios de Granada conversan sobre liderazgo, criterios editoriales, transformación digital y gestión de equipos en un contexto marcado por la inteligencia artificial, la desinformación y la evolución de los hábitos de consumo informativo. Una reflexión sobre el lugar donde cada día se decide qué historias se cuentan, cómo se cuentan y por qué son relevantes para la ciudadanía.</p><div class="mesa-people"><div class="mesa-group-label">Participan</div><div class="mesa-person"><span class="mesa-photo"><img src="assets/mesas/lola-quero.jpg" alt="Lola Quero" style="object-position:50% 22%"></span><div class="mesa-person-body"><h4>Lola Quero</h4><span class="mesa-role">Directora de Granada Hoy</span><p>Directora de Granada Hoy, donde ha desarrollado una larga y variada labor periodística desde los inicios del periódico hace ya 23 años, en áreas como tribunales, política o sociedad.</p><p>Licenciada en Ciencias de la Información por la Universidad de Sevilla, trabajó en radio, agencias de noticias y prensa en medios como La Vanguardia o El País, y ha desarrollado proyectos editoriales y de comunicación corporativa e institucional.</p><p>En 2024 fue incluida en la Lista Forbes de las 100 mujeres más influyentes de Andalucía por su labor en el equipo de dirección editorial de Grupo Joly, donde publica columnas semanales para sus diez cabeceras.</p></div></div><div class="mesa-person"><span class="mesa-photo"><img src="assets/mesas/mvictoria-cobo.webp" alt="María Victoria Cobo" style="object-position:50% 22%"></span><div class="mesa-person-body"><h4>María Victoria Cobo</h4><span class="mesa-role">Subdirectora de IDEAL</span><p>Licenciada en Periodismo por la Universidad de Málaga y máster en Periodismo Digital, con amplia formación audiovisual.</p><p>Desde 2003 ejerce en IDEAL, donde ha cubierto sucesos, información municipal y el seguimiento de grandes infraestructuras con un perfil multimedia. En 2017 pasó a coordinar la web y ha sido jefa de Local y jefa de Información. Desde 2024 es subdirectora del diario.</p><p>Ha formado parte de los equipos que han obtenido tres Premios Andalucía de Periodismo y ha coordinado la transformación digital de la redacción.</p></div></div><div class="mesa-person"><span class="mesa-photo"><img src="assets/mesas/carmen-gonzalez-rtva.jpg" alt="Carmen María González" style="object-position:72% 20%"></span><div class="mesa-person-body"><h4>Carmen María González</h4><span class="mesa-role">Directora Delegada Territorial de RTVA en Granada</span><p>Doctora en Comunicación por la Universidad de Granada, profesora asociada de esta universidad y directora delegada territorial de Radio Televisión Andaluza (RTVA) en Granada.</p><p>Periodista especializada en información televisiva, con más de veinticinco años de experiencia en medios públicos, entre ellos Televisión Española y Canal Sur.</p><p>Investiga la transformación del periodismo audiovisual, la participación de las audiencias, el contenido generado por los usuarios y el impacto de la inteligencia artificial en la producción, verificación y difusión de la información.</p></div></div><div class="mesa-person"><span class="mesa-photo"><img src="assets/mesas/raquel-romero.jpg" alt="Raquel Romero" style="object-position:55% 18%"></span><div class="mesa-person-body"><h4>Raquel Romero</h4><span class="mesa-role">Directora de TG7</span><p>Licenciada en Ciencias de la Comunicación (Periodismo) y máster en Periodismo por la Agencia EFE y la Universidad Rey Juan Carlos. Más de veinticinco años de experiencia en redacción, presentación, edición y dirección de contenidos en televisión, radio y agencias.</p><p>Dirige TG7, la televisión municipal de Granada, donde lidera la programación y la estrategia de contenidos, e impulsa La Placeta, magacín diario centrado en la actualidad local, la información social y la participación ciudadana.</p><p>Especializada en periodismo de proximidad, compagina la gestión de un medio público con una apuesta firme por una comunicación cercana, útil y comprometida con la sociedad.</p></div></div><div class="mesa-group-label">Modera</div><div class="mesa-person"><span class="mesa-photo"><img src="assets/mesas/aranzazu-roman.jpg" alt="Aránzazu Román San Miguel" style="object-position:50% 22%"></span><div class="mesa-person-body"><h4>Aránzazu Román San Miguel</h4><span class="mesa-role">Universidad de Sevilla</span><p>Profesora titular de Periodismo en la Universidad de Sevilla y directora del Máster en Periodismo de Datos e Inteligencia Artificial que imparte esta misma universidad.</p><p>Es responsable del grupo de investigación Estrategias de Comunicación.</p></div></div></div></div></div></div>
+      <div class="agenda-row reveal agenda-break"><span class="agenda-time">14:00–16:00</span><div class="agenda-body"><h4>Almuerzo</h4></div></div>
+      <div class="agenda-row reveal agenda-click" role="button" tabindex="0"><span class="agenda-time">16:00–18:00</span><div class="agenda-body"><span class="agenda-tag">Itinerario A · Lab GenderCom</span><h4>Liderazgos en plató: primer Manifiesto Transmedia de Liderazgo Feminista</h4><p>Podcast en directo conducido por Medialab UGR.</p><p class="agenda-note">20 plazas · requiere inscripción previa.</p><div class="agenda-links"><a class="agenda-cta" href="https://tally.so/r/Zj0YVA" target="_blank" rel="noopener" data-tally="Zj0YVA">Inscribirse →</a><a class="agenda-news" href="#noticias" data-news="news-manifiesto">Leer la noticia →</a></div><span class="agenda-more">Ver detalle y coordinación →</span><div class="mesa-detail" hidden data-time="16:00–18:00 · Itinerario A · Lab GenderCom"><p class="mesa-lead">Los congresos no solo sirven para compartir conocimiento, sino también para crearlo. El LAB GENDERCOM convierte las ideas surgidas durante el encuentro en una experiencia de cocreación audiovisual abierta a la ciudadanía. En este formato de podcast en directo, conducido por Medialab UGR, cuatro referentes de los ámbitos institucional, empresarial, social y del bienestar personal reaccionarán a las conclusiones del Manifiesto de Liderazgo Feminista elaborado durante el congreso: un relato vivo, multiplataforma y abierto al impacto social.</p><div class="mesa-people"><div class="mesa-group-label">Coordina</div><div class="mesa-person"><span class="mesa-photo"><img src="assets/mesas/sandra-haro.jpg" alt="Sandra Haro Márquez" style="object-position:50% 18%"></span><div class="mesa-person-body"><h4>Sandra Haro Márquez</h4><span class="mesa-role">Coordinadora de Medialab UGR</span><p>Politóloga y coordinadora del laboratorio de innovación de la Universidad de Granada (Medialab UGR). Su trayectoria se enmarca en el ámbito de los proyectos de innovación social, la participación ciudadana y la gobernanza pública.</p><p>Es formadora en el programa «Educación para la Igualdad» del Instituto de las Mujeres y divulgadora en Radiolab UGR.</p></div></div></div></div></div></div>
+      <div class="agenda-row reveal"><span class="agenda-time">16:00–18:00</span><div class="agenda-body"><span class="agenda-tag">Itinerario B · Investigación</span><h4>Presentación de comunicaciones (sesiones paralelas)</h4></div></div>
+      <div class="agenda-row reveal agenda-break"><span class="agenda-time">18:00–18:30</span><div class="agenda-body"><h4>☕ Coffee break</h4></div></div>
+      <div class="agenda-row reveal agenda-click" role="button" tabindex="0" data-mesa-id="reporteras"><span class="agenda-time">18:30–19:30</span><div class="agenda-body"><span class="agenda-tag">Liderazgo periodístico</span><h4>Contar desde el terreno. Liderazgo femenino en el periodismo televisivo</h4><p>Renata Rota (Mañaneros 360, TVE), Marta de la Chica (Telecinco, Noticias Cuatro y Trece TV), Ana Martín (Informativos Telecinco y Noticias Cuatro), Cecilia Cano (laSexta Noticias y Antena 3 Noticias) y Mónica Martínez (Andalucía Directo). Modera: Noelia Gómez Mira (DAZN).</p><span class="agenda-more">Ver participantes y bios →</span><div class="mesa-detail" hidden data-time="18:30–19:30 · Liderazgo periodístico"><p class="mesa-lead">La información en televisión exige inmediatez, capacidad de adaptación y un profundo compromiso con el rigor periodístico. Desde la cobertura diaria de la actualidad hasta la especialización deportiva, las reporteras afrontan el reto de explicar la realidad desde el lugar donde ocurre: en directo, bajo presión y en escenarios en constante cambio. Un encuentro sobre la evolución de la profesión, los nuevos perfiles que demanda el sector y los desafíos de las mujeres en un ámbito cada vez más diverso y multiplataforma.</p><div class="mesa-people"><div class="mesa-group-label">Participan</div><div class="mesa-person"><span class="mesa-photo"><img src="assets/mesas/renata-rota.jpg" alt="Renata Rota" style="object-position:50% 25%"></span><div class="mesa-person-body"><h4>Renata Rota</h4><span class="mesa-role">Mañaneros 360 · TVE</span><p>Estudió Periodismo en la Universidad de Málaga e hizo sus prácticas en Canal Sur Noticias. Con 23 años empezó en Informativos Telecinco haciendo vídeos y conexiones en directo: primero como reportera en Málaga, después en Algeciras y finalmente en Sevilla como coordinadora de fin de semana de Informativos Telecinco, Noticias Cuatro y Agencia Atlas en Andalucía.</p><p>En 2013 llegó a TVE como reportera de España Directo. Desde 2019 trabaja en los magacines de mañana de la cadena —La Mañana, La Hora de La 1 y actualmente Mañaneros 360— cubriendo sucesos y actualidad de Andalucía Oriental.</p></div></div><div class="mesa-person"><span class="mesa-photo"><img src="assets/mesas/marta-de-la-chica.jpg" alt="Marta de la Chica" style="object-position:42% 16%"></span><div class="mesa-person-body"><h4>Marta de la Chica</h4><span class="mesa-role">Telecinco · Noticias Cuatro · Trece TV</span><p>Periodista especializada en información de actualidad, graduada en Relaciones Internacionales por la Universidad Complutense de Madrid y con un Máster en Periodismo Televisivo.</p><p>Ha trabajado en diversos medios nacionales, entre ellos El Debate, Informativos Telecinco, Noticias Cuatro y Trece TV.</p></div></div><div class="mesa-person"><span class="mesa-photo"><img src="assets/mesas/ana-martin.jpg" alt="Ana Martín" style="object-position:45% 18%"></span><div class="mesa-person-body"><h4>Ana Martín</h4><span class="mesa-role">Informativos Telecinco · Noticias Cuatro</span><p>Redactora en Informativos Telecinco y Noticias Cuatro desde hace 16 años. Arrancó en Onda Cero, aunque lleva más de una década ligada a los servicios informativos de Mediaset.</p><p>Complementa su trabajo como docente en un Máster de Periodismo en Televisión y con la presentación de galas y eventos.</p></div></div><div class="mesa-person"><span class="mesa-photo"><img src="assets/mesas/cecilia-cano.jpg" alt="Cecilia Cano" style="object-position:50% 12%"></span><div class="mesa-person-body"><h4>Cecilia Cano</h4><span class="mesa-role">laSexta Noticias · Antena 3 Noticias</span><p>Reportera de laSexta Noticias y Antena 3 Noticias en Andalucía, donde cubre la actualidad política, social y cultural de la comunidad.</p><p>Licenciada en Ciencias de la Información por la Universidad de Salamanca, cuenta con más de veinte años de experiencia en televisión. Ha sido presentadora de informativos en Canal Extremadura y reportera de Andaluces por Europa en Canal Sur.</p></div></div><div class="mesa-person"><span class="mesa-photo"><img src="assets/mesas/monica-martinez.jpg" alt="Mónica Martínez" style="object-position:50% 14%"></span><div class="mesa-person-body"><h4>Mónica Martínez</h4><span class="mesa-role">Andalucía Directo · Canal Sur</span><p>Periodista y doctora en Periodismo por la Universidad de Sevilla. Trabaja en Canal Sur Radio y Televisión como reportera de Andalucía Directo, uno de los programas de referencia de la televisión pública andaluza.</p><p>Especializada en información de proximidad, ha dedicado su trayectoria a contar la actualidad, la cultura y las historias que definen el territorio, convirtiéndose en una de las voces más reconocibles del periodismo televisivo andaluz.</p></div></div><div class="mesa-group-label">Modera</div><div class="mesa-person"><span class="mesa-photo"><img src="assets/mesas/noelia-gomez.jpg" alt="Noelia Gómez Mira" style="object-position:55% 14%"></span><div class="mesa-person-body"><h4>Noelia Gómez Mira</h4><span class="mesa-role">DAZN · Presidenta de la AGPD</span><p>Periodista desde hace más de una década, especializada en baloncesto. Es uno de los rostros del baloncesto televisivo nacional como comentarista y pie de pista en DAZN cubriendo la Liga Endesa, además de colaboradora en Colgados del Aro y Radio Marca.</p><p>Graduada en Comunicación Audiovisual y máster en Nuevos Medios Interactivos y Periodismo Multimedia por la UGR, empezó cubriendo fútbol y polideportivo hasta llegar a jefa de sección de Local en Granada Hoy, labor que compaginó con ser speaker del Covirán Granada.</p><p>En 2022 asumió el rol de especialista de baloncesto en Relevo y desde diciembre de 2024 es presidenta de la Asociación Granadina de Periodistas Deportivos (AGPD).</p></div></div></div></div></div></div>
+      <div class="agenda-row reveal"><span class="agenda-time">20:00</span><div class="agenda-body"><span class="agenda-tag">Experiencias GenderCom</span><h4>Granada con perspectiva de género: paseo nocturno con Herstóricas</h4><p>Salida desde el Monumento a Boabdil (Paseo del Salón). Unas dos horas y 2 km por el Paseo del Violón, la Carrera de la Virgen y las plazas del Campillo y del Carmen. Accesible para personas con movilidad reducida. Con el patrocinio de Granada 2031.</p><p class="agenda-note">Plazas limitadas · requiere inscripción previa. Información de inscripción próximamente.</p><div class="agenda-links"><a class="agenda-news" href="#noticias" data-news="news-paseo">Leer la noticia →</a></div></div></div>
+      <div class="agenda-row reveal"><span class="agenda-time">21:30</span><div class="agenda-body"><span class="agenda-tag">Experiencias GenderCom</span><h4>Cena-networking en el Carmen de la Victoria</h4><p>Encuentro informal con vistas a la Alhambra para cerrar la jornada.</p><p class="agenda-note">Solo para congresistas que hayan contratado la opción networking en la inscripción. Es necesario confirmar asistencia e indicar alergias o necesidades alimentarias para organizar el servicio.</p></div></div>
+    </div>
+
+    <!-- Día 3 -->
+    <div class="agenda-day" data-day="d3">
+      <div class="agenda-row reveal agenda-click" role="button" tabindex="0"><span class="agenda-time">09:30–10:30</span><div class="agenda-body"><span class="agenda-tag">Encuentros GenderCom · U-CHASS</span><h4>Historia digital, comunicación y memoria de las mujeres</h4><p>Con Lidia Bocanegra, Ágata Ignaciuk y Elisa Roncone. Modera: Nicolás Robinson-García (U-CHASS).</p><span class="agenda-more">Ver moderación y bio →</span><div class="mesa-detail" hidden data-time="09:30–10:30 · Encuentros GenderCom · U-CHASS"><div class="mesa-people"><div class="mesa-group-label">Modera</div><div class="mesa-person"><span class="mesa-photo"><img src="assets/mesas/nicolas-robinson.jpg" alt="Nicolás Robinson-García" style="object-position:50% 30%"></span><div class="mesa-person-body"><h4>Nicolás Robinson-García</h4><span class="mesa-role">Director científico de U-CHASS · Universidad de Granada</span><p>Profesor titular especializado en bibliometría y evaluación de la investigación en la Universidad de Granada. Se interesa por comprender cómo la colaboración y la organización social configuran el funcionamiento de la ciencia, así como por la diversidad de trayectorias profesionales que siguen los científicos.</p><p>Es director científico de la Unidad de Humanidades y Ciencias Sociales Computacionales (U-CHASS) y miembro del grupo de investigación EC3. Asimismo, es coeditor de la revista <em>Research Evaluation</em> y miembro del consejo editorial de <em>Quantitative Science Studies</em>.</p></div></div></div></div></div></div>
+      <div class="agenda-row reveal"><span class="agenda-time">10:30–11:30</span><div class="agenda-body"><span class="agenda-tag">Encuentros GenderCom</span><h4>Manuel Sicilia — Cine para inspirar vocaciones científicas en las niñas</h4><p>Fundador de Rokyn Animation. Proyección del cortometraje <em>Estela</em>, Premio Carmen 2025 al Mejor Cortometraje de Animación, y diálogo con el público.</p><div class="agenda-links"><a class="agenda-news" href="#noticias" data-news="news-sicilia">Leer la noticia →</a></div></div></div>
+      <div class="agenda-row reveal agenda-break"><span class="agenda-time">11:30–12:00</span><div class="agenda-body"><h4>☕ Coffee break</h4></div></div>
+      <div class="agenda-row reveal agenda-click" role="button" tabindex="0"><span class="agenda-time">12:00–12:45</span><div class="agenda-body"><span class="agenda-tag">Encuentros GenderCom</span><h4>Paola Panarese — Gender and Power in the New Media Ecosystem: From Media Stereotypes to AI Bias</h4><p>Catedrática de Sociología de los Procesos Culturales y Comunicativos (Universidad Sapienza de Roma) y responsable científica de GeMMa – Gender and Media Matters.</p><span class="agenda-more">Ver perfil y bio →</span><div class="mesa-detail" hidden data-time="12:00–12:45 · Encuentros GenderCom"><div class="mesa-people"><div class="mesa-group-label">Interviene</div><div class="mesa-person"><span class="mesa-photo"><img src="assets/mesas/paola-panarese.jpg" alt="Paola Panarese" style="object-position:50% 12%"></span><div class="mesa-person-body"><h4>Paola Panarese</h4><span class="mesa-role">Catedrática de Sociología · Universidad Sapienza de Roma</span><p>Paola Panarese es catedrática de Sociología de los Procesos Culturales y Comunicativos en el Departamento de Comunicación e Investigación Social (CoRiS) de la Universidad Sapienza de Roma. Su investigación se desarrolla en el ámbito de los estudios de género y medios, la publicidad, las culturas juveniles y las tecnologías digitales, con especial atención a las representaciones y los sesgos de género en los ecosistemas contemporáneos de comunicación.</p><p>Es presidenta del Máster en <em>Gender Studies, Culture e politiche per i media e la comunicazione</em> y responsable científica de GeMMa – Gender and Media Matters, unidad de investigación especializada en género y medios. Ha coordinado asimismo IMAGES, proyecto PRIN-PNRR centrado en el análisis y la mitigación de los sesgos de género y étnicos en los sistemas de inteligencia artificial y <em>machine learning</em>.</p><p>Forma parte del Comité Científico de GENDERCOM 2026 y participa además en esta edición con dos contribuciones científicas sobre el reconocimiento de los sesgos de género en la inteligencia artificial y sobre la representación de las mujeres y la responsabilidad mediática en la prensa italiana.</p></div></div></div></div></div></div>
+      <div class="agenda-row reveal"><span class="agenda-time">12:45–13:15</span><div class="agenda-body"><span class="agenda-tag">Editorial</span><h4>Presentación de la Revista GENDERCOM y novedades editoriales</h4><p>Encuentro con el equipo de TECMERIN. Participa: Juan Carlos Suárez.</p></div></div>
+      <div class="agenda-row reveal"><span class="agenda-time">13:30–14:30</span><div class="agenda-body"><span class="agenda-tag">🏆 Premios GenderCom</span><h4>Ceremonia de entrega de los Premios GENDERCOM 2026</h4><p>Reconocimiento a proyectos e iniciativas por su contribución a la innovación, la transferencia y el liderazgo con perspectiva de género.</p></div></div>
+      <div class="agenda-row reveal"><span class="agenda-time">14:30</span><div class="agenda-body"><span class="agenda-tag">Clausura institucional</span><h4>Clausura institucional</h4></div></div>
+      <div class="agenda-row reveal"><span class="agenda-time">14:30–16:30</span><div class="agenda-body"><span class="agenda-tag">Experiencias GenderCom</span><h4>Cóctel de clausura</h4></div></div>
+    </div>
+
+    <p class="agenda-foot reveal">Programa sujeto a cambios · Actualizaciones en <a href="https://www.gendercom.org" target="_blank" rel="noopener">www.gendercom.org</a></p>
+  </div>
+</section>
+
+<!-- ============ INSCRIPCIONES ============ -->
+<section class="section dark" id="inscripciones" data-screen-label="Inscripciones">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow on-dark" data-index="07">Participa</span>
+      <h2>Inscripciones</h2>
+      <p>Elige la modalidad que mejor se ajusta a tu participación. Todas las inscripciones se gestionan en el área privada del congreso.</p>
+    </div>
+    <div class="tickets">
+      <div class="ticket reveal">
+        <span class="ticket-tag">Básica</span>
+        <div class="ticket-name">Inscripción Básica</div>
+        <div class="ticket-price"><span class="cur">€</span>150</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Presentación de una comunicación, libro o póster</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Participación online o presencial</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Publicación voluntaria en Intracom Editorial</li>
+        </ul>
+        <a href="https://areaprivada.portalintracom.com/inscripcion-previa-gendercom26" target="_blank" rel="noopener" class="btn btn-ghost on-dark">Quiero exponer</a>
+      </div>
+      <div class="ticket reveal" data-d="1">
+        <span class="ticket-tag">Networking</span>
+        <div class="ticket-name">Inscripción con Networking</div>
+        <div class="ticket-price">€
+200</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Todos los derechos de la inscripción básica</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Cena de trabajo con otros participantes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Participación presencial</li>
+        </ul>
+        <a href="https://areaprivada.portalintracom.com/inscripcion-previa-gendercom26" target="_blank" rel="noopener" class="btn btn-ghost on-dark">Quiero exponer</a>
+      </div>
+      <div class="ticket featured reveal" data-d="2">
+        <span class="ticket-tag">Más popular</span>
+        <div class="ticket-name">Inscripción + Publicación</div>
+        <div class="ticket-price"><span class="cur">€</span>250</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Para el primer firmante de cada propuesta</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Evaluación y publicación en editorial SPI</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Tirant lo Blanch · Dykinson · Intracom</li>
+        </ul>
+        <a href="https://areaprivada.portalintracom.com/inscripcion-previa-gendercom26" target="_blank" rel="noopener" class="btn btn-light">Quiero exponer</a>
+      </div>
+      <div class="ticket reveal" data-d="3">
+        <span class="ticket-tag">Completa</span>
+        <div class="ticket-name">Inscripción Completa</div>
+        <div class="ticket-price">€
+290</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Para primeros firmantes presenciales</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Opción networking incluida</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Opción de publicación en editorial SPI</li>
+        </ul>
+        <a href="https://areaprivada.portalintracom.com/inscripcion-previa-gendercom26" target="_blank" rel="noopener" class="btn btn-ghost on-dark">Quiero exponer</a>
+      </div>
+    </div>
+
+    <div class="listeners reveal">
+      <div class="listener-item"><h4>Oyente</h4><span style="color:var(--text-ondark-soft);font-size:14px">Sin derecho a presentación</span><span class="price">100€</span></div>
+      <div class="listener-item"><h4>Oyente UGR</h4><span style="color:var(--text-ondark-soft);font-size:14px">Universidad de Granada</span><span class="price">30€</span></div>
+      <a href="https://areaprivada.portalintracom.com/inscripcion-asistente-gendercom26" target="_blank" rel="noopener" class="btn btn-ghost on-dark">Asistir como oyente</a>
+    </div>
+
+    <div class="fares-static reveal">
+      <div class="fares-title">Modalidades bonificadas (iberoamericanas y doctorandos)</div>
+      <div class="fares-body">
+        <div class="fare-row"><span>Presentación de comunicación científica</span><strong>80€</strong></div>
+        <div class="fare-row"><span>Comunicación + publicación SPI</span><strong>170€</strong></div>
+      </div>
+      <p class="fares-note">Aplicable a investigadores/as de universidades iberoamericanas y en periodo de formación doctoral, con documento acreditativo en vigor. La bonificación se mantiene tanto para la participación online como para quienes asistan presencialmente a Granada.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ALOJAMIENTO ============ -->
+<section class="section" id="alojamiento" data-screen-label="Alojamiento">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-index="08">Dónde dormir</span>
+      <h2>Alojamiento con tarifa de congreso</h2>
+      <p>Establecimientos de Granada con condiciones especiales para participantes en GENDERCOM 2026. Las reservas se realizan directamente con cada hotel y están sujetas a disponibilidad.</p>
+    </div>
+    <div class="alo">
+      <div class="alo-row reveal">
+        <h3>Residencia Student Experience</h3>
+        <p class="alo-deal">Individual <b>55 €</b> · doble matrimonio <b>75 €</b>/noche. Desayuno, parking y late check-out (14:00) incluidos. Estancias del 7 al 11 de octubre.</p>
+        <div class="alo-side">
+          <span class="alo-code">GENDERCOM26</span>
+          <a class="alo-link" href="https://shortstay.studentexperience.com/" target="_blank" rel="noopener">Reservar →</a>
+        </div>
+      </div>
+      <div class="alo-row reveal">
+        <h3>Gran Hotel Luna de Granada</h3>
+        <p class="alo-deal"><b>10 %</b> de descuento sobre la mejor tarifa disponible.</p>
+        <div class="alo-side">
+          <span class="alo-code">GENDERCOM26</span>
+          <a class="alo-link" href="https://www.delunahotels.com/" target="_blank" rel="noopener">Reservar →</a>
+        </div>
+      </div>
+      <div class="alo-row reveal">
+        <h3>Vincci Albayzín 4*</h3>
+        <p class="alo-deal"><b>15 %</b> de descuento sobre la tarifa web. Fechas habilitadas: 6–10 de octubre. Tarifas dinámicas, sin cupo reservado.</p>
+        <div class="alo-side">
+          <span class="alo-code">GENDERCOM2026</span>
+          <a class="alo-link" href="https://www.vinccihoteles.com/?cp=GENDERCOM2026" target="_blank" rel="noopener">Reservar →</a>
+        </div>
+      </div>
+      <div class="alo-row reveal">
+        <h3>Eurostars San Antón</h3>
+        <p class="alo-deal"><b>12 %</b> sobre la tarifa publicada. Cupo de 50 habitaciones diarias; código válido hasta el 23 de septiembre.</p>
+        <div class="alo-side">
+          <span class="alo-code">GENDERCOM</span>
+          <a class="alo-link" href="https://www.eurostarshotels.com/eurostars-san-anton.html?promotion_code=ISMEC2025" target="_blank" rel="noopener">Reservar →</a>
+        </div>
+      </div>
+      <div class="alo-row reveal">
+        <h3>Hotel Granada Center / Andalucía Center</h3>
+        <p class="alo-deal">Tarifa especial para asistentes. Introduce el código en la 4.ª casilla del formulario de reserva.</p>
+        <div class="alo-side">
+          <span class="alo-code">GENDERCOM</span>
+          <a class="alo-link" href="https://www.hotelescenter.es/hotel-granada-center/" target="_blank" rel="noopener">Reservar →</a>
+        </div>
+      </div>
+      <div class="alo-row reveal">
+        <h3>Catalonia Granada 4*</h3>
+        <p class="alo-deal">Solo noche del 8 de octubre confirmada. DUI <b>125 €</b> · doble <b>145 €</b>, IVA y desayuno incluidos. Parking 16 €/día, gimnasio 24 h gratuito.</p>
+        <div class="alo-side">
+          <span class="alo-code">Indicar «GENDERCOM»</span>
+          <span class="alo-link" style="color:var(--text-soft)">Reserva por email</span>
+        </div>
+      </div>
+      <div class="alo-row reveal">
+        <h3>Casa Castelo Stays</h3>
+        <p class="alo-deal"><b>10 %</b> de descuento en cápsulas matrimoniales. Solo alojamiento, sin desayuno.</p>
+        <div class="alo-side">
+          <span class="alo-code">GENDERCOM10</span>
+          <a class="alo-link" href="https://us2.cloudbeds.com/es-es/reservation/yMQ3yM?currency=eur" target="_blank" rel="noopener">Reservar →</a>
+        </div>
+      </div>
+    </div>
+    <p class="alo-note">La organización facilita estas condiciones como servicio a las personas participantes, pero no gestiona las reservas: disponibilidad, cancelación y pago corresponden a cada establecimiento.</p>
+  </div>
+</section>
+
+<!-- ============ PUBLICACIONES ============ -->
+<section class="section mist" id="publicaciones" data-screen-label="Publicaciones">
+  <div class="container pub-grid">
+    <div class="reveal">
+      <span class="eyebrow" data-index="09">Difunde tu investigación</span>
+      <h2 style="font-family:var(--display);font-weight:800;font-size:clamp(2.4rem,6vw,4.6rem);line-height:.96;letter-spacing:-0.03em;margin-top:22px">Publicaciones</h2>
+      <p style="margin-top:22px;color:var(--text-soft);font-size:1.1rem;max-width:48ch">Los trabajos presentados podrán publicarse, tras revisión por pares ciegos, en editoriales como Tirant lo Blanch o Dykinson, en la colección de Estudios de Género de Intracom Editorial o en revistas científicas colaboradoras.</p>
+      <p style="margin-top:18px;color:var(--text-soft)"><strong style="color:var(--magenta)">Textos completos al email:</strong> gendercompublicaciones@gmail.com</p>
+    </div>
+    <div class="pub-logos">
+      <div class="pub-logo reveal"><div class="logo-wrap"><img src="assets/img/tirant-lo-blanch-logo-se.webp" alt="Tirant lo Blanch" loading="lazy"></div><div><h4>Tirant lo Blanch</h4><span>Editorial indexada en el Ranking SPI</span></div></div>
+      <div class="pub-logo reveal" data-d="1"><div class="logo-wrap"><img src="assets/img/logo-dykinson-300x200-1.png" alt="Dykinson" loading="lazy"></div><div><h4>Dykinson</h4><span>Editorial académica indexada SPI</span></div></div>
+      <div class="pub-logo reveal" data-d="2"><div class="logo-wrap"><img src="assets/img/pageHeaderLogoImage_es.jpg" alt="Intracom Editorial" loading="lazy"></div><div><h4>Intracom Editorial</h4><span>Colección de Estudios de Género</span></div></div>
+    </div>
+  </div>
+
+  <div class="container" style="margin-top:clamp(40px,5vw,72px)">
+    <div class="pub-appendix reveal">
+      <span class="pub-appendix-tag">Monográfico especial · destacado</span>
+      <h3 class="pub-appendix-title">TECMERIN Nº18 <span>(Noviembre–Diciembre 2026)</span></h3>
+      <p class="pub-appendix-lead">Ecofeminismos y liderazgo sostenible en el audiovisual contemporáneo.</p>
+      <p class="pub-appendix-note">Las comunicaciones presentadas en GENDERCOM tendrán la oportunidad de formar parte de este número especial.</p>
+      <a href="https://tecmerin.uc3m.es/cfp-18/" target="_blank" rel="noopener" class="btn btn-primary pub-appendix-cta">Accede para consultar el CFP
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PREMIOS GENDERCOM ============ -->
+<section class="section" id="premios" data-screen-label="Premios">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-index="10">Reconocimiento al talento</span>
+      <h2>Premios GenderCom 26</h2>
+      <p>La Facultad de Comunicación y Documentación de la Universidad de Granada convoca los Premios GenderCom 2026 para fomentar y visibilizar la excelencia académica, la innovación comunicativa y la transferencia de conocimiento con perspectiva de género. Concurrencia competitiva · dotación total de 1.500 €.</p>
+    </div>
+
+    <div class="premios-grid">
+      <div class="premio-card reveal">
+        <span class="premio-letter">Modalidad A</span>
+        <h3>Emprendimiento y Liderazgo con Perspectiva de Género</h3>
+        <p class="premio-funder">Financiado por UGR Emprendedora. Iniciativas profesionales, innovación social, comunicación aplicada y modelos de transferencia con perspectiva de género.</p>
+        <div class="premio-dotacion">
+          <div class="premio-prize"><span>Primer premio</span><strong>300 €</strong></div>
+          <div class="premio-prize"><span>Segundo premio</span><strong>150 €</strong></div>
+          <div class="premio-prize"><span>Tercer premio</span><strong>50 €</strong></div>
+          <div class="premio-prize premio-total"><span>Total modalidad</span><strong>500 €</strong></div>
+        </div>
+      </div>
+      <div class="premio-card reveal" data-d="1">
+        <span class="premio-letter">Modalidad B</span>
+        <h3>MediaLab / Innovación en Comunicación</h3>
+        <p class="premio-funder">Financiado por Innovación Social-MediaLAB (UGR). Formatos audiovisuales, videoensayos, proyectos transmedia, propuestas digitales y narrativas emergentes.</p>
+        <div class="premio-dotacion">
+          <div class="premio-prize"><span>Primer premio</span><strong>300 €</strong></div>
+          <div class="premio-prize"><span>Segundo premio</span><strong>150 €</strong></div>
+          <div class="premio-prize"><span>Tercer premio</span><strong>50 €</strong></div>
+          <div class="premio-prize premio-total"><span>Total modalidad</span><strong>500 €</strong></div>
+        </div>
+      </div>
+      <div class="premio-card reveal" data-d="2">
+        <span class="premio-letter">Modalidad C</span>
+        <h3>Escuela Internacional de Doctorado</h3>
+        <p class="premio-funder">Financiado por la Escuela Internacional de Posgrado / Doctorado (UGR). Investigaciones doctorales, comunicaciones científicas, pósters y trabajos metodológicos.</p>
+        <div class="premio-dotacion">
+          <div class="premio-prize"><span>Primer premio</span><strong>300 €</strong></div>
+          <div class="premio-prize"><span>Segundo premio</span><strong>150 €</strong></div>
+          <div class="premio-prize"><span>Tercer premio</span><strong>50 €</strong></div>
+          <div class="premio-prize premio-total"><span>Total modalidad</span><strong>500 €</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="premios-extra reveal">
+      <span class="premios-extra-label">Reconocimientos especiales sin dotación económica</span>
+      <div class="premios-chips">
+        <span class="premio-chip">Premio del Público GenderCom 2026</span>
+        <span class="premio-chip">Mención al Impacto Social y Transferencia</span>
+        <span class="premio-chip">Mención a la Innovación Digital</span>
+        <span class="premio-chip">Mención Especial Doctorado GenderCom</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="margin-top:clamp(40px,5vw,72px)">
+    <div class="pub-appendix reveal">
+      <span class="pub-appendix-tag">Convocatoria abierta · GenderCom 2026</span>
+      <h3 class="pub-appendix-title">Consulta las bases completas</h3>
+      <p class="pub-appendix-lead">Modalidades, requisitos, criterios de evaluación y procedimiento de concesión.</p>
+      <p class="pub-appendix-note">Bases reguladoras completas: modalidades y dotación, requisitos, documentación, jurado, criterios de evaluación y plazos. Para optar a los premios, el texto completo del trabajo deberá enviarse antes del 30 de septiembre al correo <a href="mailto:info@intracom.es" style="color:#fff;text-decoration:underline">info@intracom.es</a>.</p>
+      <a href="#bases" class="btn btn-primary pub-appendix-cta">Leer las bases reguladoras
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NOVEDADES ============ -->
+<section class="section" id="noticias" aria-label="Novedades">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-index="11">Novedades</span>
+      <h2>Últimas noticias</h2>
+    </div>
+    <div class="news-grid">
+      <article class="news-card reveal" id="news-desinfo" role="button" tabindex="0" aria-haspopup="dialog">
+        <img class="news-thumb" src="assets/img/tiro-medio-mujer-que-trabaja-en-la-computadora-portatil_resultado.webp" alt="" loading="lazy">
+        <div class="news-body">
+          <span class="news-date">28 sep 2026</span>
+          <h3>Del bulo a la verificación: GENDERCOM analiza la desinformación con sesgo de género</h3>
+          <span class="news-link">Leer más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+        <template class="news-full"><p><strong>La conferencia inaugural de Ramón Salaverría dará paso a una mesa con Marilín Gonzalo, de Newtral, y Ximena Villagrán, de Maldita.es, moderada por Zoraida Callejas</strong></p><p><strong>De los bulos que utilizan la identidad para alimentar la polarización a los desafíos que plantea la inteligencia artificial para la verificación informativa. GENDERCOM GRX2026 dedicará la mañana inaugural de su programación presencial a analizar la desinformación desde una perspectiva académica, profesional y tecnológica, con especial atención a los sesgos de género y los discursos de odio.</strong></p><p>El catedrático de Periodismo y coordinador del observatorio europeo IBERIFIER, Ramón Salaverría, abrirá el congreso el miércoles 7 de octubre con la conferencia “Cómo opera la desinformación identitaria en Europa”. A continuación, Newtral y Maldita.es protagonizarán la mesa «Desinformación con sesgo de género: verificación, IA y discursos de odio», moderada por la directora de la Cátedra RTVE-UGR, Zoraida Callejas.</p><p>La jornada reunirá así en la Facultad de Comunicación y Documentación de la Universidad de Granada a especialistas en investigación, verificación, alfabetización mediática, gestión de medios e inteligencia artificial. El objetivo es avanzar desde el análisis de los mecanismos que utilizan los bulos para generar división social hasta las estrategias profesionales y tecnológicas necesarias para detectarlos, verificarlos y reducir su impacto.</p><h4>Los bulos identitarios como herramienta de polarización</h4><p>La conferencia inaugural de Ramón Salaverría, programada a las 10:00 horas, abordará cómo determinados contenidos manipulados explotan cuestiones relacionadas con el género, el origen, la religión, la cultura o la pertenencia nacional para reforzar prejuicios y alimentar la confrontación en las democracias europeas.</p><p>Su intervención se enmarca en los trabajos desarrollados por IBERIFIER, el observatorio ibérico de medios digitales integrado en EDMO, el Observatorio Europeo de Medios Digitales impulsado por la Comisión Europea. Esta iniciativa investiga la evolución de la desinformación en España y Portugal y promueve la verificación de contenidos, la investigación académica y la alfabetización mediática.</p><p>Considerado una de las principales referencias internacionales en periodismo digital, Salaverría es catedrático de la Universidad de Navarra, miembro de la Academia Europaea y autor de destacadas investigaciones sobre transformación digital de los medios y desinformación. Su conferencia situará el punto de partida de una mañana dedicada a examinar la relación entre manipulación informativa, identidades colectivas, discursos de odio y polarización social.</p><h4>Newtral y Maldita.es: la verificación desde la práctica profesional</h4><p>A las 11:00 horas comenzará la mesa “Desinformación con sesgo de género: verificación, IA y discursos de odio”, que contará con Marilín Gonzalo, responsable de Políticas Públicas de Newtral, y Ximena Villagrán, directora de Operaciones de Maldita.es.</p><p>La conversación abordará cómo los sesgos de género pueden condicionar la creación, circulación y recepción de contenidos desinformativos; de qué manera se utilizan narrativas relacionadas con la igualdad, el feminismo o las identidades para generar rechazo y polarización; y qué respuestas pueden ofrecer el periodismo de verificación, la alfabetización mediática y la innovación tecnológica.</p><p>La irrupción de la inteligencia artificial generativa introduce además nuevos desafíos para las organizaciones de fact-checking. La producción de imágenes, voces, vídeos y textos sintéticos obliga a desarrollar herramientas y protocolos capaces de identificar contenidos manipulados, acreditar su origen y explicar los procesos de verificación de manera comprensible para la ciudadanía.</p><p>Marilín Gonzalo cuenta con veinte años de experiencia en puestos de dirección editorial y de producto en medios como Newtral, elDiario.es y VozPópuli. Actualmente es responsable de Políticas Públicas en Newtral, donde lidera iniciativas sobre integridad informativa, verificación y alfabetización mediática y coordina proyectos europeos destinados a reforzar la resiliencia social frente a la desinformación.</p><p>Su trayectoria combina la innovación periodística con la defensa de un periodismo independiente y comprometido con el interés público. Fue una de las impulsoras de #LasPeriodistasParamos, movimiento que visibilizó la desigualdad de género en los medios de comunicación españoles. Este compromiso ha sido reconocido con el Premio Feminista Revelación de la Federación de Mujeres Progresistas, el Premio Compromiso con la Igualdad del Instituto de la Mujer y una Mención de Honor de la Asociación de la Prensa de Sevilla.</p><p>Ximena Villagrán es directora de Operaciones de Maldita.es y periodista especializada en gestión de medios, periodismo de investigación y datos. Cuenta con una certificación en gestión de producto periodístico de News Product Alliance y fue becaria del International Center for Journalists dentro de un programa del Departamento de Estado de Estados Unidos.</p><p>Antes de incorporarse a Maldita.es fue directora ejecutiva de El Intercambio, productora especializada en periodismo de datos en Centroamérica. Su experiencia permitirá incorporar al encuentro la perspectiva de la gestión de organizaciones periodísticas dedicadas a la verificación y de los proyectos de investigación y datos orientados a combatir la desinformación.</p><h4>La inteligencia artificial aplicada a la verificación</h4><p>La mesa estará moderada por Zoraida Callejas, profesora e investigadora de la Universidad de Granada y directora de la Cátedra RTVE-UGR en Inteligencia Artificial Conversacional y sus aplicaciones en el ámbito de los medios de comunicación.</p><p>Especialista en sistemas de diálogo, inteligencia artificial conversacional y tecnologías del habla y del lenguaje, Callejas cuenta con una amplia trayectoria en proyectos nacionales y europeos sobre interacción entre personas y máquinas. Desde la Cátedra RTVE-UGR trabaja en ámbitos como la generación de contenidos accesibles, las voces sintéticas, la detección de suplantaciones de voz y la aplicación de la inteligencia artificial a la verificación de noticias.</p><p>Su participación permitirá conectar la experiencia periodística de Newtral y Maldita.es con los retos tecnológicos que plantean los contenidos sintéticos y manipulados, así como con la necesidad de garantizar el rigor, la trazabilidad y la transparencia en el uso de la inteligencia artificial.</p><h4>Verificar para proteger la conversación democrática</h4><p>Con este bloque inaugural, GENDERCOM plantea la verificación informativa como una cuestión estrechamente vinculada a la igualdad y a la calidad democrática. La desinformación no afecta de la misma manera a todas las personas ni se distribuye de forma neutral: puede aprovechar desigualdades previas, reforzar estereotipos y convertir determinadas identidades y derechos en instrumentos de confrontación.</p><p>La conferencia de Salaverría y la mesa con Newtral y Maldita.es ofrecerán dos perspectivas complementarias sobre este fenómeno: la investigación de las dinámicas de desinformación y polarización en Europa y el trabajo desarrollado desde las organizaciones de verificación para detectar contenidos falsos, contextualizarlos y proporcionar herramientas críticas a la ciudadanía.</p><p>El XII Congreso Internacional de Género y Comunicación se celebrará del 7 al 9 de octubre en la Facultad de Comunicación y Documentación de la Universidad de Granada. Su programa combinará investigación académica, debates profesionales y experiencias de transferencia en torno a la comunicación sostenible, la igualdad, la inteligencia artificial y los nuevos liderazgos.</p><p>Toda la información y las actualizaciones del programa pueden consultarse en <a href="https://www.gendercom.org" target="_blank" rel="noopener">www.gendercom.org</a>.</p></template>
+      </article>
+      <article class="news-card reveal" id="news-google" role="button" tabindex="0" aria-haspopup="dialog">
+        <img class="news-thumb" src="assets/mesas/luis-collado-2.jpg" alt="" loading="lazy" style="object-position:50% 16%">
+        <div class="news-body">
+          <span class="news-date">28 sep 2026</span>
+          <h3>Google lleva a GENDERCOM el debate sobre el futuro del periodismo ante el avance de la inteligencia artificial</h3>
+          <span class="news-link">Leer más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+        <template class="news-full"><p><strong>Luis Collado, Senior Manager News de Google España, abordará en Granada los nuevos modelos de negocio y la relación entre medios, plataformas y audiencias</strong></p><p><strong>El periodista Javier Barrera, fundador de 1001 Medios, presentará un encuentro sobre innovación, IA y sostenibilidad del ecosistema informativo</strong></p><p>La inteligencia artificial está acelerando una transformación que afecta no solo a la forma de producir y consumir información, sino también a la relación entre medios, plataformas y audiencias y a los propios modelos de negocio sobre los que se sostiene el periodismo. Luis Collado, Senior Manager News de Google España, abordará estos desafíos en GENDERCOM 2026 en el encuentro «El futuro del periodismo: innovación, IA y sostenibilidad».</p><p>La sesión se celebrará el jueves 8 de octubre, de 9.00 a 9.45 horas, en la Facultad de Comunicación y Documentación de la Universidad de Granada. El encuentro será presentado por Javier Barrera, periodista de IDEAL y fundador de 1001 Medios, y permitirá abordar desde la experiencia profesional algunos de los principales interrogantes que plantea la transformación actual del sector.</p><p>Collado cuenta con más de veinte años de trayectoria vinculada a la industria editorial. Antes de incorporarse a Google fue director general de División y posteriormente director de Promoción y Marketing de McGraw-Hill España. Actualmente trabaja desde Google con editores de prensa, revistas y medios nativos digitales en sus procesos de transformación y adaptación tecnológica.</p><p>Su participación llevará así a GENDERCOM uno de los debates centrales para el futuro de la comunicación: cómo aprovechar las posibilidades de la innovación y la inteligencia artificial en un momento en el que la viabilidad económica, la calidad de la información y la sostenibilidad del periodismo están más estrechamente relacionadas que nunca.</p><p>El encuentro forma parte de la XII edición de GENDERCOM, que se celebra en Granada bajo el lema «Comunicación sostenible y liderazgo con mirada de género» y reúne a profesionales e investigadores para analizar las transformaciones que están redefiniendo el ecosistema de la comunicación.</p><p>Toda la información y las actualizaciones del programa pueden consultarse en <a href="https://www.gendercom.org" target="_blank" rel="noopener">www.gendercom.org</a></p></template>
+      </article>
+      <article class="news-card reveal" id="news-dircom" role="button" tabindex="0" aria-haspopup="dialog">
+        <img class="news-thumb" src="assets/mesas/nieves-rey.png" alt="" loading="lazy" style="object-position:45% 20%">
+        <div class="news-body">
+          <span class="news-date">28 sep 2026</span>
+          <h3>GENDERCOM reúne en Granada a la dirección de Dircom para abordar el nuevo papel estratégico de la comunicación en las organizaciones</h3>
+          <span class="news-link">Leer más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+        <template class="news-full"><p><strong>Nieves Rey y Santiago Alfonso analizarán cómo la reputación, el propósito y la sostenibilidad han situado la comunicación en el centro de la toma de decisiones</strong></p><p><strong>Paco Torres, jefe de prensa del Ayuntamiento de Granada, presentará y moderará el encuentro, que se celebrará el jueves 8 de octubre</strong></p><p>La reputación de una organización puede tardar años en construirse y ponerse en cuestión en cuestión de horas. En un escenario marcado por la polarización, la desinformación, la inteligencia artificial y una creciente exigencia social hacia empresas e instituciones, la comunicación ha dejado de limitarse a contar lo que hacen las organizaciones para participar cada vez más en las decisiones sobre lo que son, cómo actúan y cómo responden ante una crisis.</p><p>Este cambio será el punto de partida de «Liderar desde la comunicación: reputación, propósito y transformación», la mesa que GENDERCOM 2026 dedicará el jueves 8 de octubre a la comunicación corporativa. El encuentro reunirá a Nieves Rey Hernández, directora general de Dircom, y Santiago Alfonso Rodríguez, presidente de Dircom Andalucía y vicepresidente de Relaciones Institucionales y Reputación Corporativa de Grupo Cosentino.</p><p>La sesión estará presentada y moderada por Paco Torres, jefe de prensa del Ayuntamiento de Granada, y pondrá sobre la mesa algunos de los desafíos que están redefiniendo el trabajo de los responsables de comunicación: cómo se construye y protege la reputación en un entorno de exposición permanente, qué papel desempeña la comunicación ante una crisis, hasta dónde debe llegar el propósito corporativo o por qué la sostenibilidad ha pasado de ser un ámbito especializado a formar parte de la estrategia de las organizaciones.</p><h4>Comunicación y liderazgo</h4><p>La mesa permitirá confrontar dos perspectivas complementarias. Desde Dircom, Nieves Rey aportará una visión transversal sobre la evolución de la comunicación corporativa y el creciente peso de sus profesionales en la alta dirección. Cuenta con más de 25 años de experiencia en comunicación, marketing, reputación y sostenibilidad y, antes de asumir la dirección general de Dircom, desarrolló buena parte de su trayectoria en Ecoembes, donde fue directora de Comunicación y Marketing y lideró estrategias de marca, comunicación externa e interna, gestión de crisis, medición de la reputación y equipos de más de 20 profesionales. En 2025 recibió el Premio Especial Dircom Ramón del Corral.</p><p>Su participación permitirá incorporar también al debate la cuestión del liderazgo femenino en un ámbito profesional en el que las mujeres tienen una presencia muy relevante, pero en el que continúa siendo necesario analizar su acceso efectivo a los espacios de máxima responsabilidad y decisión. Una reflexión especialmente vinculada al eje de GENDERCOM 2026 sobre comunicación sostenible y liderazgo con mirada de género.</p><p>Santiago Alfonso aportará la perspectiva empresarial desde Grupo Cosentino, compañía andaluza con presencia internacional en la que ejerce como vicepresidente de Relaciones Institucionales y Reputación Corporativa. Con más de tres décadas de trayectoria en el grupo, ha desarrollado responsabilidades vinculadas al comercio exterior, el marketing y la comunicación corporativa y forma parte de la dirección de la compañía.</p><p>Desde 2026 preside además Dircom Andalucía, después de haber ejercido durante varios años como vocal de la organización. Su experiencia permitirá abordar cómo se gestiona la reputación de una compañía desde Andalucía en un mercado global y cómo cuestiones como la sostenibilidad, el propósito, la relación con los grupos de interés y la confianza condicionan hoy la estrategia corporativa.</p><h4>La comunicación como parte de la decisión</h4><p>El encuentro parte así de una cuestión que atraviesa buena parte de los debates de GENDERCOM 2026: qué significa liderar desde la comunicación cuando las organizaciones están sometidas a un escrutinio público prácticamente permanente. Frente a una concepción de la comunicación centrada únicamente en transmitir decisiones ya adoptadas, la mesa abordará su incorporación a los procesos en los que esas decisiones se definen y se evalúan sus posibles consecuencias reputacionales y sociales.</p><p>La sesión «Liderar desde la comunicación: reputación, propósito y transformación» se celebrará el jueves 8 de octubre, de 10.30 a 11.30 horas, dentro de la programación de GENDERCOM 2026 en la Facultad de Comunicación.</p><p>GENDERCOM celebra en Granada su XII edición bajo el lema «Comunicación sostenible y liderazgo con mirada de género», con un programa internacional que reúne a profesionales, investigadores y responsables de organizaciones para analizar algunos de los principales desafíos que afrontan actualmente la comunicación y el liderazgo.</p><p>Toda la información y las actualizaciones del programa pueden consultarse en <a href="https://www.gendercom.org" target="_blank" rel="noopener">www.gendercom.org</a></p></template>
+      </article>
+      <article class="news-card reveal" id="news-sicilia" role="button" tabindex="0" aria-haspopup="dialog">
+        <img class="news-thumb" src="assets/img/sede-fachada.jpg" alt="" loading="lazy">
+        <div class="news-body">
+          <span class="news-date">28 sep 2026</span>
+          <h3>Manuel Sicilia lleva a GENDERCOM el cine de animación como herramienta para impulsar vocaciones científicas entre las niñas</h3>
+          <span class="news-link">Leer más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+        <template class="news-full"><p><strong>El cineasta granadino proyectará Estela, Premio Carmen al Mejor Cortometraje de Animación, y dialogará con el público sobre ciencia, igualdad y nuevas narrativas</strong></p><p><strong>El fundador de Rokyn Animation, estudio responsable también de Elvira y el Tesoro para Granada 2031, protagonizará además la cata de cine y vino del congreso</strong></p><p>¿Puede una película de animación contribuir a que una niña se imagine a sí misma como científica? GENDERCOM 2026 llevará esta pregunta a la pantalla de la mano del cineasta granadino Manuel Sicilia, que participará el viernes 9 de octubre en el encuentro «Cine para inspirar vocaciones científicas en las niñas», con la proyección de su cortometraje Estela y un posterior diálogo con el público.</p><p>Escrita y dirigida por Sicilia y producida por Rokyn Animation y Grupo ADM, Estela cuenta la historia de una niña curiosa y decidida que sueña desde pequeña con viajar al espacio. Su vida transcurre en paralelo al desarrollo de un gran proyecto científico inspirado en IFMIF-DONES, la infraestructura internacional de investigación sobre energía de fusión que se desarrolla en Escúzar. La película conecta así ciencia y ficción para acercar la investigación a las nuevas generaciones y, especialmente, fomentar las vocaciones científicas entre las niñas.</p><p>El cortometraje llega a GENDERCOM después de un importante recorrido. Ganó el Premio Carmen 2025 al Mejor Cortometraje de Animación y posteriormente obtuvo, entre otros reconocimientos, el Augusto al Mejor Cortometraje Internacional de Animación del Festival de Cine de Zaragoza, el premio al Mejor Cortometraje de la sección Animant de K-Lidoscopi y el Premio al Mejor Cortometraje Nacional IES Pablo Neruda del Festival de Cine Iberoamericano de Huelva. El ICAA le concedió además los distintivos de película especialmente recomendada para la infancia y para el fomento de la igualdad de género.</p><h4>Un referente de la animación desde Granada</h4><p>Director, productor y guionista, Manuel Sicilia es una de las figuras destacadas de la animación española. Codirigió El lince perdido, ganadora del Goya a la Mejor Película de Animación en 2009, y dirigió Justin y la espada del valor, reconocida posteriormente con el Premio Forqué a la Mejor Película de Animación. Actualmente está al frente del estudio granadino Rokyn Animation.</p><p>Su trabajo está también estrechamente ligado a uno de los grandes proyectos culturales que afronta actualmente la ciudad. Sicilia ha escrito y dirigido para Rokyn Animation Elvira y el Tesoro, cortometraje concebido como pieza estratégica de apoyo a la candidatura de Granada a Capital Europea de la Cultura 2031. Estrenada este año en el Teatro Isabel la Católica, la película utiliza la animación para construir un relato sobre la ciudad, su identidad y sus posibilidades de transformación a través de la cultura.</p><h4>Del cine a los sentidos</h4><p>La presencia de Manuel Sicilia en GENDERCOM tendrá además una segunda dimensión. El cineasta será el encargado de conducir la cata de cine y vino que el congreso celebrará en el Hotel Palacio de Santa Paula, una propuesta que trasladará la reflexión sobre las narrativas audiovisuales a un formato más experiencial, relacionando películas, relatos y vinos desde una perspectiva de comunicación e igualdad.</p><p>El encuentro con Estela se celebrará el viernes 9 de octubre, de 10.30 a 11.30 horas, dentro de la programación de la XII edición de GENDERCOM, que reúne en Granada a profesionales e investigadores bajo el lema «Comunicación sostenible y liderazgo con mirada de género».</p><p>Toda la información y las actualizaciones del programa pueden consultarse en <a href="https://www.gendercom.org" target="_blank" rel="noopener">www.gendercom.org</a></p></template>
+      </article>
+      <article class="news-card reveal" id="news-cine" role="button" tabindex="0" aria-haspopup="dialog">
+        <img class="news-thumb" src="https://cdn.premiumguest.com/flyers/w_7.10.26cine-y-otras-miradas.jpg" alt="" loading="lazy">
+        <div class="news-body">
+          <span class="news-date">24 sep 2026</span>
+          <h3>GENDERCOM abre sus experiencias con una noche de vino, cine y otras miradas</h3>
+          <span class="news-link">Leer más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+        <template class="news-full"><p>GENDERCOM GRX2026 abrirá su programa de experiencias culturales el miércoles 7 de octubre, a las 20.30 horas, con <em>Noches de vino, cine… y otras miradas</em>, una cata de cine en el Palacio de Santa Paula que combinará película, vino y gastronomía en una experiencia en la que todo está conectado.</p><p>La propuesta invita a disfrutar del cine desde otras miradas: a detenerse en cómo construye a sus personajes y sus relaciones, y en los roles que asigna a mujeres y hombres en la pantalla. Cada vino y cada bocado acompañarán a las escenas seleccionadas, de modo que la conversación sobre lo que se ve se mezcle con lo que se saborea.</p><p>La experiencia estará dirigida por Manuel Sicilia y David Rodríguez, y se integra en la apuesta de GENDERCOM por llevar la reflexión sobre comunicación e igualdad más allá del aula, hacia espacios de encuentro, ocio y cultura en la ciudad.</p><p>La actividad cuenta con plazas limitadas y requiere inscripción independiente de la del congreso.</p><p><a class="agenda-cta" href="https://sales.premiumguest.com/1540experiencesclub/es/1540experiencesclub/noches-de-vino-cine-y-otras-miradas/" target="_blank" rel="noopener">Inscribirse en la actividad →</a></p></template>
+      </article>
+      <article class="news-card reveal" id="news-paseo" role="button" tabindex="0" aria-haspopup="dialog">
+        <img class="news-thumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Alhambra_de_noche_vista_desde_San_Nicolas.jpg?width=1200" alt="" loading="lazy">
+        <div class="news-body">
+          <span class="news-date">24 sep 2026</span>
+          <h3>GENDERCOM recorrerá la Granada de las mujeres en un paseo nocturno con Herstóricas</h3>
+          <span class="news-link">Leer más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+        <template class="news-full"><p><strong>La ruta tendrá lugar el jueves 8 de octubre, a las 20.00 horas, con el patrocinio del Ayuntamiento de Granada a través del programa de la Capitalidad Europea de la Cultura 2031.</strong></p><p>GENDERCOM invita a descubrir la ciudad desde otra mirada con <em>Granada con perspectiva de género</em>, un paseo nocturno guiado por la asociación Herstóricas. A través de sus calles y plazas, la ruta recuperará historias, espacios y referentes femeninos que forman parte de la memoria de Granada y que a menudo quedan fuera de los relatos habituales sobre su patrimonio.</p><p>El paseo propone también detenerse en las preguntas que plantea esa ausencia: cómo se ha representado a las mujeres en el espacio público, qué lugares han ocupado en la vida de la ciudad y por qué algunas de sus aportaciones apenas aparecen en la historia que conocemos. Herstóricas abordará estas cuestiones de forma participativa, tomando el propio recorrido como punto de partida para la conversación.</p><p>Constituida en 2017, la asociación Herstóricas trabaja para visibilizar la aportación histórica de las mujeres mediante actividades culturales y educativas. Su propuesta conecta con el enfoque de GENDERCOM al incorporar la perspectiva de género a una experiencia compartida de la ciudad y su patrimonio.</p><p>El recorrido comenzará en el Monumento a Boabdil, en el Paseo del Salón, y pasará por el Paseo del Violón, la Carrera de la Virgen, la plaza del Campillo y la plaza del Carmen. Tendrá una duración aproximada de dos horas y una extensión de dos kilómetros. Es accesible para personas con movilidad reducida.</p><p>La actividad cuenta con plazas limitadas y requiere inscripción previa.</p></template>
+      </article>
+      <article class="news-card reveal" id="news-manifiesto" role="button" tabindex="0" aria-haspopup="dialog">
+        <img class="news-thumb" src="assets/mesas/sandra-haro.jpg" alt="" loading="lazy" style="object-position:50% 22%">
+        <div class="news-body">
+          <span class="news-date">24 sep 2026</span>
+          <h3>GENDERCOM convertirá el liderazgo feminista en un manifiesto vivo, colectivo y transmedia</h3>
+          <span class="news-link">Leer más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+        <template class="news-full"><p>¿Cómo se ejerce el liderazgo en las instituciones, las empresas, la sociedad civil y la vida cotidiana? ¿Qué problemas y desigualdades persisten en cada uno de estos ámbitos? ¿Qué soluciones pueden construirse colectivamente? GENDERCOM GRX2026 y Medialab UGR impulsarán durante el congreso el primer Manifiesto Transmedia de Liderazgo Feminista, una iniciativa concebida para transformar la reflexión compartida en un relato vivo, audiovisual y abierto al impacto social.</p><p>El proyecto estará coordinado por Sandra Haro, politóloga y responsable de Medialab UGR, y se desarrollará mediante una metodología participativa articulada en distintas fases. La primera permitirá identificar problemáticas, retos y soluciones a través de cuatro mesas de inteligencia colectiva; la segunda trasladará sus conclusiones a un plató de televisión para convertirlas en un relato audiovisual; y la propuesta se completará con una ruta por Granada desarrollada junto a Herstóricas.</p><p>El resultado no será únicamente un documento de conclusiones, sino un artefacto transmedia construido a partir de las voces y experiencias de las personas participantes y difundido en diferentes lenguajes, espacios y plataformas.</p><h4>Cuatro dimensiones para repensar el liderazgo</h4><p>La primera fase se celebrará el miércoles 7 de octubre bajo el título «Liderazgos en red: cocreando el Manifiesto Feminista». Durante 50 minutos, las personas participantes trabajarán simultáneamente en cuatro mesas temáticas dedicadas a otras tantas dimensiones: el liderazgo público, el privado, el ciudadano y el propio.</p><p>Cada grupo identificará las principales dificultades y desigualdades presentes en su ámbito, analizará los modelos de liderazgo existentes y formulará propuestas para avanzar hacia formas de ejercer el poder, tomar decisiones y gestionar las relaciones desde una perspectiva feminista.</p><p>El liderazgo público permitirá abordar la representación y la capacidad de decisión de las mujeres en las instituciones y administraciones. El ámbito privado dirigirá la mirada hacia las empresas, los equipos profesionales y las estructuras organizativas. La dimensión ciudadana se centrará en la participación social, el asociacionismo y la construcción de respuestas colectivas. El liderazgo propio incorporará una reflexión sobre la autonomía, los cuidados, el bienestar y las posibilidades de transformación personal.</p><p>La metodología permitirá mapear en un tiempo limitado las principales problemáticas, retos y soluciones que surjan en las cuatro esferas. Las aportaciones de las personas participantes se convertirán en la materia prima y el cimiento del primer Manifiesto Transmedia de Liderazgo Feminista.</p><h4>Del manifiesto al relato audiovisual</h4><p>El proceso continuará el jueves 8 de octubre con «Liderazgos en plató: del Manifiesto al relato transmedia», una experiencia audiovisual conducida por Medialab UGR que trasladará las conclusiones de la jornada anterior a un plató de televisión.</p><p>Cuatro referentes vinculadas a los ámbitos público, empresarial, asociativo y del bienestar personal reaccionarán en directo a los hallazgos y propuestas surgidos durante las mesas de cocreación. Sus intervenciones permitirán contrastar la reflexión colectiva con la experiencia de mujeres que ejercen el liderazgo desde contextos profesionales y vitales diferentes.</p><p>El formato se desarrollará como un podcast audiovisual de 50 minutos en el que se conectarán los debates de las cuatro esferas. La conversación combinará conocimiento, experiencia e innovación para activar un relato común sobre las distintas maneras de entender y ejercer el liderazgo.</p><p>El paso al plató permitirá convertir las ideas iniciales en una narrativa audiovisual y multiplataforma, ampliando su capacidad de circulación y transferencia. De este modo, el manifiesto no se concibe como un texto cerrado, sino como un contenido en evolución que puede incorporar nuevas voces, formatos y espacios de participación.</p><h4>Una ruta por Granada con Herstóricas</h4><p>La iniciativa se completará con <em>Granada con perspectiva de género</em>, un paseo nocturno diseñado junto a Herstóricas que trasladará la reflexión sobre liderazgo, género y memoria al espacio urbano.</p><p>La ruta recorrerá el Paseo del Salón, el Paseo del Violón, la Carrera de la Virgen y las plazas del Campillo y del Carmen. A lo largo del paseo, Herstóricas recuperará espacios, historias y referentes femeninos para reflexionar con las personas participantes sobre la presencia y la representación de las mujeres en la ciudad.</p><p>Esta tercera dimensión conectará el proceso de cocreación y el relato audiovisual con Granada, incorporando las reflexiones surgidas durante el recorrido a la construcción del Manifiesto Transmedia de Liderazgo Feminista.</p><p>La ruta se celebrará el jueves 8 de octubre, a las 20.00 horas, con salida desde el Monumento a Boabdil, en el Paseo del Salón. Durará aproximadamente dos horas. La información sobre inscripción y número de plazas se comunicará próximamente a través de los canales oficiales del congreso.</p><h4>Medialab UGR: innovación y participación ciudadana</h4><p>La coordinación del proyecto corresponde a Sandra Haro, directora ejecutiva de Medialab UGR. Su trayectoria se desarrolla en los ámbitos de la innovación social, la participación ciudadana y la gobernanza pública.</p><p>Haro es también formadora del programa «Educación para la Igualdad» del Instituto de las Mujeres y divulgadora en Radiolab UGR. Desde Medialab impulsa procesos de experimentación e inteligencia colectiva destinados a conectar la universidad con la ciudadanía y transformar el conocimiento en propuestas con impacto social.</p><p>La metodología planteada para GENDERCOM responde a esa concepción abierta y participativa de la innovación. Las personas asistentes no serán únicamente receptoras de contenidos, sino que intervendrán directamente en la identificación de los problemas, la formulación de propuestas y la construcción del relato final.</p><h4>Un congreso que también crea conocimiento</h4><p>El Manifiesto Transmedia de Liderazgo Feminista constituye una de las principales iniciativas de innovación y transferencia de GENDERCOM GRX2026. Frente al formato congresual basado exclusivamente en conferencias y comunicaciones, la propuesta convierte el encuentro en un laboratorio en el que el conocimiento se debate, se produce de forma colectiva y se transforma en contenidos capaces de circular más allá del ámbito académico.</p><p>La combinación de mesas participativas, podcast audiovisual y recorrido urbano permitirá conectar distintos espacios de creación y aprendizaje. El manifiesto resultante recogerá así voces procedentes de la universidad, las instituciones, las empresas, los colectivos sociales y la ciudadanía.</p><p>El XII Congreso Internacional de Género y Comunicación se celebrará del 7 al 9 de octubre en la Facultad de Comunicación y Documentación de la Universidad de Granada.</p><p><strong>Las mesas de cocreación cuentan con 20 plazas y requieren inscripción previa.</strong></p><p><a class="agenda-cta" href="https://tally.so/r/Zj0YVA" target="_blank" rel="noopener" data-tally="Zj0YVA">Inscribirse en el Manifiesto →</a></p></template>
+      </article>
+      <article class="news-card reveal" role="button" tabindex="0" aria-haspopup="dialog">
+        <img class="news-thumb" src="assets/img/cineastas-banner.png" alt="" loading="lazy">
+        <div class="news-body">
+          <span class="news-date">8 sep 2026</span>
+          <h3>GENDERCOM y FilmingLAB abren en Granada un diálogo sobre cine, ecofeminismo y cuidados</h3>
+          <span class="news-link">Leer más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+        <template class="news-full"><p>¿Puede el cine cuidar? ¿Es posible filmar y producir desde el cuidado en un mundo en crisis? El XII Congreso Internacional de Género y Comunicación, GENDERCOM GRX2026, y FilmingLAB reunirán en Granada a cuatro profesionales del audiovisual para reflexionar sobre las relaciones entre creación cinematográfica, antropología, género, ecofeminismo y sostenibilidad.</p><p>El encuentro, titulado «Cineastas. Habitar el mundo para crear», se celebrará el 7 de octubre en la Facultad de Comunicación y Documentación de la Universidad de Granada en sesión de tarde. Participarán la especialista en producción audiovisual sostenible Asia Jarzyna, la productora creativa Inés Nofuentes y la cineasta e investigadora Ainhoa Gutiérrez. La conversación estará moderada por la antropóloga audiovisual y directora de FilmingLAB, Marian del Moral.</p><p>A partir de sus prácticas y experiencias profesionales, las participantes explorarán otras maneras de entender los procesos de creación y producción cinematográfica, poniendo el foco en los vínculos que el cine establece con los cuerpos, los territorios y el mundo no humano.</p><p>El encuentro parte de la necesidad de pensar el cine no solo como una herramienta para representar el mundo, sino también como una práctica capaz de proponer nuevas formas de relacionarnos. Desde una perspectiva ecofeminista, la conversación abordará cómo filmar y producir desde el cuidado y desde modelos no extractivos, tanto en su dimensión material como simbólica.</p><p>La sesión prestará especial atención a las relaciones de poder que atraviesan la creación audiovisual y a las condiciones en las que se desarrollan los propios proyectos: cómo se organizan los equipos, qué vínculos se establecen con los territorios y las personas filmadas, qué impacto generan las producciones y qué imaginarios construyen las narrativas cinematográficas.</p><p>«Cineastas. Habitar el mundo para crear» se integra en la apuesta de GENDERCOM GRX2026 por incorporar al programa científico formatos profesionales, creativos y experimentales, planteando el audiovisual no solo como objeto de análisis académico, sino como una forma de investigación, producción de conocimiento e intervención social.</p><p><a href="#mesas">Ver participantes y bios →</a></p></template>
+      </article>
+      <article class="news-card reveal" role="button" tabindex="0" aria-haspopup="dialog">
+        <img class="news-thumb" src="assets/mesas/lola-quero.jpg" alt="" loading="lazy">
+        <div class="news-body">
+          <span class="news-date">8 sep 2026</span>
+          <h3>GenderCom reúne a once periodistas para analizar el liderazgo femenino dentro y fuera de las redacciones</h3>
+          <span class="news-link">Leer más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+        <template class="news-full"><p>El XII Congreso Internacional de Género y Comunicación, GENDERCOM GRX2026, reunirá el jueves 8 de octubre en Granada a once periodistas para abordar el liderazgo femenino desde dos espacios determinantes de la profesión: los lugares donde se decide la agenda informativa y los escenarios donde las reporteras cuentan la actualidad sobre el terreno.</p><p>Directoras y responsables de IDEAL, Granada Hoy, RTVA y TG7 compartirán la sesión matinal «Donde se decide la agenda. Mujeres al frente de los medios», de 13:00 a 14:00 horas, con Lola Quero (Granada Hoy), María Victoria Cobo (IDEAL), Carmen María González (RTVA Granada) y Raquel Romero (TG7). Modera Aránzazu Román San Miguel, profesora titular de Periodismo de la Universidad de Sevilla.</p><p>Por la tarde, de 18:30 a 19:30, profesionales vinculadas a TVE, Telecinco, Noticias Cuatro, laSexta, Antena 3, Canal Sur y DAZN participarán en «Contar desde el terreno. Liderazgo femenino en el periodismo televisivo»: Renata Rota, Marta de la Chica, Ana Martín, Cecilia Cano y Mónica Martínez, con la moderación de Noelia Gómez Mira.</p><p>Los dos encuentros permitirán analizar la evolución del periodismo y los desafíos que afrontan las mujeres en las redacciones, la dirección de medios y la información televisiva. La inteligencia artificial, la desinformación, la transformación de los hábitos de consumo, la gestión de equipos, la inmediatez y los nuevos perfiles profesionales serán algunos de los asuntos centrales de la jornada.</p><p>Las dos mesas plantean una mirada complementaria sobre el liderazgo: desde la responsabilidad de dirigir medios, definir criterios editoriales y gestionar redacciones hasta la capacidad de tomar decisiones sobre el terreno y construir el relato informativo en contacto directo con la realidad.</p><p><a href="#mesas">Ver participantes y bios →</a></p></template>
+      </article>
+      <article class="news-card reveal" role="button" tabindex="0" aria-haspopup="dialog">
+        <img class="news-thumb" src="assets/img/closeup-of-diverse-people-joining-their-hands_resultado.webp" alt="" loading="lazy">
+        <div class="news-body">
+          <span class="news-date">31 jul 2026</span>
+          <h3>La UGR lanza los Premios GenderCom, dotados con 1.500 euros, para reconocer la excelencia investigadora y la innovación en comunicación y género</h3>
+          <span class="news-link">Leer más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+        <template class="news-full"><p>La Universidad de Granada ha abierto la convocatoria de los Premios GenderCom, que distinguirán los mejores trabajos presentados en el XII Congreso Internacional de Comunicación y Género, GENDERCOM GRX2026, del 5 al 9 de octubre en la Facultad de Comunicación y Documentación.</p><p>Los premios, dotados con 1.500 euros en total, reconocen la excelencia en investigación, la innovación y la transferencia del conocimiento en comunicación con perspectiva de género, e incentivan la participación de investigadores/as, personal investigador en formación, estudiantes de posgrado y profesionales del sector.</p><p>La convocatoria contempla tres modalidades, cada una impulsada por una entidad estratégica de la UGR: Emprendimiento y Liderazgo con Perspectiva de Género (UGR Emprendedora), MediaLab / Innovación en Comunicación (MediaLab UGR) y Escuela Internacional de Doctorado. Cada modalidad concederá un primer premio de 300 euros, un segundo de 150 y un tercero de 50.</p><p>Además del reconocimiento económico, los trabajos premiados obtendrán difusión institucional a través de los canales oficiales del congreso y de las universidades y entidades colaboradoras.</p><p><a href="#bases">Consultar las bases reguladoras →</a></p><p><a href="https://canal.ugr.es/noticia/la-ugr-lanza-los-premios-gendercom-sobre-comunicacion-y-genero/" target="_blank" rel="noopener">Ver cobertura en Canal UGR →</a></p></template>
+      </article>
+      <article class="news-card reveal" data-d="1" role="button" tabindex="0" aria-haspopup="dialog">
+        <img class="news-thumb" src="assets/img/jon-tyson-IYtVtgXw72M-unsplash.jpg" alt="" loading="lazy">
+        <div class="news-body">
+          <span class="news-date">10 jun 2026</span>
+          <h3>Ramón Salaverría abrirá GENDERCOM 2026 con una conferencia sobre los bulos que alimentan la polarización en Europa</h3>
+          <span class="news-link">Leer más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+        <template class="news-full"><p>El catedrático de Periodismo de la Universidad de Navarra Ramón Salaverría pronunciará la conferencia inaugural de GENDERCOM 2026, dedicada a cómo opera la desinformación y de qué manera los bulos alimentan la polarización en Europa.</p><p>La ponencia abrirá la jornada presencial del congreso el 7 de octubre en la Facultad de Comunicación y Documentación de la Universidad de Granada, y dará paso a la mesa de debate sobre desinformación, democracia y polarización.</p><p><a href="https://gendercom.org/" target="_blank" rel="noopener">Más información en la web oficial →</a></p></template>
+      </article>
+      <article class="news-card reveal" data-d="1" role="button" tabindex="0" aria-haspopup="dialog">
+        <img class="news-thumb" src="assets/img/Captura-de-pantalla-2025-06-23-a-las-12.33.43_resultado-1024x439.webp" alt="" loading="lazy">
+        <div class="news-body">
+          <span class="news-date">27 feb 2026</span>
+          <h3>La UGR acogerá el XII Congreso Internacional GenderCom, referente en género y comunicación</h3>
+          <span class="news-link">Leer más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+        <template class="news-full"><p>La Universidad de Granada acogerá en octubre de 2026 el XII Congreso Internacional de Género y Comunicación (GenderCom 2026), una de las citas académicas y profesionales de referencia internacional en el análisis crítico de la comunicación contemporánea.</p><p>La edición tendrá un doble enfoque, académico y profesional, sobre la transferencia de conocimiento y el impacto social de la investigación desde una perspectiva de género, sostenibilidad y liderazgo.</p><p>Se desarrollará durante una semana, con sesiones virtuales los primeros días y un formato presencial del 7 al 9 de octubre en la Facultad de Comunicación y Documentación. Está organizado por la Universidad de Granada en colaboración con la Universidad de Sevilla y la Università La Sapienza de Roma.</p><p><a href="https://canal.ugr.es/noticia/xii-congreso-internacional-de-genero-y-comunicacion-gendercom-grx26-t/" target="_blank" rel="noopener">Ver cobertura en Canal UGR →</a></p></template>
+      </article>
+      <article class="news-card reveal" data-d="2" role="button" tabindex="0" aria-haspopup="dialog">
+        <img class="news-thumb" src="assets/img/Grupo-134_resultado.webp" alt="" loading="lazy">
+        <div class="news-body">
+          <span class="news-date">14 ene 2026</span>
+          <h3>El XII Congreso GenderCom 2026 llegará a Granada para analizar los retos de la comunicación y la igualdad</h3>
+          <span class="news-link">Leer más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+        <template class="news-full"><p>El XII Congreso GenderCom 2026 llegará a Granada para analizar los retos de la comunicación y la igualdad, consolidando a la ciudad y a la UGR como espacio de diálogo entre investigación, profesión y creación cultural.</p><p>El encuentro reunirá a investigadoras, investigadores y profesionales de todo el mundo en torno a la comunicación sostenible y el liderazgo con mirada de género, con un consejo asesor de primer nivel académico e institucional.</p><p><a href="https://gendercom.org/" target="_blank" rel="noopener">Más información en la web oficial →</a></p></template>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ORGANIZACIÓN ============ -->
+<section class="section mist" id="organizacion" data-screen-label="Organización">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-index="12">Quién lo hace posible</span>
+      <h2>Organización</h2>
+    </div>
+
+    <div class="org-block reveal">
+      <div class="org-label">Dirección</div>
+      <div class="director-card">
+        <span class="ring"><img src="assets/img/WhatsApp-Image-2025-12-15-at-09.08.27-978x1024.jpeg" alt="Magdalena Trillo" loading="lazy"></span>
+        <div>
+          <span class="role">Directora del congreso</span>
+          <h4>Magdalena Trillo</h4>
+          <span>Universidad de Granada</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="org-block reveal">
+      <div class="org-label">Comité de dirección</div>
+      <div class="committee-grid">
+        <div class="member"><span class="ring"><img src="assets/img/Diseno-sin-titulo-26_resultado.webp" alt="Juan Carlos Suárez Villegas" loading="lazy"></span><h4>Juan Carlos Suárez Villegas</h4><span>Universidad de Sevilla</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Paola-Panarese.jpg" alt="Paola Panarese" loading="lazy"></span><h4>Paola Panarese</h4><span>Università La Sapienza, Roma</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Diseno-sin-titulo-21_resultado.webp" alt="Lidia Bocanegra" loading="lazy"></span><h4>Lidia Bocanegra</h4><span>Unidad de Excelencia U-CHASS · UGR</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Diseno-sin-titulo-19_resultado-1.webp" alt="Juncal Gutiérrez Artacho" loading="lazy"></span><h4>Juncal Gutiérrez Artacho</h4><span>Secretariado de Igualdad · UGR</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Diseno-sin-titulo-11_resultado.webp" alt="Sandra Haro" loading="lazy"></span><h4>Sandra Haro</h4><span>Medialab-UGR</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/download-2.jpg" alt="Carlos Centeno" loading="lazy"></span><h4>Carlos Centeno</h4><span>Director Oficina Comunicación UGR</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Diseno-sin-titulo-18_resultado-2.webp" alt="Vanessa Moreno Rangel" loading="lazy"></span><h4>Vanessa Moreno Rangel</h4><span>DIRCOM Andalucía</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Diseno-sin-titulo-16_resultado.webp" alt="Marian del Moral Garrido" loading="lazy"></span><h4>Marian del Moral Garrido</h4><span>Directora FilmingLAB</span></div>
+      </div>
+    </div>
+
+    <div class="org-block reveal">
+      <div class="org-label">Comité científico asesor</div>
+      <div class="committee-grid">
+        <div class="member"><span class="ring"><img src="assets/img/Diseno-sin-titulo-12_resultado.webp" alt="Lola Olvera" loading="lazy"></span><h4>Lola Olvera</h4><span>Catedrática de Documentación · UGR</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Diseno-sin-titulo-18_resultado-3.webp" alt="Marga Sánchez" loading="lazy"></span><h4>Marga Sánchez</h4><span>Vicerrectora · catedrática de Prehistoria · UGR</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Diseno-sin-titulo-10_resultado.webp" alt="Zoraida Callejas" loading="lazy"></span><h4>Zoraida Callejas</h4><span>Catedrática de Ing. Informática · UGR</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Diseno-sin-titulo-19_resultado-2.webp" alt="Montserrat Zamorano" loading="lazy"></span><h4>Montserrat Zamorano</h4><span>Vicerrectora · cat. Tecnologías del Medio Ambiente · UGR</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Diseno-sin-titulo-18_resultado-1.webp" alt="Mar Venegas" loading="lazy"></span><h4>Mar Venegas</h4><span>Vicerrectora de Igualdad · Sociología · UGR</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Diseno-sin-titulo-25_resultado.webp" alt="Domingo Sánchez-Mesa" loading="lazy"></span><h4>Domingo Sánchez-Mesa</h4><span>Catedrático de Teoría de la Literatura · IP Fictrans</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Diseno-sin-titulo-13_resultado.webp" alt="Nicolás Robinson-García" loading="lazy"></span><h4>Nicolás Robinson-García</h4><span>Coordinador del grupo U-CHASS</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/pilararanda.jpg" alt="Pilar Aranda" loading="lazy"></span><h4>Pilar Aranda</h4><span>Universidad de Granada</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Captura-de-pantalla-2025-03-26-a-las-10.30.02-e1761830416945.png" alt="Flavia Laviosa" loading="lazy"></span><h4>Flavia Laviosa</h4><span>Wellesley College</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Luis-Alfonso-Guadarrama-Rico-Universidad-Autonoma-del-Estado-de-Mexico-e1761830510351.jpeg" alt="Luis Alfonso Guadarrama" loading="lazy"></span><h4>Luis Alfonso Guadarrama</h4><span>U. Autónoma del Estado de México</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/WhatsApp-Image-2025-04-10-at-09.20.17.jpeg" alt="Charo Lacalle" loading="lazy"></span><h4>Charo Lacalle</h4><span>Universidad Autónoma de Barcelona</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Polizzi-scaled-e1741639591493-1024x1024.jpg" alt="Gabriella Polizzi" loading="lazy"></span><h4>Gabriella Polizzi</h4><span>«Kore» University of Enna</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/profile_photo-190x190-1.png" alt="Marco Scarcelli" loading="lazy"></span><h4>Marco Scarcelli</h4><span>Universidad de Padova</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/profileImage.img_-e1761830527342.jpg" alt="Lisa Cuklanz" loading="lazy"></span><h4>Lisa Cuklanz</h4><span>Boston College</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Asuncion-Bernardez-Rodal-Universidad-Complutense-e1761830547898.jpeg" alt="Asunción Bernárdez" loading="lazy"></span><h4>Asunción Bernárdez</h4><span>Universidad Complutense de Madrid</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Pilar-Rodriguez-Universidad-de-Deusto-1.jpg" alt="Pilar Rodríguez" loading="lazy"></span><h4>Pilar Rodríguez</h4><span>Universidad de Deusto</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Foto_Guerrero_Salazar-e1761830562894.jpg" alt="Susana Guerrero" loading="lazy"></span><h4>Susana Guerrero</h4><span>Universidad de Málaga</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/E8FDE6CF8D08E93CED30F3260B14244E.jpg" alt="Susana de Andrés" loading="lazy"></span><h4>Susana de Andrés</h4><span>Universidad de Valladolid</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Marta-Marin-Llaguno-Universidad-de-Alicante-945x1024.jpeg" alt="Marta Martín Llaguno" loading="lazy"></span><h4>Marta Martín Llaguno</h4><span>Universidad de Alicante</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Antonino-Oliveri.webp" alt="Antonino Oliveri" loading="lazy"></span><h4>Antonino Oliveri</h4><span>Universidad de Palermo</span></div>
+      </div>
+    </div>
+
+    <div class="org-block reveal">
+      <div class="org-label">Comité de organización</div>
+      <div class="committee-grid">
+        <div class="member"><span class="ring"><img src="assets/img/Diseno-sin-titulo-20_resultado.webp" alt="Lidia Peralta" loading="lazy"></span><h4>Lidia Peralta</h4><span>Universidad de Granada</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Juan-Angel-Jodar.jpg" alt="Juan Ángel Jódar" loading="lazy"></span><h4>Juan Ángel Jódar</h4><span>Secretario de la Facultad · Coordinador del Grado, UGR</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Diseno-sin-titulo-22_resultado.webp" alt="Irene Rivera" loading="lazy"></span><h4>Irene Rivera</h4><span>Universidad de Granada</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/download-e1765886951371.jpg" alt="Julia Nawrot" loading="lazy"></span><h4>Julia Nawrot</h4><span>Universidad de Granada</span></div>
+        <div class="member"><span class="ring"><img class="face-carmen" src="assets/img/Carmen-Gonzalez-RTVA.jpeg" alt="Carmen González" loading="lazy"></span><h4>Carmen González</h4><span>Universidad de Granada</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Diseno-sin-titulo-15_resultado.webp" alt="Mario de la Torre" loading="lazy"></span><h4>Mario de la Torre</h4><span>Universidad de Granada</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/img.jpg" alt="Giselle García Hípola" loading="lazy"></span><h4>Giselle García Hípola</h4><span>Universidad de Granada</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Diseno-sin-titulo-6_resultado.webp" alt="Mar Díaz Millón" loading="lazy"></span><h4>Mar Díaz Millón</h4><span>Universidad de Granada</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Diseno-sin-titulo-24_resultado.webp" alt="Eladio Mateos" loading="lazy"></span><h4>Eladio Mateos</h4><span>Universidad de Granada</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Diseno-sin-titulo-23_resultado.webp" alt="Fran Gómez" loading="lazy"></span><h4>Fran Gómez</h4><span>Universidad de Granada</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/WhatsApp-Image-2026-06-15-at-11.20.12-1024x1024.jpeg" alt="Jesús Cantón" loading="lazy"></span><h4>Jesús Cantón</h4><span>Universidad de Granada</span></div>
+      </div>
+    </div>
+
+    <div class="org-block reveal">
+      <div class="org-label">Equipo técnico y de apoyo</div>
+      <div class="committee-grid">
+        <div class="member"><span class="ring"><img src="assets/img/Desire-Milena.jpg" alt="Desiré Milena" loading="lazy"></span><h4>Desiré Milena</h4><span>Comunicadora</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/juan-jose-feria.png" alt="Juan José Feria" loading="lazy"></span><h4>Juan José Feria</h4><span>Investigador FPU · Universidad de Granada</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/jose-manuel-blazquez.png" alt="José Manuel Blázquez" loading="lazy"></span><h4>José Manuel Blázquez</h4><span>Investigador FPU · Universidad de Granada</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Maria-Muros.jpg" alt="María Muros" loading="lazy"></span><h4>María Muros</h4><span>Universidad de Granada</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Maria-Jimenez.jpg" alt="María Jiménez" loading="lazy"></span><h4>María Jiménez</h4><span>Universidad de Granada</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Francisco-Ruiz.jpg" alt="Francisco Ruiz" loading="lazy"></span><h4>Francisco Ruiz</h4><span>Universidad de Granada</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Montse-Zamorano.jpg" alt="Montserrat Rodríguez Zamorano" loading="lazy"></span><h4>Montserrat Rodríguez Zamorano</h4><span>Universidad de Granada</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Gulnaz-Minnibaeva.jpg" alt="Gulnaz Minnibaeva" loading="lazy"></span><h4>Gulnaz Minnibaeva</h4><span>Universidad de Granada</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Sergio-Castro.jpg" alt="Sergio Castro" loading="lazy"></span><h4>Sergio Castro</h4><span>Universidad de Granada</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Elvira-Gonzalez-Salmon.jpg" alt="Elvira González-Salmón" loading="lazy"></span><h4>Elvira González-Salmón</h4><span>Universidad de Granada</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Foto-Lara.png" alt="Laura Murvartian" loading="lazy"></span><h4>Laura Murvartian</h4><span>Universidad de Granada</span></div>
+        <div class="member"><span class="ring"><img src="assets/img/Foto-Jose-Antonio.jpeg" alt="Jose Antonio Matías" loading="lazy"></span><h4>Jose Antonio Matías</h4><span>Universidad de Sevilla</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ UNIVERSIDADES Y ENTIDADES ============ -->
+<section class="section" aria-label="Universidades y entidades">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:center;margin-inline:auto">
+      <span class="eyebrow" data-index="13" style="justify-content:center">Apoyan el congreso</span>
+      <h2 style="font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,5vw,3.6rem);line-height:.98;letter-spacing:-0.02em;margin-top:18px">Universidades organizadoras</h2>
+    </div>
+    <div class="org-universities reveal">
+      <div class="uni-card"><div class="uni-logo"><img src="assets/img/logo-ugr-300x212.png" alt="Universidad de Granada" loading="lazy"></div></div>
+      <div class="uni-card"><div class="uni-logo"><img src="assets/img/Imagen-2_resultado.webp" alt="Universidad organizadora" loading="lazy"></div></div>
+      <div class="uni-card"><div class="uni-logo"><img src="assets/img/1200px-Universite_de_Rome__La_Sapienza__logo.svg_resultado.webp" alt="Università La Sapienza, Roma" loading="lazy"></div></div>
+    </div>
+
+    <div class="reveal" style="margin-top:clamp(48px,6vw,80px)">
+      <div class="tier-label">Entidades colaboradoras</div>
+      <div class="collab-logos">
+        <div class="collab-logo"><img src="assets/img/download-1.jpg" alt="Colaborador" loading="lazy"></div>
+        <div class="collab-logo"><img src="assets/img/images-1-b.jpg" alt="Colaborador" loading="lazy"></div>
+        <div class="collab-logo"><img src="assets/img/Imagen-3_resultado.webp" alt="Colaborador" loading="lazy"></div>
+        <div class="collab-logo"><img src="assets/img/Logo-Negro-Vertical.png" alt="Colaborador" loading="lazy"></div>
+        <div class="collab-logo"><img src="assets/img/logo-EIP-full.jpeg" alt="Escuela Internacional de Posgrado" loading="lazy"></div>
+        <div class="collab-logo"><img src="assets/img/logo-Igualdad-UGR.jpg" alt="Igualdad UGR" loading="lazy"></div>
+        <div class="collab-logo"><img src="assets/img/UGR-emprendimiento-color-1024x360.png" alt="UGR Emprendimiento" loading="lazy"></div>
+        <div class="collab-logo"><img src="assets/img/Logo-Vida-Universitaria-vdo-Estudiantes-1024x704.jpg" alt="Vida Universitaria UGR" loading="lazy"></div>
+        <div class="collab-logo"><img src="assets/img/logo-master2.jpg" alt="Máster" loading="lazy"></div>
+        <div class="collab-logo"><img src="assets/img/TRANSPARENTE-Unidad-de-Calidad-Ambiental-1024x869.png" alt="Unidad de Calidad Ambiental" loading="lazy"></div>
+        <div class="collab-logo"><img src="assets/img/logo-festival-periodismo.png" alt="Festival de Periodismo" loading="lazy"></div>
+        <div class="collab-logo"><img src="assets/img/Grupo-139_resultado.webp" alt="Colaborador" loading="lazy"></div>
+        <div class="collab-logo"><img src="assets/img/Grupo-140_resultado.webp" alt="Colaborador" loading="lazy"></div>
+        <div class="collab-logo"><img src="assets/img/Imagen-4_resultado.webp" alt="Colaborador" style="width: 124px; height: 170px" loading="lazy"></div>
+        <div class="collab-logo"><img src="assets/logo-1001medios.png" alt="1001 Medios" loading="lazy"></div>
+        <div class="collab-logo"><img src="assets/img/logo-Granada-suenos.jpeg" alt="Granada, sueños que se viven" loading="lazy"></div>
+        <div class="collab-logo"><img src="assets/logo-odontologia.png" alt="Facultad de Odontología UGR" loading="lazy"></div>
+        <div class="collab-logo"><img src="assets/logo-filming-lab.png" alt="Filming Lab — Antropología del cine" loading="lazy"></div>
+        <div class="collab-logo"><img src="assets/img/logo-capitalidad.jpg" alt="Granada 2031 — Capital Europea de la Cultura, ciudad candidata" loading="lazy"></div>
+      </div>
+    </div>
+
+    <div class="partners-cta reveal">
+      <p>¿Tu entidad quiere colaborar?</p>
+      <a href="#sede" class="btn btn-primary">Contáctanos
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SEDE Y CONTACTO ============ -->
+<section class="section dark" id="sede" data-screen-label="Sede y contacto">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow on-dark" data-index="14">Sede y contacto</span>
+      <h2>Nos vemos en Granada</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-photo reveal">
+        <div class="sede-carousel" id="sedeCarousel">
+          <div class="sede-track">
+            <img src="assets/img/sede-fachada.jpg" alt="Fachada del Colegio Máximo de Cartuja, Granada" loading="lazy">
+            <img src="assets/img/sede-salon.jpg" alt="Salón de actos del Colegio Máximo" loading="lazy">
+            <img src="assets/img/sede-patio.jpg" alt="Patio del Colegio Máximo" loading="lazy">
+            <img src="assets/img/sede-biblioteca.jpg" alt="Biblioteca del Colegio Máximo" loading="lazy">
+          </div>
+          <button class="sede-arrow sede-prev" type="button" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 6l-6 6 6 6"/></svg></button>
+          <button class="sede-arrow sede-next" type="button" aria-label="Foto siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 6l6 6-6 6"/></svg></button>
+          <div class="sede-dots">
+            <button class="sede-dot is-active" type="button" aria-label="Foto 1"></button>
+            <button class="sede-dot" type="button" aria-label="Foto 2"></button>
+            <button class="sede-dot" type="button" aria-label="Foto 3"></button>
+            <button class="sede-dot" type="button" aria-label="Foto 4"></button>
+          </div>
+        </div>
+      </div>
+      <div class="contact-info reveal" data-d="1">
+        <div class="info-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><div class="k">Email</div><div class="v">gendercomconference@gmail.com</div></div></div>
+        <div class="info-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><div class="k">Publicaciones</div><div class="v">gendercompublicaciones@gmail.com</div></div></div>
+        <div class="info-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg><div><div class="k">Teléfono</div><div class="v">+34 613 70 09 07</div></div></div>
+        <div class="info-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><div class="k">Sede</div><div class="v">Facultad de Comunicación y Documentación · Colegio Máximo de Cartuja, Granada</div></div></div>
+      </div>
+    </div>
+
+    <div class="venue reveal">
+      <iframe class="venue-map" src="https://www.google.com/maps?q=Facultad+de+Comunicaci%C3%B3n+y+Documentaci%C3%B3n,+Universidad+de+Granada,+Colegio+M%C3%A1ximo+de+Cartuja,+Granada&z=15&output=embed" referrerpolicy="no-referrer-when-downgrade" allowfullscreen title="Mapa de la sede del congreso en Granada"></iframe>
+      <div class="venue-caption">
+        <div>
+          <h4>Facultad de Comunicación y Documentación</h4>
+          <p>Universidad de Granada · Colegio Máximo de Cartuja, Granada</p>
+        </div>
+        <a href="https://share.google/4DKIcY0vbz16SYRBL" target="_blank" rel="noopener" class="btn btn-light">Abrir en Google Maps
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="faq" id="faq">
+      <div class="faq-item" data-open="false">
+        <button class="faq-trigger">¿Puedo participar online? <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-body"><div class="faq-body-inner"><p>Sí. El congreso es presencial en Granada del 7 al 9 de octubre, con una sesión online de apertura el 6 de octubre. Varias modalidades permiten presentar comunicaciones de forma virtual, en directo o en diferido.</p></div></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button class="faq-trigger">¿Qué incluye la inscripción? <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-body"><div class="faq-body-inner"><p>Según la modalidad: la presentación de una comunicación, póster o libro; la participación en las actividades de la sede; y, en las modalidades superiores, networking y la evaluación para publicación en editorial indexada SPI.</p></div></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button class="faq-trigger">¿Se publicarán las actas? <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-body"><div class="faq-body-inner"><p>Sí. Tras revisión por pares ciegos, los trabajos podrán publicarse en Tirant lo Blanch, Dykinson, la colección de Estudios de Género de Intracom Editorial o en revistas científicas colaboradoras. Los textos completos se envían a gendercompublicaciones@gmail.com.</p></div></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button class="faq-trigger">¿Hay tarifas para doctorandos/as o iberoamericanos/as? <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-body"><div class="faq-body-inner"><p>Sí. Existen modalidades bonificadas (80€ y 170€) para investigadores/as de universidades iberoamericanas y en periodo de formación doctoral, aportando documento acreditativo en vigor. La bonificación se aplica tanto si participas online como si asistes presencialmente a Granada.</p></div></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button class="faq-trigger">¿Cómo envío mi propuesta? <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-body"><div class="faq-body-inner"><p>A través del área privada del congreso. El abstract (400–1000 palabras) puede presentarse en español, portugués o inglés. La fecha límite de propuestas fue el domingo 13 de septiembre de 2026. El texto completo se entrega el 30 de septiembre si optas a los Premios GenderCom (para que el jurado pueda evaluarlo antes del congreso) y el 30 de octubre en el resto de los casos.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<section class="bases-overlay" id="bases" aria-label="Bases reguladoras de los Premios GenderCom 2026">
+<div class="bases-close"><div class="container bases-close-inner"><img src="assets/logo-neg.png" alt="GENDERCOM 2026"><a href="#premios"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Volver a Premios GenderCom</a></div></div>
+<header class="bp-hero">
+  <div class="container">
+    <span class="bp-kicker">Convocatoria abierta · GenderCom 2026</span>
+    <h1>Bases reguladoras de los Premios GenderCom 2026</h1>
+    <div class="bp-hero-meta">
+      <div class="bp-meta-cell"><span>Congreso</span><strong>XII Congreso Internacional de Comunicación y Género</strong></div>
+      <div class="bp-meta-cell"><span>Sede</span><strong>Facultad de Comunicación y Documentación · UGR</strong></div>
+      <div class="bp-meta-cell"><span>Fechas</span><strong>5–9 de octubre de 2026</strong></div>
+      <div class="bp-meta-cell"><span>Dotación total</span><strong>1.500 € · tres modalidades</strong></div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="bp-layout">
+    <aside class="bp-index">
+      <div class="bp-index-label">Índice</div>
+      <ol>
+        <li><a href="#s1">Objeto y finalidad</a></li>
+        <li><a href="#s2">Modalidades y dotación</a></li>
+        <li><a href="#s3">Reconocimientos especiales</a></li>
+        <li><a href="#s4">Colaboraciones y patrocinios</a></li>
+        <li><a href="#s5">Requisitos</a></li>
+        <li><a href="#s6">Documentación requerida</a></li>
+        <li><a href="#s7">Procedimiento de concesión</a></li>
+        <li><a href="#s8">Criterios de evaluación</a></li>
+        <li><a href="#s9">Composición del jurado</a></li>
+        <li><a href="#s10">Entrega de premios</a></li>
+        <li><a href="#s11">Desistimiento y aceptación</a></li>
+        <li><a href="#s12">Protección de datos</a></li>
+        <li><a href="#s13">Propiedad intelectual</a></li>
+        <li><a href="#s14">Plazos de la convocatoria</a></li>
+      </ol>
+    </aside>
+
+    <article class="bp-art">
+      <p class="bp-lead">La Facultad de Comunicación y Documentación de la Universidad de Granada crea los Premios GenderCom 2026 para reconocer y visibilizar la excelencia académica, la innovación comunicativa y la transferencia de conocimiento en el ámbito de la comunicación con perspectiva de género.</p>
+
+      <section class="bp-sec" id="s1">
+        <span class="bp-sec-num">Artículo 1</span>
+        <h2>Objeto y finalidad</h2>
+        <p>La Facultad de Comunicación y Documentación de la Universidad de Granada, en el marco del XII Congreso Internacional de Comunicación y Género (GenderCom 2026), crea los Premios GenderCom 2026 con el objetivo de reconocer y visibilizar la excelencia académica, la innovación comunicativa y la transferencia de conocimiento en el ámbito de la comunicación con perspectiva de género. De forma especial, el reconocimiento del impulso del emprendimiento, la innovación y la investigación doctoral con perspectiva de género.</p>
+        <p>Los premios se alinean con los ejes temáticos del congreso:</p>
+        <ul class="bp-list">
+          <li>Comunicación sostenible y liderazgo con perspectiva de género.</li>
+          <li>Innovación y transformación digital en comunicación.</li>
+          <li>Narrativas audiovisuales y transmedia.</li>
+          <li>Transferencia social y profesional del conocimiento.</li>
+        </ul>
+      </section>
+
+      <section class="bp-sec" id="s2">
+        <span class="bp-sec-num">Artículo 2</span>
+        <h2>Modalidades y dotación económica</h2>
+        <div class="bp-mods">
+          <div class="bp-mod">
+            <span class="bp-mod-letter">Modalidad A</span>
+            <h3>Emprendimiento y Liderazgo con Perspectiva de Género</h3>
+            <p>Financiado por UGR Emprendedora (Vicerrectorado de Innovación Social, Empleabilidad y Emprendimiento). Dirigido a iniciativas profesionales, propuestas de innovación social, estrategias de comunicación aplicada, modelos de transferencia e iniciativas vinculadas al liderazgo, la igualdad y la sostenibilidad con perspectiva de género.</p>
+            <div class="bp-mod-prizes">
+              <div><span>Primer premio</span><strong>300 €</strong></div>
+              <div><span>Segundo premio</span><strong>150 €</strong></div>
+              <div><span>Tercer premio</span><strong>50 €</strong></div>
+              <div class="bp-tot"><span>Total modalidad</span><strong>500 €</strong></div>
+            </div>
+          </div>
+          <div class="bp-mod">
+            <span class="bp-mod-letter">Modalidad B</span>
+            <h3>MediaLab / Innovación en Comunicación</h3>
+            <p>Financiado por el Vicerrectorado de Innovación Social, Empleabilidad y Emprendimiento (área de Innovación Social-MediaLAB). Dirigido a formatos audiovisuales, videoensayos, proyectos transmedia, iniciativas de innovación comunicativa, propuestas digitales, narrativas emergentes y proyectos experimentales aplicados a la comunicación y el género.</p>
+            <div class="bp-mod-prizes">
+              <div><span>Primer premio</span><strong>300 €</strong></div>
+              <div><span>Segundo premio</span><strong>150 €</strong></div>
+              <div><span>Tercer premio</span><strong>50 €</strong></div>
+              <div class="bp-tot"><span>Total modalidad</span><strong>500 €</strong></div>
+            </div>
+          </div>
+          <div class="bp-mod">
+            <span class="bp-mod-letter">Modalidad C</span>
+            <h3>Escuela Internacional de Doctorado</h3>
+            <p>Financiado por la Escuela Internacional de Posgrado / Doctorado de la Universidad de Granada. Dirigido a investigaciones doctorales, comunicaciones científicas, pósters académicos, trabajos metodológicos y propuestas de investigación presentadas por personal investigador en formación.</p>
+            <div class="bp-mod-prizes">
+              <div><span>Primer premio</span><strong>300 €</strong></div>
+              <div><span>Segundo premio</span><strong>150 €</strong></div>
+              <div><span>Tercer premio</span><strong>50 €</strong></div>
+              <div class="bp-tot"><span>Total modalidad</span><strong>500 €</strong></div>
+            </div>
+          </div>
+        </div>
+        <div class="bp-total">
+          <div class="bp-total-fig">1.500 € <span>dotación total de los Premios GenderCom</span></div>
+          <p>La financiación se realizará mediante aportaciones efectuadas por distintas unidades y estructuras colaboradoras de la Universidad de Granada, distribuidas de la siguiente forma:</p>
+          <ul class="bp-list">
+            <li>500 € vinculados a iniciativas de emprendimiento colaboradoras de la Universidad de Granada.</li>
+            <li>500 € vinculados a iniciativas de innovación y transformación digital / MediaLab colaboradoras de la Universidad de Granada.</li>
+            <li>500 € vinculados a la Escuela Internacional de Posgrado y Doctorado de la Universidad de Granada.</li>
+          </ul>
+        </div>
+        <p>Las cantidades estarán sujetas a las retenciones fiscales vigentes en el momento del pago. El abono de los premios se realizará mediante transferencia bancaria tras el fallo del jurado. El jurado podrá declarar desierto cualquiera de los premios si considera que los trabajos no alcanzan el nivel de calidad suficiente.</p>
+      </section>
+
+      <section class="bp-sec" id="s3">
+        <span class="bp-sec-num">Artículo 3</span>
+        <h2>Reconocimientos especiales sin dotación económica</h2>
+        <p>Adicionalmente, podrán concederse las siguientes distinciones honoríficas:</p>
+        <div class="bp-chips">
+          <span class="bp-chip">Premio del Público GenderCom 2026</span>
+          <span class="bp-chip">Mención Especial al Impacto Social y Transferencia</span>
+          <span class="bp-chip">Mención Especial a la Innovación Digital y Uso de Herramientas Tecnológicas</span>
+          <span class="bp-chip">Mención Especial Doctorado GenderCom</span>
+        </div>
+        <p>Estos reconocimientos incluirán certificado oficial y difusión institucional.</p>
+      </section>
+
+      <section class="bp-sec" id="s4">
+        <span class="bp-sec-num">Artículo 4</span>
+        <h2>Colaboraciones y patrocinios externos</h2>
+        <p>La organización podrá incorporar reconocimientos especiales, actividades formativas o colaboraciones promovidas por entidades externas vinculadas a la comunicación, la innovación tecnológica, la sostenibilidad, la investigación o la transformación digital. Estas colaboraciones podrán incluir:</p>
+        <ul class="bp-list">
+          <li>Programas de mentoría.</li>
+          <li>Acciones formativas.</li>
+          <li>Asesoramiento especializado.</li>
+          <li>Acceso a herramientas digitales.</li>
+          <li>Participación de profesionales externos.</li>
+          <li>Otras iniciativas alineadas con los objetivos del congreso.</li>
+        </ul>
+        <p>La incorporación de entidades colaboradoras no implicará necesariamente dotación económica asociada.</p>
+      </section>
+
+      <section class="bp-sec" id="s5">
+        <span class="bp-sec-num">Artículo 5</span>
+        <h2>Requisitos</h2>
+        <p>Podrán optar a los premios las personas participantes en GenderCom 2026 cuyos trabajos:</p>
+        <ul class="bp-list">
+          <li>Hayan sido aceptados por el comité científico del congreso.</li>
+          <li>Sean efectivamente presentados o defendidos durante el congreso.</li>
+          <li>Se ajusten a las modalidades establecidas en estas bases.</li>
+          <li>Dispongan de la documentación requerida por la organización.</li>
+        </ul>
+        <h3>Personas que pueden ser premiadas</h3>
+        <ul class="bp-list">
+          <li>Estudiantes de grado.</li>
+          <li>Estudiantes de máster.</li>
+          <li>Personal investigador en formación.</li>
+          <li>Personal docente e investigador.</li>
+          <li>Profesionales y personas participantes externas vinculadas al ámbito de la comunicación y el género.</li>
+        </ul>
+        <p>En el caso de trabajos colectivos, al menos una persona integrante deberá asumir la representación ante la organización.</p>
+      </section>
+
+      <section class="bp-sec" id="s6">
+        <span class="bp-sec-num">Artículo 6</span>
+        <h2>Documentación requerida por los trabajos</h2>
+        <ul class="bp-list">
+          <li>Resumen o texto de la comunicación.</li>
+          <li>Póster.</li>
+          <li>Pieza audiovisual.</li>
+          <li>Memoria descriptiva.</li>
+          <li>O documentación equivalente según el formato presentado.</li>
+        </ul>
+        <p>Toda la documentación, así como el texto completo del trabajo, deberá enviarse al correo <a href="mailto:info@intracom.es">info@intracom.es</a> dentro de los plazos establecidos en estas bases.</p>
+      </section>
+
+      <section class="bp-sec" id="s7">
+        <span class="bp-sec-num">Artículo 7</span>
+        <h2>Procedimiento de concesión</h2>
+        <p>La concesión de los premios se realizará mediante evaluación de los trabajos aceptados por el comité científico del congreso.</p>
+        <h3>a) Preselección</h3>
+        <p>Cada mesa temática podrá proponer trabajos finalistas atendiendo a su calidad, originalidad y adecuación temática.</p>
+        <h3>b) Evaluación final</h3>
+        <p>El jurado realizará la valoración definitiva conforme a los criterios establecidos en las presentes bases.</p>
+        <h3>c) Fallo del jurado</h3>
+        <p>La decisión final del jurado será emitida por la organización del congreso y publicada en los canales oficiales de GenderCom y de la Facultad de Comunicación y Documentación.</p>
+      </section>
+
+      <section class="bp-sec" id="s8">
+        <span class="bp-sec-num">Artículo 8</span>
+        <h2>Criterios de evaluación</h2>
+        <table class="bp-table">
+          <thead><tr><th>Criterio</th><th>Ponderación</th></tr></thead>
+          <tbody>
+            <tr><td>Relevancia temática y alineación con el enfoque del congreso</td><td>30 %</td></tr>
+            <tr><td>Calidad conceptual y metodológica</td><td>20 %</td></tr>
+            <tr><td>Originalidad y creatividad</td><td>25 %</td></tr>
+            <tr><td>Impacto potencial, innovación y transferencia</td><td>25 %</td></tr>
+          </tbody>
+        </table>
+        <h3>Comunicaciones científicas</h3>
+        <ul class="bp-list">
+          <li>Solidez teórica.</li>
+          <li>Rigor metodológico.</li>
+          <li>Claridad expositiva.</li>
+          <li>Contribución al campo.</li>
+        </ul>
+        <h3>Pósters</h3>
+        <ul class="bp-list">
+          <li>Síntesis conceptual.</li>
+          <li>Claridad visual.</li>
+          <li>Eficacia comunicativa.</li>
+        </ul>
+        <h3>Formatos audiovisuales y transmedia</h3>
+        <ul class="bp-list">
+          <li>Creatividad narrativa.</li>
+          <li>Innovación formal.</li>
+          <li>Capacidad de impacto y transferencia.</li>
+        </ul>
+      </section>
+
+      <section class="bp-sec" id="s9">
+        <span class="bp-sec-num">Artículo 9</span>
+        <h2>Composición del jurado</h2>
+        <p>El jurado estará integrado por:</p>
+        <ul class="bp-list">
+          <li>Miembros de la coordinación de GenderCom.</li>
+          <li>Representantes de las entidades financiadoras y colaboradoras de los Premios GenderCom 2026.</li>
+          <li>Profesorado e investigadores/as de la Universidad de Granada.</li>
+          <li>Representantes académicos vinculados al ámbito de la comunicación y el género.</li>
+          <li>Profesionales externos o representantes de entidades colaboradoras, en su caso.</li>
+        </ul>
+        <p>La composición definitiva del jurado será determinada por la organización del congreso. Las deliberaciones del jurado tendrán carácter confidencial.</p>
+      </section>
+
+      <section class="bp-sec" id="s10">
+        <span class="bp-sec-num">Artículo 10</span>
+        <h2>Entrega de premios</h2>
+        <p>El fallo del jurado se hará público durante el acto de clausura de GenderCom 2026 y a través de los canales oficiales del congreso y de la Facultad de Comunicación y Documentación.</p>
+        <p>La organización podrá difundir los trabajos premiados y reconocidos mediante página web oficial, redes institucionales, notas de prensa y publicaciones o materiales divulgativos vinculados al congreso.</p>
+      </section>
+
+      <section class="bp-sec" id="s11">
+        <span class="bp-sec-num">Artículo 11</span>
+        <h2>Desistimiento y aceptación</h2>
+        <p>La concesión del premio queda sujeta a la aceptación formal del beneficiario. En caso de que la persona premiada decidiera no aceptar el mismo, deberá manifestar su renuncia de forma expresa y por escrito en un plazo máximo de 5 días hábiles desde la publicación del fallo del jurado. La renuncia al premio implica la pérdida automática de todos los derechos, beneficios y dotación económica asociados. La organización procederá a asignar el premio al siguiente finalista con mayor puntuación o, en caso de no existir, quedará desierto.</p>
+      </section>
+
+      <section class="bp-sec" id="s12">
+        <span class="bp-sec-num">Artículo 12</span>
+        <h2>Protección de datos</h2>
+        <p>El tratamiento de los datos personales se ajustará a lo establecido en el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo y en la Ley Orgánica 3/2018, de Protección de Datos Personales y garantía de los derechos digitales. Los datos recogidos serán utilizados exclusivamente para la gestión de los premios y la difusión institucional de los resultados.</p>
+      </section>
+
+      <section class="bp-sec" id="s13">
+        <span class="bp-sec-num">Artículo 13</span>
+        <h2>Derechos de propiedad intelectual</h2>
+        <p>La obtención de algún premio no implica cesión exclusiva de derechos de propiedad intelectual. Las personas premiadas autorizan a la organización, de forma gratuita y no exclusiva, a reproducir y difundir imágenes, títulos, resúmenes o fragmentos de los trabajos exclusivamente con fines académicos, culturales y de promoción institucional del congreso y de la Universidad de Granada.</p>
+      </section>
+
+      <section class="bp-sec" id="s14">
+        <span class="bp-sec-num">Artículo 14</span>
+        <h2>Plazos de la convocatoria</h2>
+        <div class="bp-dates">
+          <div class="bp-date"><strong>13 sep 2026</strong><span>Límite de recepción de propuestas.</span></div>
+          <div class="bp-date"><strong>15 sep 2026</strong><span>Límite de inscripción al congreso.</span></div>
+          <div class="bp-date"><strong>30 sep 2026</strong><span>Entrega del texto completo para quienes opten a los Premios GenderCom, con el fin de que el jurado pueda evaluarlo antes del congreso.</span></div>
+          <div class="bp-date"><strong>5–9 oct 2026</strong><span>Celebración del congreso, presentación y defensa de los trabajos.</span></div>
+          <div class="bp-date"><strong>30 oct 2026</strong><span>Entrega del texto completo para la participación general.</span></div>
+        </div>
+        <p>Las entregas de textos completos se realizarán por correo electrónico a <a href="mailto:info@intracom.es">info@intracom.es</a>, indicando en el asunto la modalidad a la que se opta.</p>
+      </section>
+
+      <div class="bp-cta">
+        <a href="https://areaprivada.portalintracom.com/inscripcion-previa-gendercom26" target="_blank" rel="noopener" class="btn btn-primary">Presentar una propuesta</a>
+        <a href="#premios" class="btn btn-ghost">Ver las modalidades en la web</a>
+      </div>
+    </article>
+  </div>
+</div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logo-neg.png" alt="GENDERCOM" loading="lazy">
+        <p>XII Congreso Internacional de Comunicación y Género. Comunicación sostenible y liderazgo con mirada de género.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM2.5 9.5h5V21h-5zM9.5 9.5h4.78v1.57h.07c.67-1.27 2.3-2.6 4.73-2.6 5.06 0 6 3.33 6 7.66V21h-5v-5.86c0-1.4-.03-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1V21h-5z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Navegación</h5>
+        <ul>
+          <li><a href="#presentacion">Presentación</a></li>
+          <li><a href="#lineas">Líneas Temáticas</a></li>
+          <li><a href="#inscripciones">Inscripciones</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#alojamiento">Alojamiento</a></li>
+        <li><a href="#publicaciones">Publicaciones</a></li>
+          <li><a href="#premios">Premios GenderCom 26</a></li>
+          <li><a href="#noticias">Noticias</a></li>
+          <li><a href="#organizacion">Organización</a></li>
+          <li><a href="#sede">Sede y contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contacto</h5>
+        <ul>
+          <li><a href="mailto:gendercomconference@gmail.com">gendercomconference@gmail.com</a></li>
+          <li><a href="mailto:gendercompublicaciones@gmail.com">gendercompublicaciones@gmail.com</a></li>
+          <li><a href="https://areaprivada.portalintracom.com/inscripcion-previa-gendercom26" target="_blank" rel="noopener">Área privada / Inscripción</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>GENDERCOM es un congreso de la Red INTRACOM · © 2026</span>
+      <span>Granada · 7–9 octubre 2026</span>
+    </div>
+  </div>
+</footer>
+
+<div class="news-modal mesa-modal" id="mesaModal" aria-hidden="true">
+  <div class="news-modal-backdrop" data-close></div>
+  <div class="news-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="mesaModalTitle">
+    <button class="news-modal-close" data-close type="button" aria-label="Cerrar">&times;</button>
+    <div class="news-modal-content">
+      <span class="mesa-modal-time" id="mesaModalTime"></span>
+      <h3 id="mesaModalTitle"></h3>
+      <div id="mesaModalBody"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('click',function(e){var a=e.target.closest('.agenda-news');if(!a)return;e.preventDefault();e.stopPropagation();var c=document.getElementById(a.getAttribute('data-news'));if(c)c.click();},true);
+document.addEventListener('click',function(e){if(e.target.closest('.agenda-cta'))e.stopPropagation();},true);
+</script>
+
+<div class="tally-pop" id="tallyPop" aria-hidden="true">
+  <div class="tally-backdrop" data-tally-close></div>
+  <div class="tally-card" role="dialog" aria-modal="true" aria-labelledby="tallyTitle">
+    <div class="tally-head"><span>Inscripción · 20 plazas</span><h3 id="tallyTitle">Manifiesto Transmedia de Liderazgo Feminista</h3><button class="tally-close" type="button" data-tally-close aria-label="Cerrar">&times;</button></div>
+    <iframe id="tallyFrame" title="Formulario de inscripción" loading="lazy"></iframe>
+  </div>
+</div>
+<script>
+(function(){
+  var pop=document.getElementById('tallyPop'),fr=document.getElementById('tallyFrame');
+  function close(){pop.classList.remove('is-open');pop.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('[data-tally]');
+    if(a){e.preventDefault();e.stopPropagation();
+      var id=a.getAttribute('data-tally');var src='https://tally.so/embed/'+id+'?alignLeft=1&hideTitle=1&transparentBackground=1';
+      if(fr.getAttribute('src')!==src)fr.setAttribute('src',src);
+      var nm=document.getElementById('newsModal');if(nm&&nm.classList.contains('is-open')){var c=nm.querySelector('[data-close]');if(c)c.click();}
+      pop.classList.add('is-open');pop.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';return;}
+    if(e.target.closest('[data-tally-close]'))close();
+  },true);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&pop.classList.contains('is-open'))close();});
+})();
+</script>
+
+<div class="news-modal" id="newsModal" aria-hidden="true">
+  <div class="news-modal-backdrop" data-close></div>
+  <div class="news-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="newsModalTitle">
+    <button class="news-modal-close" data-close type="button" aria-label="Cerrar">&times;</button>
+    <img class="news-modal-img" id="newsModalImg" alt="">
+    <div class="news-modal-content">
+      <span class="news-date" id="newsModalDate"></span>
+      <h3 id="newsModalTitle"></h3>
+      <div class="news-modal-body" id="newsModalBody"></div>
+    </div>
+  </div>
+</div>
+
+<script src="assets/image-slot.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>
