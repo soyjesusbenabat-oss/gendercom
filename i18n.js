@@ -589,6 +589,7 @@
       "Investigador FPU · Universidad de Granada": "FPU Researcher · University of Granada",
       "Organiza IntraCOM": "Organized by IntraCOM",
       "Con el patrocinio de": "Sponsored by",
+      "Diputación de Granada": "Provincial Council of Granada",
       "Apoyan el congreso": "Supporting the congress",
       "Universidades": "Universities",
       "Entidades colaboradoras": "Partner organizations",
