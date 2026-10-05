@@ -875,6 +875,10 @@
     });
     document.documentElement.setAttribute("lang", lang);
     if (TITLES[lang]) document.title = TITLES[lang];
+    // Quien lea la web en un idioma debe llegar a la de Turín en ese mismo idioma.
+    Array.prototype.forEach.call(document.querySelectorAll('a[href^="/gendercom2027/"]'), function (a) {
+      a.setAttribute("href", "/gendercom2027/?lang=" + lang);
+    });
     document.querySelectorAll("[data-i18n-switch] button").forEach(function (b) {
       var activo = b.getAttribute("data-lang") === lang;
       b.style.background = activo ? "#C6007E" : "transparent";

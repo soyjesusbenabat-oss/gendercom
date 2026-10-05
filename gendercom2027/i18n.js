@@ -495,8 +495,15 @@
   var IDIOMAS = ["it", "es", "en"];
   var lang = "it";
   try {
-    var g = localStorage.getItem("gendercom27_lang");
-    if (g && IDIOMAS.indexOf(g) >= 0) lang = g;
+    // Si se llega desde la web de 2026 leyéndola en español o en inglés, se mantiene ese idioma.
+    var url = (location.search.match(/[?&]lang=([a-z]{2})/) || [])[1];
+    if (url && IDIOMAS.indexOf(url) >= 0) {
+      lang = url;
+      try { localStorage.setItem("gendercom27_lang", url); } catch (e) {}
+    } else {
+      var g = localStorage.getItem("gendercom27_lang");
+      if (g && IDIOMAS.indexOf(g) >= 0) lang = g;
+    }
   } catch (e) {}
 
   var ORIG = new WeakMap();
@@ -547,7 +554,7 @@
       b.setAttribute("data-lang", l);
       b.textContent = l.toUpperCase();
       b.style.cssText =
-        "background:none;border:0;cursor:pointer;font:600 11.5px/1 inherit;letter-spacing:.12em;padding:7px 6px;color:currentColor;opacity:.55;transition:opacity .2s";
+        "background:none;border:0;cursor:pointer;font:600 12px/1 inherit;letter-spacing:.12em;padding:7px 7px;transition:opacity .2s,color .25s";
       b.addEventListener("click", function () {
         lang = l;
         try { localStorage.setItem("gendercom27_lang", l); } catch (e) {}
@@ -557,7 +564,11 @@
     });
     cta.insertBefore(caja, cta.firstChild);
     var estilo = document.createElement("style");
-    estilo.textContent = "[data-i18n-selector] button.on{opacity:1;text-decoration:underline;text-underline-offset:4px}";
+    estilo.textContent = "[data-i18n-selector] button{color:#fff;opacity:.68}"
+      + "[data-i18n-selector] button:hover{opacity:1}"
+      + "[data-i18n-selector] button.on{opacity:1;text-decoration:underline;text-underline-offset:4px}"
+      + ".nav.scrolled [data-i18n-selector] button{color:var(--ink,#140f1a)}"
+      + ".nav.scrolled [data-i18n-selector] button.on{color:var(--magenta,#C6007E)}";
     document.head.appendChild(estilo);
   }
 
