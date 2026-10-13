@@ -13,6 +13,16 @@
 
   var DICT = {
     en: {
+      "En los medios": "In the media",
+      "Repercusión": "Press coverage",
+      "El congreso en los medios": "The congress in the media",
+      "Lo que han contado la prensa y los canales institucionales sobre GENDERCOM 2026.": "What the press and the university’s own channels have published about GENDERCOM 2026.",
+      "¿Ha publicado su medio algo sobre el congreso? Escríbanos a": "Has your outlet covered the congress? Write to us at",
+      "y lo añadimos.": "and we will add it.",
+      "24 feb 2026": "24 Feb 2026",
+      "6 oct 2026": "6 Oct 2026",
+      "7 oct 2026": "7 Oct 2026",
+      "8 oct 2026": "8 Oct 2026",
       "Los Premios GENDERCOM 2026 reconocen siete trabajos sobre comunicación, innovación y liderazgo con perspectiva de género": "The GENDERCOM 2026 Awards recognise seven projects on communication, innovation and leadership with a gender perspective",
       "De la memoria de las mujeres en la Sociología a las barreras que encuentran las personas migrantes LGBTIAQ+ en la frontera sur: los trabajos premiados en el XII Congreso Internacional de Género y Comunicación muestran que la igualdad también se investiga, se diseña y se comunica.": "From the memory of women in Sociology to the barriers faced by LGBTIAQ+ migrants at Spain’s southern border: the projects awarded at the XII International Congress on Gender and Communication show that equality is also researched, designed and communicated.",
       "Granada ha sido durante tres días el punto de encuentro de la investigación en comunicación y género. Del 7 al 9 de octubre, el XII Congreso Internacional de Género y Comunicación, GENDERCOM GRX2026, ha reunido a investigadoras, profesionales y estudiantes alrededor de una idea: comunicar de forma sostenible y liderar con mirada de género. Los Premios GENDERCOM han reconocido los trabajos que mejor representan ese espíritu.": "For three days Granada was the meeting point for research on communication and gender. From 7 to 9 October, the XII International Congress on Gender and Communication, GENDERCOM GRX2026, brought together researchers, professionals and students around a single idea: communicating sustainably and leading with a gender perspective. The GENDERCOM Awards have recognised the projects that best embody that spirit.",
