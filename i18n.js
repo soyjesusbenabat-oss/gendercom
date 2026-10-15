@@ -13,6 +13,12 @@
 
   var DICT = {
     en: {
+      "El congreso en imágenes": "The congress in pictures",
+      "Galería": "Gallery",
+      "Tres días en la Facultad de Comunicación y Documentación de la Universidad de Granada, del 7 al 9 de octubre de 2026.": "Three days at the Faculty of Communication and Documentation of the University of Granada, 7–9 October 2026.",
+      "GENDERCOM 2026 en la Universidad de Granada": "GENDERCOM 2026 at the University of Granada",
+      "Imagen anterior": "Previous image",
+      "Imagen siguiente": "Next image",
       "En los medios": "In the media",
       "Repercusión": "Press coverage",
       "El congreso en los medios": "The congress in the media",
