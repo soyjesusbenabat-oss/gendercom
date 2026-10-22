@@ -10,11 +10,11 @@
   "use strict";
 
   var DATOS = {
-      "lang": "es",
-      "locale": "es_ES",
-      "nombre": "GENDERCOM 2026",
-      "title": "GENDERCOM 2026 · Congreso de Comunicación y Género · Granada",
-      "desc": "XII Congreso Internacional de Comunicación y Género. Comunicación sostenible y liderazgo con mirada de género. Universidad de Granada, 7–9 de octubre de 2026.",
+      "lang": "it",
+      "locale": "it_IT",
+      "nombre": "GENDERCOM 2027",
+      "title": "GENDERCOM 2027 · Convegno internazionale di comunicazione e genere · Torino",
+      "desc": "Comunicare le differenze per costruire l’uguaglianza. CIRSDe, Università degli Studi di Torino, 9–11 giugno 2027.",
       "url": "https://gendercom.org/",
       "imagen": "https://gendercom.org/og.png"
   };
