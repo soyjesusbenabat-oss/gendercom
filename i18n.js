@@ -541,6 +541,22 @@
     if (nodo.textContent !== nuevo) nodo.textContent = nuevo;
   }
 
+  /**
+   * Los botones que llevan a la plataforma del congreso apuntan al idioma que se está
+   * leyendo: la plataforma tiene las mismas tres lenguas que esta web, y quien navega
+   * en español no tiene por qué aterrizar en italiano.
+   */
+  var PLATAFORMA = /^(https:\/\/conferences\.portalintracom\.com)\/[a-z]{2}(\/.*)$/;
+  function enlacesPlataforma() {
+    Array.prototype.forEach.call(
+      document.querySelectorAll('a[href*="conferences.portalintracom.com"]'),
+      function (a) {
+        var m = PLATAFORMA.exec(a.getAttribute("href") || "");
+        if (m) a.setAttribute("href", m[1] + "/" + lang + m[2]);
+      }
+    );
+  }
+
   var aplicando = false;
   function aplicar() {
     if (aplicando) return;
@@ -553,6 +569,7 @@
       if (!p || p.tagName === "SCRIPT" || p.tagName === "STYLE" || p.closest("[data-i18n-selector]")) continue;
       traducir(n, dict);
     }
+    enlacesPlataforma();
     document.documentElement.setAttribute("lang", lang);
     document.title = TITULOS[lang] || TITULOS.it;
     Array.prototype.forEach.call(document.querySelectorAll("[data-i18n-selector] button"), function (b) {
