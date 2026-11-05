@@ -23,19 +23,19 @@
       "aviso-legal": "Note legali",
       "privacidad": "Informativa sulla privacy",
       "cookies": "Informativa sui cookie",
-      "preferencias": "Cookie"
+      "preferencias": "Preferenze cookie"
     },
     "es": {
       "aviso-legal": "Aviso legal",
       "privacidad": "Política de privacidad",
       "cookies": "Política de cookies",
-      "preferencias": "Cookies"
+      "preferencias": "Preferencias de cookies"
     },
     "en": {
       "aviso-legal": "Legal notice",
       "privacidad": "Privacy policy",
       "cookies": "Cookie policy",
-      "preferencias": "Cookies"
+      "preferencias": "Cookie settings"
     }
   },
   "titular": "Portal Intracom",
