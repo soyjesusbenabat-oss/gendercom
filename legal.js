@@ -43,6 +43,7 @@
 };
 
   var DOCS = ["aviso-legal", "privacidad", "cookies"];
+  var BARRA_ID = "intracom-legal";
 
   /** Rótulos que puede llevar un enlace ya existente, en los cuatro idiomas. */
   var ROTULOS = {
@@ -117,12 +118,27 @@
     return null;
   }
 
+  /**
+   * Lo que ponemos nosotros: la barra del pie y lo que añade el aviso de cookies (el recuadro del
+   * contenido bloqueado y el propio aviso). Esos enlaces no cuentan: si contaran, la barra creería
+   * que el pie ya trae el documento y se quitaría a sí misma en el siguiente repaso.
+   */
+  function nuestro(a) {
+    for (var n = a; n && n.nodeType === 1; n = n.parentNode) {
+      if (n.id === BARRA_ID || n.id === "intracom-cookies") return true;
+      var c = n.className;
+      if (c && String(c).indexOf("ic-hueco") >= 0) return true;
+    }
+    return false;
+  }
+
   /** Pone el enlace en los rótulos que ya existen. Devuelve los documentos que ha encontrado. */
   function arreglarExistentes(lang) {
     var vistos = {};
     var anclas = document.querySelectorAll("a");
     for (var i = 0; i < anclas.length; i++) {
       var a = anclas[i];
+      if (nuestro(a)) continue;
       var ya = a.getAttribute("data-legal");
       if (ya) {
         vistos[ya] = true;
@@ -138,7 +154,6 @@
     return vistos;
   }
 
-  var BARRA_ID = "intracom-legal";
   var ESTILO_ID = "intracom-legal-css";
   var CSS =
     "#" + BARRA_ID + "{position:relative;z-index:5;padding:18px 20px;display:flex;flex-wrap:wrap;" +
