@@ -168,25 +168,32 @@
 
   // ---------- Aviso ----------
 
+  // El diseño de cada web inyecta sus propios estilos después, así que el recuadro se impone:
+  // si pierde el fondo claro, queda texto oscuro sobre una sección oscura y no se lee.
   var CSS =
-    ".ic-hueco{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;" +
-    "min-height:220px;padding:26px 22px;text-align:center;background:#EEF1F6;border:1px dashed #AEBACD;" +
-    "border-radius:14px;color:#2A3545;font:400 14.5px/1.55 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif}" +
-    ".ic-hueco p{margin:0}" +
+    ".ic-hueco{display:flex !important;flex-direction:column !important;align-items:center !important;" +
+    "justify-content:center !important;gap:4px;min-height:220px;padding:26px 22px !important;" +
+    "text-align:center !important;background:#EEF1F6 !important;border:1px dashed #AEBACD !important;" +
+    "border-radius:14px !important;color:#2A3545 !important;" +
+    "font:400 14.5px/1.55 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif !important}" +
+    ".ic-hueco p{margin:0 !important;color:#2A3545 !important;font:inherit !important;letter-spacing:normal !important;" +
+    "text-transform:none !important}" +
     ".ic-hueco-t{max-width:46ch}" +
-    ".ic-hueco-d{margin-top:14px !important;display:flex;flex-wrap:wrap;gap:10px;justify-content:center}" +
-    ".ic-hueco-p{margin-top:10px !important;font-size:13px}" +
-    ".ic-hueco-p a{color:#003871}" +
-    ".ic-b{display:inline-block;padding:10px 20px;border-radius:999px;border:1px solid #0A2150;cursor:pointer;" +
-    "font:600 13.5px/1 inherit;text-decoration:none}" +
-    ".ic-b-si{background:#0A2150;color:#fff}" +
-    ".ic-b-no{background:transparent;color:#0A2150}" +
+    ".ic-hueco-d{margin-top:14px !important;display:flex !important;flex-wrap:wrap;gap:10px;justify-content:center}" +
+    ".ic-hueco-p{margin-top:10px !important;font-size:13px !important}" +
+    ".ic-hueco-p a{color:#003871 !important;text-decoration:underline !important}" +
+    ".ic-b{display:inline-block !important;padding:10px 20px !important;border-radius:999px !important;" +
+    "border:1px solid #0A2150 !important;cursor:pointer;font:600 13.5px/1 inherit !important;" +
+    "text-decoration:none !important;letter-spacing:normal !important;text-transform:none !important}" +
+    ".ic-b-si{background:#0A2150 !important;color:#fff !important}" +
+    ".ic-b-no{background:transparent !important;color:#0A2150 !important}" +
     "#" + ID_BANNER + "{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;padding:20px;" +
     "background:#0A2150;color:#E6ECF6;box-shadow:0 -14px 40px rgba(6,16,36,.35);" +
     "font:400 14.5px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif}" +
     "#" + ID_BANNER + " .ic-caja{width:min(1040px,100%);margin-inline:auto;display:flex;flex-wrap:wrap;" +
     "gap:14px 26px;align-items:center;justify-content:space-between}" +
-    "#" + ID_BANNER + " p{margin:0;max-width:62ch}" +
+    "#" + ID_BANNER + " p{margin:0 !important;max-width:62ch;color:#E6ECF6 !important;font:inherit !important;" +
+    "letter-spacing:normal !important;text-transform:none !important}" +
     "#" + ID_BANNER + " a{color:#fff}" +
     "#" + ID_BANNER + " .ic-botones{display:flex;flex-wrap:wrap;gap:10px}" +
     "#" + ID_BANNER + " button{padding:12px 22px;border-radius:999px;border:1px solid #fff;cursor:pointer;" +
