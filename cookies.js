@@ -286,6 +286,7 @@
     div.id = ID_BANNER;
     div.setAttribute("role", "region");
     div.setAttribute("aria-label", t.titulo);
+    div.setAttribute("data-lang", lang());
     div.innerHTML =
       '<div class="ic-caja"><p>' +
       t.aviso +
@@ -367,7 +368,10 @@
       // El diseño reconstruye la página y se lleva por delante la hoja de estilos y el aviso
       css();
       taparTodo();
-      if (decision() === null) preguntar();
+      // Algunas webs eligen el idioma después de cargar: el aviso tiene que cambiar con ellas
+      var b = document.getElementById(ID_BANNER);
+      if (b && b.getAttribute("data-lang") !== lang()) quitarBanner();
+      if (decision() === null || b) preguntar();
     }, 100);
   }
 
