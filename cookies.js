@@ -256,6 +256,9 @@
 
   function aplicar() {
     if (!document.body) return;
+    // Los estilos van siempre, no solo al enseñar el aviso: quien ya ha rechazado sigue viendo
+    // el recuadro del contenido bloqueado y tiene que leerse
+    css();
     var d = decision();
     if (d === "si") {
       destaparTodo();
@@ -294,6 +297,8 @@
     pendiente = setTimeout(function () {
       pendiente = null;
       if (decision() === "si") return;
+      // El diseño reconstruye la página y se lleva por delante la hoja de estilos
+      css();
       taparTodo();
     }, 100);
   }
