@@ -1,0 +1,304 @@
+/**
+ * Consentimiento de cookies con bloqueo previo. Lo genera scripts/webs-legales del repositorio de
+ * la plataforma: no editar a mano.
+ *
+ * Nada de terceros se carga antes de que la persona decida. Los mapas, los vídeos y los
+ * formularios externos se sustituyen por un recuadro con su propio botón, y la etiqueta de medición
+ * de Google Ads no se inyecta hasta que se acepta. Quien rechaza sigue teniendo la web completa:
+ * solo ve el recuadro en lugar del mapa, con el enlace para abrirlo en su sitio original.
+ *
+ * La decisión se guarda en el navegador de quien visita (localStorage), que es almacenamiento
+ * técnico exento de consentimiento: sin él habría que volver a preguntar en cada página.
+ */
+(function () {
+  "use strict";
+
+  var CFG = {
+  "idiomaPorDefecto": "it",
+  "textos": {
+    "it": {
+      "titulo": "Cookie",
+      "aceptar": "Accetta",
+      "rechazar": "Rifiuta",
+      "masInfo": "Informativa sui cookie",
+      "bloqueado": "Questo contenuto è di terzi e può installare cookie nel suo browser. Non viene caricato prima della sua autorizzazione.",
+      "cargar": "Carica questo contenuto",
+      "abrirFuera": "Aprilo all'origine",
+      "aviso": "Questo sito non installa cookie propri. Per mostrarle la mappa della sede e il modulo di iscrizione carica contenuti di Google e di altri servizi, che possono installare i loro. Non li carichiamo prima della sua decisione: se rifiuta, il sito funziona allo stesso modo e avrà un collegamento per aprirli a parte."
+    },
+    "es": {
+      "titulo": "Cookies",
+      "aceptar": "Aceptar",
+      "rechazar": "Rechazar",
+      "masInfo": "Política de cookies",
+      "bloqueado": "Este contenido es de un tercero y puede instalar cookies en su navegador. No se carga hasta que usted lo autoriza.",
+      "cargar": "Cargar este contenido",
+      "abrirFuera": "Abrirlo en su web",
+      "aviso": "Esta web no instala cookies propias. Para mostrarle el mapa de la sede y el formulario de inscripción carga contenido de Google y otros servicios, que sí pueden instalar las suyas. No lo cargamos hasta que usted lo decida: si lo rechaza, la web funciona igual y verá un enlace para abrirlo aparte."
+    },
+    "en": {
+      "titulo": "Cookies",
+      "aceptar": "Accept",
+      "rechazar": "Decline",
+      "masInfo": "Cookie policy",
+      "bloqueado": "This content comes from a third party and may set cookies in your browser. It will not load until you allow it.",
+      "cargar": "Load this content",
+      "abrirFuera": "Open it at source",
+      "aviso": "This website sets no cookies of its own. To show you the venue map and the registration form it loads content from Google and other services, which can set their own. We do not load it until you decide: if you decline, the website works just the same and you will get a link to open it separately."
+    }
+  },
+  "patrones": [
+    "google.com/maps",
+    "maps.google.",
+    "tally.so"
+  ],
+  "ads": null
+};
+
+  var CLAVE = "intracom_cookies_v1";
+  var ID_BANNER = "intracom-cookies";
+  var ID_CSS = "intracom-cookies-css";
+
+  function lang() {
+    var q = /[?&]lang=([a-z]{2})/.exec(location.search);
+    if (q && CFG.textos[q[1]]) return q[1];
+    var h = (document.documentElement.getAttribute("lang") || "").slice(0, 2).toLowerCase();
+    if (CFG.textos[h]) return h;
+    return CFG.idiomaPorDefecto;
+  }
+  function T() {
+    return CFG.textos[lang()] || CFG.textos[CFG.idiomaPorDefecto];
+  }
+  function enlacePolitica() {
+    var l = lang();
+    return "/legal/cookies" + (l === CFG.idiomaPorDefecto ? "" : "." + l) + ".html";
+  }
+
+  function decision() {
+    try {
+      return localStorage.getItem(CLAVE);
+    } catch (e) {
+      return null;
+    }
+  }
+  function guardar(v) {
+    try {
+      localStorage.setItem(CLAVE, v);
+    } catch (e) {
+      /* navegación privada: se preguntará otra vez */
+    }
+  }
+
+  // ---------- Bloqueo de lo incrustado ----------
+
+  function esDeTerceros(src) {
+    if (!src) return false;
+    for (var i = 0; i < CFG.patrones.length; i++) if (src.indexOf(CFG.patrones[i]) >= 0) return true;
+    return false;
+  }
+
+  /** Cambia un iframe por un recuadro con el motivo y un botón para cargarlo solo él. */
+  function tapar(marco) {
+    var src = marco.getAttribute("src");
+    if (!esDeTerceros(src) || marco.getAttribute("data-bloqueado")) return;
+    var hueco = document.createElement("div");
+    hueco.className = "ic-hueco";
+    hueco.setAttribute("data-src", src);
+    // Que ocupe lo mismo que ocupaba el iframe, para no descuadrar el diseño
+    var alto = marco.getAttribute("height") || (marco.style && marco.style.height) || "";
+    if (alto) hueco.style.minHeight = /\d$/.test(String(alto)) ? alto + "px" : alto;
+    hueco.innerHTML =
+      '<p class="ic-hueco-t">' +
+      T().bloqueado +
+      "</p>" +
+      '<p class="ic-hueco-d"><button type="button" class="ic-b ic-b-si" data-cargar="1">' +
+      T().cargar +
+      '</button> <a class="ic-b ic-b-no" href="' +
+      src +
+      '" target="_blank" rel="noopener noreferrer">' +
+      T().abrirFuera +
+      "</a></p>" +
+      '<p class="ic-hueco-p"><a href="' + enlacePolitica() + '">' + T().masInfo + "</a></p>";
+    marco.setAttribute("data-bloqueado", "1");
+    marco.parentNode.insertBefore(hueco, marco);
+    marco.parentNode.removeChild(marco);
+    hueco.appendChild(marco);
+    marco.style.display = "none";
+    marco.removeAttribute("src");
+  }
+
+  function destapar(hueco) {
+    var marco = hueco.querySelector("iframe");
+    var src = hueco.getAttribute("data-src");
+    if (marco && src) {
+      marco.setAttribute("src", src);
+      marco.style.display = "";
+      marco.removeAttribute("data-bloqueado");
+      hueco.parentNode.insertBefore(marco, hueco);
+    }
+    hueco.parentNode.removeChild(hueco);
+  }
+
+  function taparTodo() {
+    var marcos = document.querySelectorAll("iframe[src]");
+    for (var i = 0; i < marcos.length; i++) tapar(marcos[i]);
+  }
+  function destaparTodo() {
+    var huecos = document.querySelectorAll(".ic-hueco");
+    for (var i = 0; i < huecos.length; i++) destapar(huecos[i]);
+  }
+
+  // ---------- Etiqueta de medición ----------
+
+  var medicionPuesta = false;
+  function medicion() {
+    if (medicionPuesta || !CFG.ads) return;
+    medicionPuesta = true;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () {
+      window.dataLayer.push(arguments);
+    };
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + CFG.ads;
+    document.head.appendChild(s);
+    window.gtag("js", new Date());
+    window.gtag("config", CFG.ads);
+  }
+
+  // ---------- Aviso ----------
+
+  var CSS =
+    ".ic-hueco{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;" +
+    "min-height:220px;padding:26px 22px;text-align:center;background:#EEF1F6;border:1px dashed #AEBACD;" +
+    "border-radius:14px;color:#2A3545;font:400 14.5px/1.55 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif}" +
+    ".ic-hueco p{margin:0}" +
+    ".ic-hueco-t{max-width:46ch}" +
+    ".ic-hueco-d{margin-top:14px !important;display:flex;flex-wrap:wrap;gap:10px;justify-content:center}" +
+    ".ic-hueco-p{margin-top:10px !important;font-size:13px}" +
+    ".ic-hueco-p a{color:#003871}" +
+    ".ic-b{display:inline-block;padding:10px 20px;border-radius:999px;border:1px solid #0A2150;cursor:pointer;" +
+    "font:600 13.5px/1 inherit;text-decoration:none}" +
+    ".ic-b-si{background:#0A2150;color:#fff}" +
+    ".ic-b-no{background:transparent;color:#0A2150}" +
+    "#" + ID_BANNER + "{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;padding:20px;" +
+    "background:#0A2150;color:#E6ECF6;box-shadow:0 -14px 40px rgba(6,16,36,.35);" +
+    "font:400 14.5px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif}" +
+    "#" + ID_BANNER + " .ic-caja{width:min(1040px,100%);margin-inline:auto;display:flex;flex-wrap:wrap;" +
+    "gap:14px 26px;align-items:center;justify-content:space-between}" +
+    "#" + ID_BANNER + " p{margin:0;max-width:62ch}" +
+    "#" + ID_BANNER + " a{color:#fff}" +
+    "#" + ID_BANNER + " .ic-botones{display:flex;flex-wrap:wrap;gap:10px}" +
+    "#" + ID_BANNER + " button{padding:12px 22px;border-radius:999px;border:1px solid #fff;cursor:pointer;" +
+    "font:600 14px/1 inherit}" +
+    "#" + ID_BANNER + " .si{background:#fff;color:#0A2150}" +
+    "#" + ID_BANNER + " .no{background:transparent;color:#fff}";
+
+  function css() {
+    if (document.getElementById(ID_CSS)) return;
+    var s = document.createElement("style");
+    s.id = ID_CSS;
+    s.textContent = CSS;
+    (document.head || document.documentElement).appendChild(s);
+  }
+
+  function quitarBanner() {
+    var b = document.getElementById(ID_BANNER);
+    if (b) b.parentNode.removeChild(b);
+  }
+
+  function preguntar() {
+    if (document.getElementById(ID_BANNER)) return;
+    css();
+    var t = T();
+    var div = document.createElement("div");
+    div.id = ID_BANNER;
+    div.setAttribute("role", "region");
+    div.setAttribute("aria-label", t.titulo);
+    div.innerHTML =
+      '<div class="ic-caja"><p>' +
+      t.aviso +
+      ' <a href="' + enlacePolitica() + '">' + t.masInfo + "</a></p>" +
+      '<div class="ic-botones"><button type="button" class="no" data-no="1">' +
+      t.rechazar +
+      '</button><button type="button" class="si" data-si="1">' +
+      t.aceptar +
+      "</button></div></div>";
+    document.body.appendChild(div);
+  }
+
+  function aceptar() {
+    guardar("si");
+    quitarBanner();
+    destaparTodo();
+    medicion();
+  }
+  function rechazar() {
+    guardar("no");
+    quitarBanner();
+    taparTodo();
+  }
+
+  function abrir() {
+    quitarBanner();
+    preguntar();
+  }
+  window.intracomCookies = abrir;
+
+  // ---------- Arranque ----------
+
+  function aplicar() {
+    if (!document.body) return;
+    var d = decision();
+    if (d === "si") {
+      destaparTodo();
+      medicion();
+      return;
+    }
+    taparTodo();
+    if (d !== "no") preguntar();
+  }
+
+  document.addEventListener("click", function (e) {
+    var t = e.target;
+    while (t && t !== document.body) {
+      if (t.getAttribute) {
+        if (t.getAttribute("data-si")) return aceptar();
+        if (t.getAttribute("data-no")) return rechazar();
+        if (t.getAttribute("data-cookies-abrir")) {
+          e.preventDefault();
+          return abrir();
+        }
+        if (t.getAttribute("data-cargar")) {
+          e.preventDefault();
+          var hueco = t;
+          while (hueco && !(hueco.className && String(hueco.className).indexOf("ic-hueco") >= 0)) hueco = hueco.parentNode;
+          if (hueco) destapar(hueco);
+          return;
+        }
+      }
+      t = t.parentNode;
+    }
+  });
+
+  var pendiente = null;
+  function reaplicar() {
+    if (pendiente) return;
+    pendiente = setTimeout(function () {
+      pendiente = null;
+      if (decision() === "si") return;
+      taparTodo();
+    }, 100);
+  }
+
+  function arrancar() {
+    aplicar();
+    if (window.MutationObserver) {
+      new MutationObserver(reaplicar).observe(document.documentElement, { childList: true, subtree: true });
+    }
+    window.addEventListener("load", reaplicar);
+  }
+
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", arrancar);
+  else arrancar();
+})();
