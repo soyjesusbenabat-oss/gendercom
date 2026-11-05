@@ -3,9 +3,9 @@
  * la plataforma: no editar a mano.
  *
  * Nada de terceros se carga antes de que la persona decida. Los mapas, los vídeos y los
- * formularios externos se sustituyen por un recuadro con su propio botón, y la etiqueta de medición
- * de Google Ads no se inyecta hasta que se acepta. Quien rechaza sigue teniendo la web completa:
- * solo ve el recuadro en lugar del mapa, con el enlace para abrirlo en su sitio original.
+ * formularios externos se sustituyen por un recuadro con su propio botón, y las etiquetas de Google
+ * Analytics y Google Ads no se inyectan hasta que se acepta. Quien rechaza sigue teniendo la web
+ * completa: solo ve el recuadro en lugar del mapa, con el enlace para abrirlo en su sitio original.
  *
  * La decisión se guarda en el navegador de quien visita (localStorage), que es almacenamiento
  * técnico exento de consentimiento: sin él habría que volver a preguntar en cada página.
@@ -24,7 +24,7 @@
       "bloqueado": "Questo contenuto è di terzi e può installare cookie nel suo browser. Non viene caricato prima della sua autorizzazione.",
       "cargar": "Carica questo contenuto",
       "abrirFuera": "Aprilo all'origine",
-      "aviso": "Questo sito non installa cookie propri. Per mostrarle la mappa della sede e il modulo di iscrizione carica contenuti di Google e di altri servizi, che possono installare i loro. Non li carichiamo prima della sua decisione: se rifiuta, il sito funziona allo stesso modo e avrà un collegamento per aprirli a parte."
+      "aviso": "Questo sito utilizza Google Analytics per sapere quante persone lo visitano e quali pagine consultano. Inoltre, per mostrarle la mappa della sede e il modulo di iscrizione carica contenuti di terzi. Tutto ciò può installare cookie. Nulla di tutto questo viene caricato prima della sua decisione."
     },
     "es": {
       "titulo": "Cookies",
@@ -34,7 +34,7 @@
       "bloqueado": "Este contenido es de un tercero y puede instalar cookies en su navegador. No se carga hasta que usted lo autoriza.",
       "cargar": "Cargar este contenido",
       "abrirFuera": "Abrirlo en su web",
-      "aviso": "Esta web no instala cookies propias. Para mostrarle el mapa de la sede y el formulario de inscripción carga contenido de Google y otros servicios, que sí pueden instalar las suyas. No lo cargamos hasta que usted lo decida: si lo rechaza, la web funciona igual y verá un enlace para abrirlo aparte."
+      "aviso": "Esta web utiliza Google Analytics para saber cuántas personas la visitan y qué páginas consultan. Además, para mostrarle el mapa de la sede y el formulario de inscripción carga contenido de terceros. Todo ello puede instalar cookies. No cargamos nada de eso hasta que usted lo decida."
     },
     "en": {
       "titulo": "Cookies",
@@ -44,7 +44,7 @@
       "bloqueado": "This content comes from a third party and may set cookies in your browser. It will not load until you allow it.",
       "cargar": "Load this content",
       "abrirFuera": "Open it at source",
-      "aviso": "This website sets no cookies of its own. To show you the venue map and the registration form it loads content from Google and other services, which can set their own. We do not load it until you decide: if you decline, the website works just the same and you will get a link to open it separately."
+      "aviso": "This website uses Google Analytics to find out how many people visit it and which pages they view. In addition, to show you the venue map and the registration form it loads third-party content. All of this can set cookies. None of it loads until you decide."
     }
   },
   "patrones": [
@@ -52,10 +52,14 @@
     "maps.google.",
     "tally.so"
   ],
-  "ads": null
+  "ads": null,
+  "ga": "G-4XHVRYEWV2",
+  "plataforma": "conferences.portalintracom.com",
+  "politica": null
 };
 
-  var CLAVE = "intracom_cookies_v1";
+  // Analytics es una finalidad nueva: quien aceptó antes no aceptó esto y hay que volver a preguntar
+  var CLAVE = "intracom_cookies_" + (CFG.ga ? "v2" : "v1");
   var ID_BANNER = "intracom-cookies";
   var ID_CSS = "intracom-cookies-css";
 
@@ -70,6 +74,7 @@
     return CFG.textos[lang()] || CFG.textos[CFG.idiomaPorDefecto];
   }
   function enlacePolitica() {
+    if (CFG.politica) return CFG.politica;
     var l = lang();
     return "/legal/cookies" + (l === CFG.idiomaPorDefecto ? "" : "." + l) + ".html";
   }
@@ -148,22 +153,81 @@
     for (var i = 0; i < huecos.length; i++) destapar(huecos[i]);
   }
 
-  // ---------- Etiqueta de medición ----------
+  // ---------- Etiquetas de medición ----------
 
   var medicionPuesta = false;
   function medicion() {
-    if (medicionPuesta || !CFG.ads) return;
+    if (CFG.ga) window["ga-disable-" + CFG.ga] = false;
+    if (medicionPuesta) {
+      permisos("granted");
+      return;
+    }
+    if (!CFG.ads && !CFG.ga) return;
     medicionPuesta = true;
     window.dataLayer = window.dataLayer || [];
     window.gtag = function () {
       window.dataLayer.push(arguments);
     };
+    window.gtag("js", new Date());
+    if (CFG.ga) {
+      // Solo estadística. «none» pide que las cookies se queden en este subdominio, pero Google no siempre
+      // lo respeta: probado en congresos.portalintracom.com, _ga acaba a menudo en el dominio principal.
+      // Por eso retirarMedicion() borra en los dos sitios y la política de cookies menciona ambos
+      window.gtag("set", { cookie_domain: "none" });
+      window.gtag("config", CFG.ga, {
+        cookie_domain: "none",
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+      });
+    }
+    if (CFG.ads) window.gtag("config", CFG.ads, CFG.ga ? { cookie_domain: "none" } : {});
     var s = document.createElement("script");
     s.async = true;
-    s.src = "https://www.googletagmanager.com/gtag/js?id=" + CFG.ads;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + (CFG.ga || CFG.ads);
     document.head.appendChild(s);
-    window.gtag("js", new Date());
-    window.gtag("config", CFG.ads);
+  }
+
+  function permisos(valor) {
+    if (!window.gtag) return;
+    window.gtag("consent", "update", {
+      analytics_storage: valor,
+      ad_storage: valor,
+      ad_user_data: valor,
+      ad_personalization: valor,
+    });
+  }
+
+  /** Retirar el permiso tiene que surtir efecto: se apagan las etiquetas y se borran sus cookies. */
+  function retirarMedicion() {
+    if (CFG.ga) window["ga-disable-" + CFG.ga] = true;
+    permisos("denied");
+    var partes = location.hostname.split(".");
+    var dominios = [""];
+    for (var i = 0; i < partes.length - 1; i++) dominios.push("; domain=." + partes.slice(i).join("."));
+    document.cookie.split(";").forEach(function (c) {
+      var nombre = c.split("=")[0].trim();
+      if (!/^(_ga|_gcl_|_gid)/.test(nombre)) return;
+      dominios.forEach(function (d) {
+        document.cookie = nombre + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/" + d;
+      });
+    });
+  }
+
+  /** Clics en un correo o hacia la inscripción de la plataforma. No se envía la dirección de correo. */
+  function contarClic(e) {
+    if (!CFG.ga || !window.gtag || decision() !== "si") return;
+    var t = e.target;
+    while (t && t !== document.body) {
+      if (t.getAttribute && t.getAttribute("href")) {
+        if (/^mailto:/i.test(t.getAttribute("href"))) {
+          window.gtag("event", "clic_correo", { send_to: CFG.ga });
+        } else if (t.hostname === CFG.plataforma && /\/c\//.test(t.pathname)) {
+          window.gtag("event", "clic_inscripcion", { send_to: CFG.ga, destino: t.pathname });
+        }
+        return;
+      }
+      t = t.parentNode;
+    }
   }
 
   // ---------- Aviso ----------
@@ -244,6 +308,7 @@
     guardar("no");
     quitarBanner();
     taparTodo();
+    retirarMedicion();
   }
 
   function abrir() {
@@ -268,6 +333,8 @@
     taparTodo();
     if (d !== "no") preguntar();
   }
+
+  document.addEventListener("click", contarClic);
 
   document.addEventListener("click", function (e) {
     var t = e.target;
